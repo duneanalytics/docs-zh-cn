@@ -10,7 +10,7 @@ description: >-
 
 | **列名**     | **数据类型** | **说明**                                                                           |
 | ------------------- | ------------ | ---------------------------------------------------------------------------------------- |
-| time                | timestamptz  | 区块被开采的时间。                                                     |
+| time                | timestamptz  | 区块被开采的时间。                                                    |
 | number              | numeric      | 区块链的长度（以块为单位）                                                   |
 | hash                | bytea        | 该区块的唯一标识符                                                       |
 | parent hash         | bytea        | 前一个区块的唯一标识符                                               |
@@ -58,7 +58,7 @@ description: >-
 | success                      | boolean      | 显示事务是否成功的真/假值                                                                                                                                              |
 | from                         | bytea        | 发送者的地址                                                                                                                                                                                  |
 | to                           | bytea        | 接收者的地址。当是合约创建交易时为NULL                                                                                                                                 |
-| value                        | numeric      | 在此交易中发送的以 wei 为单位的以太币数量。请注意，erc20 代币不会出现在这里。                                                                                                      |
+| value                        | numeric      | 在此交易中发送的以 wei 为单位的以太币数量。请注意，erc20 代币不会出现在这里。                                                                                                     |
 | block\_number                | int8         | 区块链的长度（以块为单位）                                                                                                                                                                 |
 | block\_hash                  | bytea        | 该区块的唯一标识符                                                                                                                                                                     |
 | gas\_limit                   | numeric      | 以 wei 为单位的 gas 限制                                                                                               |
@@ -94,7 +94,7 @@ description: >-
 | gas             | numeric      | gas 限制                                                                                                 |
 | gas\_used       | numeric      | 以 wei 为单位的交易消耗的 gas                                                      |
 | tx\_index       | numeric      | 交易索引                                                                    |
-| trace\_address  | array<int8>  | 调用图森林中的跟踪地址。例如，[0, 2, 1] 是 [0, 2, 1, 0] 的父级。 |
+| trace\_address  | array<int8>  | 调用图森林中的跟踪地址。例如，[0, 2, 1] 是 [0, 2, 1, 0] 的父级。|
 | sub\_traces     | numeric      | 子跟踪的数量                                                                   |
 | type            | text         | 操作类型                                                                                   |
 | address         | bytea        | 当类型为自毁或创建时调用的合约                                   |
