@@ -1,6 +1,6 @@
-# ETH Balance of a wallet
+# 钱包的ETH余额
 
-This Query yields the ETH balance of a wallet over time.
+这个查询可以得出一个钱包在一段时间内的ETH余额。
 
 ```sql
 Select sum(transfer) over (order by day asc), day
@@ -35,4 +35,4 @@ SELECT date_trunc('day', block_time) as day, sum(-value/1e18) as transfer
     ) as x
 ```
 
-Original author: [https://twitter.com/MSilb7](https://twitter.com/MSilb7)
+原作者: [https://twitter.com/MSilb7](https://twitter.com/MSilb7)
