@@ -138,6 +138,6 @@ Select avg(gas_used) from ethereum.transactions
 
 ### 结束语
 
-一些在我们的 v1 数据库中被大量索引的查询在 DuneV2 中可能会感觉有点尴尬。对于 erc20 事件传输表、`ethereum.transactions` 和 `ethereum.logs` 以及它们在其他区块链上的对应物来说尤其如此。这是我们愿意为大规模启用区块链分析而做出的权衡。我们将继续对这些数据集和我们的数据库架构进行创新，以使每个查询在 DuneV2 上尽可能快地运行，但是像 `tx_hash` 的查询速度很慢只是这个新数据库系统的本质。也就是说，我们认为我们在启用大量新用例和加速大量现有查询方面做得非常好。
+一些在我们的 v1 数据库中被大量索引的查询在 DuneV2 中可能会感觉有点尴尬。对于 erc20 事件转移表(event transfer)、`ethereum.transactions` 和 `ethereum.logs` 以及它们在其他区块链上的对应物来说尤其如此。这是我们愿意为大规模启用区块链分析而做出的权衡。我们将继续对这些数据集和我们的数据库架构进行创新，以使每个查询在 DuneV2 上尽可能快地运行，但是像 `tx_hash` 的查询速度很慢只是这个新数据库系统的本质。也就是说，我们认为我们在启用大量新用例和加速大量现有查询方面做得非常好。
 
 如果您对新系统有任何反馈或遇到问题，我们都会倾听并等待您在 [Canny](https://feedback.dune.xyz) 和 [Discord](https://discord.com/dunecom) 上的反馈。

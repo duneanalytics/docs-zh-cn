@@ -1,53 +1,48 @@
 ---
 description: >-
-  We construct customs tables which cover the entirety of a type of activity on
-  the blockchain and thereby enable you to effortlessly aggregate lots of data
-  with as little friction as possible.
+  我们构建了涵盖区块链上所有类型活动的自定义表格，从而使您能够以尽可能少的摩擦轻松聚合大量数据。
 ---
 
-# Abstractions
+# 抽象表（Abstractions）
 
-## What are abstractions?
+## 什么是抽象表（abstractions）？
 
-Abstractions are custom tables that are maintained by Team Dune and our community. They allow you to gain access to more complex SQL operators like creating your own tables, looping through values or other operations that are more catered towards database administrators. This sometimes is necessary to aggregate the on-chain data or simplify the process of querying for data.
+抽象表是由 Dune 团队和我们的社区维护的自定义表。它们允许您访问更复杂的 SQL 运算符，例如创建自己的表、在值中循环或其他更适合数据库管理员的操作。这有时对于聚合链上数据或简化数据查询过程是必要的。
 
-This public [github repository](https://github.com/duneanalytics/abstractions) hosts the logic to construct the tables and views.
+这个公共的 [github 存储库](https://github.com/duneanalytics/abstractions) 承载构建表和视图的逻辑。
 
-\
-Which abstractions are there?
+有哪些 abstractions 抽象表？
 -----------------------------
 
-You can check for existing abstractions in our [public github repository](https://github.com/duneanalytics/abstractions). You can generally divide them into 2 distinct categories.&#x20;
+您可以在我们的 [公共 github 存储库](https://github.com/duneanalytics/abstractions) 中检查现有的抽象。您通常可以将它们分为 2 个不同的类别。
 
 
 
-### Sector Abstractions
+### 行业抽象（Sector Abstractions）
 
-Sector Abstractions are tables like dex.trades, erc20.stablecoins, lending.borrow etc.&#x20;
+行业抽象是 dex.trades、erc20.stablecoins、lending.borrow 等表。
 
-These abstractions take in data from multiple contracts and projects, standardize the data across them and therefore make it very easy to query for this data and compare the metrics of different projects with each other.
+这些抽象从多个合约和项目中获取数据，标准化它们之间的数据，因此可以很容易地查询这些数据并比较不同项目的指标。
 
-Most of the [sector](../../about/usecases/sector-dashboards.md) Dashboards depend on sector abstractions. This introduces an interesting dynamic in which projects can easily get their data into these dashboards by making a pull request to our public [github repo](https://github.com/duneanalytics/abstractions).\
-\
-Team Dune and the community are always improving on these sector abstractions, all new additions to existing ones are always welcome.
+大多数 [行业](../../about/usecases/sector-dashboards.md) 仪表板都依赖于行业抽象。这引入了一个有趣的动态，项目可以通过向我们的公共 [github 存储库](https://github.com/duneanalytics/abstractions) 发出拉取请求轻松地将其数据放入这些仪表板。
+
+Dune 团队和社区一直在改进这些行业抽象，总是欢迎对现有数据的所有新添加。
 
 
+### 项目抽象（Project Abstractions）
 
-### Project Abstractions
+有时，将数据组装到一张整齐的表格中以让需要的所有数据集中在一起对某些项目很有用。为此，您可以在我们的抽象中构造视图或表。
 
-Sometimes it can be useful for projects to assemble their data into one neat table that has all the data they need in one place. To do this, you can construct views or tables in our abstractions.
+与仅构建视图相比，这里的主要优势是您可以在我们的抽象中处理大量数据，因为我们可以每隔几个小时在后台自动运行它们。
 
-The main advantage here over just constructing a view is that you are able to deal with bigger amounts of data in our abstractions since we can run them automatically in the background every few hours.
+### 查找表抽象（Lookup abstractions）
 
-### Lookup abstractions
+这个抽象最引人注目的是 `erc20.tokens` 抽象，我们将代币映射到它们的小数和符号。其他还有 `erc20.stablecoins` 或 `compound.view_c_tokens` 。
 
-The most noticeable mentions for this abstraction is the `erc20.tokens` abstraction in which we map tokens to their decimals and symbols. There also is `erc20.stablecoins` or `compound.view_c_tokens.`
+## 贡献抽象
 
-## Contributing to abstractions
+一般来说，我们的抽象对所有团队和项目开放，但我们保留拒绝拉取请求的权利。
 
-Our abstractions are open to all teams and projects in general, but we do reserve the right to reject pull requests.
+如果您确实选择为抽象做出贡献，请确保您的添加确实有效并产生了预期的结果。此外，请给我们一个简短的摘要，说明您要实现的目标以及您的项目是做什么的。
 
-If you do choose to contribute to abstractions please make sure your addition actually works and produces the intended results. Furthermore please give us a short summary about what you are trying to achieve and what your project does.
-
-If applicable please construct a view in which you show us that your addition produces the intended results.
-
+如果适用，请构建一个视图，通过它向我们展示您的添加产生了预期的结果。

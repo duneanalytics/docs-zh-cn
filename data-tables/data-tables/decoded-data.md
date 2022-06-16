@@ -1,82 +1,81 @@
 ---
 description: >-
-  We decode the data emitted by smart contracts and store them in easy-to-use
-  tables.
+  我们对智能合约发出的数据进行解码，并将它们存储在易于使用的表格中。
 ---
 
-# Decoded Data
+# 已解码数据
 
-## Decoded smart contract data
+## 已解码智能合约数据
 
-Instead of working with the traces, logs, and traces, Dune decodes smart contract activity into nice human-readable tables.
+Dune 不使用跟踪和日志，而是将智能合约活动解码为易于阅读的表格。
 
-We create tables for each event and function defined in the smart contract ABI. Subsequently, every event or function call on that contract is decoded and inserted as a row into these tables.
+我们为智能合约 ABI 中定义的每个事件（event）和功能（function）创建表格。随后，对该合约的每个事件或函数调用都被解码并作为一行插入到这些表中。
 
-The tables are named accordingly
+这些表被相应地命名：
 
-**events:** `projectname."contractName_evt_eventName"`
+**事件（events）:** `projectname."contractName_evt_eventName"`
 
-**function calls:** `projectname."contractName_call_eventName"`
+**函数调用（function calls）:** `projectname."contractName_call_eventName"`
 
-As an example, decoded data for the `swap`-event of the uniswap V2 exchange contract is found in the table [uniswap\_v2."pair\_swap"](https://dune.xyz/queries/38968).
+例如，在表 [uniswap\_v2."pair\_swap"](https://dune.xyz/queries/38968) 中可以找到 uniswap V2 交换合约的 `swap` 事件的解码数据。
 
-Using the event tables is usually sufficient, but in some cases you will want to use the `call` tables. For instance Maker DAO which don’t give you too many events you can use tables like [maker."SaiTub\_call\_draw](https://dune.xyz/queries/38974)".
+使用事件表通常就足够了，但在某些情况下，您会想要使用 `call` 表。例如 Maker DAO，它不会给你太多事件，你可以使用像 [maker."SaiTub\_call\_draw](https://dune.xyz/queries/38974)" 这样的表格。
 
-## What contracts have decoded data?
+## 哪些合约有已解码数据？
 
-You can check if contracts are already decoded by querying "blockchain".contracts through our database or [this dashboard](https://dune.xyz/0xBoxer/Is-my-Contract-decoded-yet).
+您可以通过我们的数据库查询 “blockchain”.contracts 表或 [这个仪表板](https://dune.xyz/0xBoxer/Is-my-Contract-decoded-yet) 来检查合约是否已解码。
 
-If the contract is not in our database yet, you can submit it for [Decoding](../../duneapp/adding-new-contracts.md) here: [dune.xyz/decode](http://dune.xyz/decode)
+如果合约还没有在我们的数据库中，您可以在此处将其提交给 [解码](../../duneapp/adding-new-contracts.md)：[dune.xyz/decode](http://dune.xyz/decode）.
 
-We usually take about 24-48 hours to decode smart contracts.
+我们通常需要大约 24-48 小时来解码智能合约。
 
-Check out [this guide](../../duneapp/adding-new-contracts.md) to learn more about the Decoding process.
+查看 [本指南](../../duneapp/adding-new-contracts.md) 以了解有关解码过程的更多信息。
 
-## How to understand decoded data?
+## 如何理解已解码数据？
 
-Decoded data sometimes is a bit tricky to work with since it requires you to understand what the events/calls mean in the context of the smart contract. Additionally you need to understand what kind of data the smart contract emits and understand the intricacies of the different smart contracts of the project interacting with each other. Often times the data you are looking for is scattered across multiple smart contracts and tables in Dune.
+解码数据有时有点难以处理，因为它需要您了解事件/调用在智能合约上下文中的含义。此外，您需要了解智能合约发出什么样的数据，并了解项目的不同智能合约相互交互的复杂性。通常，您要查找的数据分散在 Dune 中的多个智能合约和表格中。
 
-If you are not able to make sense of the data by just searching at the tables, it usually helps to look at single tx's using the transaction hash and etherscan.
+如果您无法通过仅在表格中搜索来理解数据，则使用事务哈希和 etherscan 查看单个交易（transaction）的详情通常会有所帮助。
 
-If that also doesn't lead to satisfactory results, scouring the relevant docs and github of the project can lead you to the desired answers. Furthermore, talking to the developers and core community of a project can also get you to a good understanding of the contract.
+如果这也不能带来令人满意的结果，那么搜索项目的相关文档和 github 可以引导您找到所需的答案。此外，与项目的开发人员和核心社区交流也可以让你更好地理解合约。
 
-Some good showcasing of how to deal with decoded data can be found all throughout Dune, but especially our [abstraction repository](https://github.com/duneanalytics/abstractions) is full of great examples.
+在整个 Dune 中都可以找到有关如何处理解码数据的一些很好的展示，但尤其是我们的 [抽象存储库](https://github.com/duneanalytics/abstractions) 充满了很好的例子。
 
-**In Summary**:
+**总之**:
 
-Dealing with decoded data allows you deep access to information stored on the blockchain and is very information rich, but understanding that data sometimes takes a bit of effort on your side since you are interacting with the data of the contract in a direct way.
+处理解码数据可以让您深入访问存储在区块链上的信息，并且信息量非常丰富，但了解数据有时需要您付出一些努力，因为您正在以直接的方式与合约数据进行交互。
 
-## Scalable decoding across contracts
+## 跨合约的可扩展解码
 
-Many dApps have numerous smart contracts that are deployed with the same bytecode. This can be: yield aggregator pools,distinctive options, liquidity pools etc.
+许多 dApp 拥有大量使用相同字节码部署的智能合约。这可以是：收益聚合池、独特的期权、流动性池等。
 
-We can automatically pull these similar contracts into the same tables and thereby make it way easier for you to work with that data. Instead of having to query for all distinctive smart contracts you can then just query one table which will have the `contract_address` of that specific smart contract as an identifier.
+我们可以自动将这些相似的合约提取到同一个表中，从而让您更轻松地处理这些数据。无需查询所有独特的智能合约，您只需查询一张表，该表将以该特定智能合约的 `contract_address` 作为标识符。
 
-To be able to use this function you have to submit the contract as one of the two bottom options while submitting it to decoding.
+为了能够使用此功能，您必须在将合约提交解码时将其作为两个底部选项之一提交。
 
 ![](<../../.gitbook/assets/image (23).png>)
 
-As a result, `SELECT`-ing from a single table might yield data from multiple contracts. In decoded tables, the column `contract_address` tells you which smart contract the event or call is on. If you want to look at only a single contract you can filter by its address.
+因此，来自单个表的 `SELECT` 可能会产生来自多个合约的数据。在解码表中，`contract_address` 列告诉你事件或调用在哪个智能合约上。如果您只想查看单个合约，则可以按其地址进行过滤。
 
-For example:
+例如:
 
 ```sql
 SELECT DISTINCT contract_address FROM uniswap_v2."Pair_evt_swap";
 ```
 
-will give you all the unique Uniswap Pairs with a Token Purchase event.
+将通过代币购买事件为您提供所有独特的 Uniswap 代币对。
 
-[Query in action](https://dune.xyz/queries/39006)
+[查询实战](https://dune.xyz/queries/39006)
 
-## **Queries to explore decoded Contracts**
+## **探索解码合约的查询**
 
-**See all projects we have decoded data for**
+**查看我们已解码数据的所有项目**
 
 ```sql
 SELECT DISTINCT namespace FROM ethereum."contracts";
 ```
 
-If you are working with a an event or call table directly you can see if there are several instances of that contract with this query.
+如果您直接使用事件或调用表，您可以通过此查询查看该合约是否有多个实例。
 
 ```sql
 SELECT DISTINCT contract_address FROM projectname."contractName_evt_eventName";
