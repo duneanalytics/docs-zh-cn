@@ -17,7 +17,7 @@
 | contract\_address         | erc20 合约地址      |
 | symbol                    | 资产的标识符（股票代码、现金标签） |
 | price                     | 任何给定分钟内的资产价格    |
-| minute                    | 此表的解析度是按分钟计算的   |
+| minute                    | 此表是按分钟为单位计算的   |
 
 Note that `WETH` can be used for ETH price.
 
@@ -30,7 +30,7 @@ Note that `WETH` can be used for ETH price.
 | contract\_address | erc20 合约地址        |
 | symbol            | 资产的标识符（股票代码、现金标签） |
 | price             | 任何给定分钟内的资产价格    |
-| minute            | 此表的解析度是按分钟计算的    |
+| minute            | 此表是按分钟为单位计算的    |
 
 ****
 
@@ -45,4 +45,4 @@ Note that `WETH` can be used for ETH price.
 | contract\_address | erc20 合约地址                                                                               |
 | sample\_size      | 该资产在所有去中心化交易所发生的交易数量（如果数量非常少，您可能希望排除数据，这可能会导致不准确）。|
 | median\_price     | 任何给定小时内资产的中位数价格                                                                                                     |
-| hour              | 此表的解析度为每小时                                                                                                             |
+| hour              | 此表按每小时为单位计算                                                                                                             |
