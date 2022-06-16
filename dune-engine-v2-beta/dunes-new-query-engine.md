@@ -22,9 +22,9 @@
 
 ### 新版查询引擎
 
-DuneV2 改变了我们的整个数据库架构。我们正在从 PostgresQL 数据库过渡到托管在 Databricks 上的 Apache Spark 实例。 两种系统的区别可以总结如下：
+DuneV2 改变了我们的整个数据库架构。我们正在从 PostgresQL 数据库过渡到托管在 Databricks 上的 Apache Spark 实例。两种系统的区别可以总结如下：
 
-* 我们现在使用 Databricks SQL，而不是 PostgresQL。 SQL 关键字的变化很小，但可能与您的某些查询习惯有关。&#x20;
+* 我们现在使用 Databricks SQL，而不是 PostgresQL。SQL 关键字的变化很小，但可能与您的某些查询书写习惯有关。&#x20;
 * 与 PostgresQL 的面向行的方法相反，Spark 是一个面向列的数据库。
 * 传统的索引被列块级别的`最小/最大`值替换。
 
@@ -36,7 +36,7 @@ DuneV2 改变了我们的整个数据库架构。我们正在从 PostgresQL 数�
 
 ### Abstractions（数据抽象）
 
-DuneV2 中的抽象将在 [dbt](https://docs.getdbt.com/docs/introduction)（数据构建工具）上运行。dbt 使分析工程师能够通过简单地编写选择语句来转换其数据仓库中的数据。 dbt 将这些选择语句处理转换为 [数据表](https://docs.getdbt.com/terms/table) 和 [视图](https://docs.getdbt.com/terms/view)。
+DuneV2 中的抽象将在 [dbt](https://docs.getdbt.com/docs/introduction)（数据构建工具）上运行。dbt 使分析工程师能够通过简单地编写选择语句来转换其数据仓库中的数据。dbt 将这些选择语句处理转换为 [数据表](https://docs.getdbt.com/terms/table) 和 [视图](https://docs.getdbt.com/terms/view)。
 
 这将使 abstractions 更加健壮、可扩展且更易于使用。
 
