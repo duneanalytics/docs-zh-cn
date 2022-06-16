@@ -1,3 +1,3 @@
-# Does Dune have a Token?
+# Dune有发行代币吗？
 
-**Dune does not have token.**
+**Dune没有代币。**
