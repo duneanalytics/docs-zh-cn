@@ -1,5 +1,5 @@
 ---
-description: >-
+说明: >-
   更改日志包含在测试版中对 Solana 表进行的更新。
 ---
 
@@ -26,7 +26,7 @@ description: >-
 
 `solana.transactions` 表现已升级到新版本。新版本的表使用更简洁的数组结构，以便更容易地提取有用信息。
 
-投票事务也被拆分到自己的表 `solana.vote_transactions` 中，因此使用 `solana.transactions` 的查询将具有更好的性能。不幸的是，此表的修改也意味着一些现有查询现在将会中断并需要更改。
+投票代交易也被拆分到自己的表 `solana.vote_transactions` 中，因此使用 `solana.transactions` 的查询将具有更好的性能。不幸的是，此表的修改也意味着一些现有查询现在将会中断并需要更改。
 
 这对使用 `solana.transactions` 的现有查询意味着什么：
 

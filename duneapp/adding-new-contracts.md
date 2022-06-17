@@ -1,5 +1,5 @@
 ---
-description: >-
+说明: >-
   Everything you should know about the submission process to successfully decode
   new contracts
 ---

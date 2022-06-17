@@ -4,7 +4,7 @@
 
 | **列名**   | **数据类型** | **说明**                                                        |
 | ----------------- | ------------ | ---------------------------------------------------------------------- |
-| time              | timestamptz  | 区块被开采的时间。                                   |
+| time              | timestamptz  | 区块被开采的时间                                   |
 | number            | numeric      | 区块链的长度（以块为单位）                                 |
 | hash              | bytea        | 该区块的唯一标识符                                     |
 | parent hash       | bytea        | 前一个区块的唯一标识符                              |
@@ -48,7 +48,7 @@
 | block\_time     | timestamptz  | 区块被开采的时间                                                                |
 | nonce           | numeric      | 该钱包独有的交易随机数                                                    |
 | index           | numeric      | 区块中的交易索引位置                                                     |
-| success         | boolean      | 显示事务是否成功的真/假值                                       |
+| success         | boolean      | 显示代交易是否成功的真/假值                                       |
 | from            | bytea        | 发送者的地址                                                                            |
 | to              | bytea        | 接收者的地址。当是合约创建交易时为空（NULL）                           |
 | value           | numeric      | 在此交易中发送的以 wei 为单位的以太币数量。请注意，erc20 代币不会出现在这里。|
@@ -62,14 +62,14 @@
 
 ### xDai.Traces
 
-事务可以触发修改以太坊虚拟机内部状态的更小的原子操作。有关这些操作执行的信息会被记录下来，并且可以存储为 EVM 执行跟踪，或者简称_跟踪（trace）_。
+交易可以触发修改以太坊虚拟机内部状态的更小的原子操作。有关这些操作执行的信息会被记录下来，并且可以存储为 EVM 执行跟踪，或者简称_跟踪（trace）_。
 
 在[这里](https://medium.com/chainalysis/ethereum-traces-not-transactions-3f0533d26aa) 阅读更多信息.
 
 | **列名** | **数据类型** | **说明**                                                                                  |
 | --------------- | ------------ | ------------------------------------------------------------------------------------------------ |
 | block\_time     | timestamptz  | 区块被开采的时间                                                                |
-| tx\_success     | boolean      | 显示事务是否成功的真/假值                                      |
+| tx\_success     | boolean      | 显示代交易是否成功的真/假值                                      |
 | success         | boolean      | 显示跟踪（trace）是否成功的真/假值                                      |
 | block\_hash     | bytea        | 该区块的唯一标识符                                                               |
 | block\_number   | int8         | 区块链的长度（以块为单位）                                                           |

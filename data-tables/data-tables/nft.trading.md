@@ -1,5 +1,5 @@
 ---
-description: >-
+说明: >-
   nft.trades 在 Dune 上向所有人提供 NFT 交易数据。
   nft.trades 将跨多个 NFT 平台的数据聚合到一张简单的表格中。
 ---

@@ -1,5 +1,5 @@
 ---
-description: >-
+说明: >-
   Sharing data on Twitter is probably the most common use case of Dune's
   Visualizations.
 ---

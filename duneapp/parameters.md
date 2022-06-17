@@ -1,5 +1,5 @@
 ---
-description: >-
+说明: >-
   Parameters are an easy and powerful way to add variables to your
   query/dashboard. This allows you and others to customize queries and
   dashboards without having to touch the code.
