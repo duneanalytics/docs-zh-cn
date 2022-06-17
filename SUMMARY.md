@@ -29,7 +29,7 @@
 
 * [Data tables](data-tables/data-tables/README.md)
   * [nft.trades](data-tables/data-tables/nft.trading.md)
-  * [Raw Data](data-tables/data-tables/raw-data/README.md)
+  * [原始数据](data-tables/data-tables/raw-data/README.md)
     * [Ethereum data](data-tables/data-tables/raw-data/ethereum-data.md)
     * [xDai Data](data-tables/data-tables/raw-data/xdai-data.md)
   * [Decoded Data](data-tables/data-tables/decoded-data.md)
