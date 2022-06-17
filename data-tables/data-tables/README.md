@@ -1,5 +1,5 @@
 ---
-description: 数据表是 Dune 工作的基础
+说明: 数据表是 Dune 工作的基础
 ---
 
 # 数据表
@@ -39,7 +39,7 @@ Dune 上的大多数表都是由 Dune 填充的，只是将区块链数据转换
 {% endcontent-ref %}
 
 {% content-ref url="abstractions.md" %}
-[Abstractions 数据](abstractions.md)
+[抽象数据（Abstractions）](abstractions.md)
 {% endcontent-ref %}
 
 {% content-ref url="prices.md" %}

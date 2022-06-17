@@ -1,5 +1,5 @@
 ---
-description: >-
+说明: >-
   dune_user_generated 模式是一种在我们的数据库中构建您自己的视图、函数或表的简单方法。
 ---
 

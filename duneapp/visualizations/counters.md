@@ -1,55 +1,53 @@
-# Counters
+# 计数器
 
-#### Counters are a great way to provide your audience with immediate "on a glance" stats.
+#### 计数器是能让你的观众“一目了然”的数据统计的好方法。
 
 !["on a glance" stats in https://dune.xyz/0xBoxer/NFT](<../../.gitbook/assets/image (41).png>)
 
-## Configuring your counter
-
+## 设置你的计数器
 ![](<../../.gitbook/assets/image (48).png>)
 
-### Counter options
+### 计数器选项
 
-In this section you can define what kind of data the counter should display.&#x20;
+你可以通过这部分内容了解计数器适用于可视化哪种数据。&#x20;
 
-#### Title
+#### 标题
 
-* The Title will appear in all instances of this graph prominently at the top
-* If left blank the query name will be the only thing that is left standing
+* 标题将出现在该图表的所有实例中的顶部醒目位置。
+* 如果不填，查询的名称将是唯一留下的东西。
 
-#### Column
+#### 列
 
-* In this field you can define which column the counter should show.
+* 通过列设置，你可以定义计数器应该显示哪一列。
 
-#### Row
+#### 行
 
-* This field can be used to define which row of the underlying datatable you want displayed e.g. row 1
+* 通过行设置，可以定义你想要显示的底层数据表格的哪一行，例如第1行。
 * Usually this requires you to sort or limit your query results in order for row 1 to show the wanted results.&#x20;
 
-### Formatting
+### 格式化
 
-**Prefix**
+**前缀**
 
-* This field allows you to define a prefix for your counter value.
-* e.g.: `$`, `€`, `Ξ`, `฿`
+* 可以为你的计数器值定义一个前缀。
+* 比如: `$`, `€`, `Ξ`, `฿`
 
-**Suffix**
+**后缀**
 
-* This field allows you to define a suffix for your counter value.
+* 可以为你的计数器值定义一个后缀。
 
-**Label**
+**标签**
 
-* This field allows you to define a label for your counter value.
-* The label will appear beneath the counter value as text.
+* 可以为你的计数器值定义一个标签。
+* 标签将以文本形式出现在计数器值的下方。
 
-**Decimals**
+**小数**
 
-* In this field you can choose how many decimals you want displayed for your counter
-* This is currently limited to 3 decimal places.
+* 可以选择让你的计数器显示多少位小数。
 
-### Counters explained
+### 计数器解释
 
-Here is an example to bring some points explained earlier home.
+通过这个例子可以更好理解前面介绍的内容。
 
 ![label](<../../.gitbook/assets/image (39).png>)
 

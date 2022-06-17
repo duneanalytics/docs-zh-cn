@@ -1,5 +1,5 @@
 ---
-description: >-
+说明: >-
   Leverage Dune to generate Insights for yourself, your project or your
   organisation.
 ---
