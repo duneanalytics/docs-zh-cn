@@ -2,19 +2,19 @@
 
 * [Introduction to Dune](README.md)
 
-## About Dune <a href="#about" id="about"></a>
+## 关于Dune <a href="#about" id="about"></a>
 
-* [Use Cases](about/usecases/README.md)
-  * [Project Dashboards](about/usecases/project-dashboards.md)
-  * [Sector Dashboards](about/usecases/sector-dashboards.md)
-  * [Ecosystem Dashboards](about/usecases/ecosystem-dashboards.md)
-* [Tutorials](about/tutorials/README.md)
-  * [Our Network course](about/tutorials/our-network-course.md)
-  * [Dune Guides](about/tutorials/dune-guides/README.md)
-    * [Tips for querying](about/tutorials/dune-guides/tips.md)
-  * [SQL guides](about/tutorials/sql-guides.md)
-  * [Video Series](about/tutorials/video-series.md)
-  * [Query templates](about/tutorials/queries/README.md)
+* [使用案例](about/usecases/README.md)
+  * [项目仪表板](about/usecases/project-dashboards.md)
+  * [行业仪表盘](about/usecases/sector-dashboards.md)
+  * [生态仪表盘](about/usecases/ecosystem-dashboards.md)
+* [教程](about/tutorials/README.md)
+  * [网络课程](about/tutorials/our-network-course.md)
+  * [Dune指南](about/tutorials/dune-guides/README.md)
+    * [查询技巧](about/tutorials/dune-guides/tips.md)
+  * [SQL指南](about/tutorials/sql-guides.md)
+  * [视频教程](about/tutorials/video-series.md)
+  * [查询模板](about/tutorials/queries/README.md)
     * [ETH Balance of a wallet](about/tutorials/queries/eth-balance-of-a-wallet.md)
     * [raw transactions per wallet](about/tutorials/queries/tx-wallet.md)
     * [gas metrics per wallet](about/tutorials/queries/gas-metrics-per-wallet.md)
