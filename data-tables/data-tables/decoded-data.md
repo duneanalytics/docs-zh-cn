@@ -67,7 +67,7 @@ SELECT DISTINCT contract_address FROM uniswap_v2."Pair_evt_swap";
 
 [查询实战](https://dune.xyz/queries/39006)
 
-## **探索解码合约的查询**
+## **探索已解码合约的查询**
 
 **查看我们已解码数据的所有项目**
 

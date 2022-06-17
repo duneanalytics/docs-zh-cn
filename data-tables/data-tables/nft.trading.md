@@ -83,7 +83,7 @@ group by 2,3
 
 **利用参数的仪表板**
 
-[**https://dune.xyz/0xBoxer/NFT**](https://dune.xyz/0xBoxer/NFT)\*\*\*\*
+[**https://dune.xyz/0xBoxer/NFT**](https://dune.xyz/0xBoxer/NFT)
 
 [**https://dune.xyz/rantum/NFT-Sales-Overview-by-Project**](https://dune.xyz/rantum/NFT-Sales-Overview-by-Project)
 
