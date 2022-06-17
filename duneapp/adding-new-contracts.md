@@ -1,113 +1,113 @@
 ---
 说明: >-
-  Everything you should know about the submission process to successfully decode
-  new contracts
+你应该知道的关于成功解码新合约的全部提交过程
 ---
 
-# Adding new contracts
+# 添加新合约
 
-The Dune App contains an extensive catalog of decoded contracts in the form of [call and event tables](../data-tables/data-tables/decoded-data.md#decoded-smart-contract-data). These contracts are brought into Dune by wizards through a process commonly referred to as [Decoding](../data-tables/data-tables/decoded-data.md).
+Dune包含了大量的[调用和事件表](../data-tables/data-tables/decoded-data.md#decoded-smart-contract-data)形式的解码合约，这些合约通常经过[解码](../data-tables/data-tables/decoded-data.md)的过程来到Dune中。
 
-## Quick tour
+## 快速浏览
 
 {% embed url="https://www.youtube.com/watch?v=4v9zEYZvv34" %}
 
-## Submitting a new contract
+## 提交一个新的合约
 
-Contracts can be submitted for decoding through the New contract form, which can be accessed via [My Creations > Contracts](https://dune.xyz/browse/contracts/authored) or within the dataset explorer in the query editor's sidebar:
+解码一个新的合约可以通过提交新合约表格，在 [我的创作> 合约](https://dune.xyz/browse/contracts/authored) 或在查询编辑器的侧边栏的数据集探索器中访问：
 
 ![](<../.gitbook/assets/Screen Shot 2022-01-03 at 15.46.22.png>)
 
-Clicking there will pop up a new browser tab with the contract submission form, which consists of 2 steps:
+点击那里将弹出一个新的浏览器标签，上面有合同提交表，其中包括2个步骤：
 
-### 1. Blockchain and address
+### 1. 区块链和地址
 
-We first ask for the contract's address and blockchain. Requesting this data first has two purposes: to anticipate potential duplicate contracts and pending submissions, and to automate parts of the submission process where we can. The latter is usually accomplished by fetching potentially useful metadata from Dune and other third party sources where relevant.
+我们首先要提供合约的地址和所在链。首先要求这些数据有两个目的：预测潜在的重复合约和待提交的合约，以及在可以的情况下尽量将提交过程的一部分自动化。后者通常是通过从Dune或其他相关的第三方数据源获取潜在的有用元数据来实现的。
 
-For instance, below we submit the USDT contract (`0x94b008aA00579c1307B0EF2c499aD98a8ce58e58`) in Optimism:
+例如，下面我们用提交Optimism上的USDT合约 (`0x94b008aA00579c1307B0EF2c499aD98a8ce58e58`)：
 
 ![](<../.gitbook/assets/Screen Shot 2022-01-03 at 16.02.19.png>)
 
-If we can find the contract through a third party source, we will show a green check mark next to the address field. This means we were able to fetch information such as the contract's name and ABI.&#x20;
+如果我们能通过第三方来源找到合约，我们会在地址栏旁边显示一个绿色的复选标记。这意味着我们能够获取合同的名称和ABI。&#x20;
 
-### 2. Contract details
+### 2. 合约细节
 
-Then, after pressing Next, you will be prompted for other information about the contract that we need in order to decode it:
+接下来在点击 "下一步 "后，会提示你提供我们需要的关于合约的其他信息，以便对其进行解码：
 
 ![](<../.gitbook/assets/Screen Shot 2022-01-03 at 16.05.07.png>)
 
-If we found the contract through other third party sources, you will only have to fill in the project name. We have some naming conventions on that, partly due to our technical setup and also to make finding data more predictable.
+如果我们通过其他第三方来源找到了合约，你只需要填上项目名称。我们对此有一些命名惯例，部分是由于我们的技术设置，也是为了使寻找数据更有预见性。
 
-Once you submit it, you are done! The contract will be stored in our queue, which we manually review for quality assurance purposes. Your submission might take a few days to get processed.
+一旦你提交了它，就完成了! 合约将被储存在我们的队列中，为了保证质量，我们会人工审查。你的提交可能需要几天的时间才能得到处理。
 
-### Advanced options
+### 高级选项
 
-In some instances, Dune can automatically detect and index multiple contract addresses under the same submission. This is useful for examples such as AMM pools where there often exists one contract instance per pair.&#x20;
+在某些情况下，Dune可以自动检测和索引同一提交下的多个合约地址。这对于像AMM池这样的例子很有用，一个合约地址对应一个代币对。
 
-We have two strategies for detecting other contracts for decoding:
+我们有两种策略来检测其他合同进行解码：
 
-1. **Bytecode match.** We use the bytecode of the contract address in the submission to find other matches in the whole chain history.
-2. **Factory instances.** We find all other contracts created by the same address as the one responsible for creating the submitted contract.
+1. **字节码匹配。** 我们使用提交的合约地址的字节码在整个链的历史中寻找与之匹配的。
+   
+2. **工厂实例。** 我们找到与负责创建提交的合约的地址相同的所有其他合约。
 
-In both cases, we assume that all the contracts found through either method correspond to the same blockchain, project name, contract name and ABI.
+在这两种情况下，我们认定通过这两种方法找到的所有合约都对应于同一个区块链、项目名称、合约名称和ABI。
 
-If you want us to index more than one contract, toggle on Advanced options and select "Yes" to the first question. Then, to the question of "Is it created by a factory contract?" select "No" to index all other contracts with the same bytecode or "Yes" to index all other contracts originating from the same creator.
+如果你想让我们索引一个以上的合同，请切换到高级选项，对第一个问题选择 "是"。然后，对于 "它是由工厂合同创建的吗？"的问题，选择 "否 "来索引所有其他具有相同字节码的合同，或者选择 "是 "来索引所有其他源于同一创建者的合约。
 
 {% hint style="warning" %}
-Only use these options if you know what you're doing and are extremely familiar with the project's architecture and deployment hierarchy.&#x20;
+只有在你清楚你在做什么，并且非常熟悉项目的架构和部署层次的情况下，才能使用这些选项。&#x20;
 
-Incorrectly applying these settings may lead to a rejected submission.
+不正确地应用这些设置可能导致提交被拒绝。
 {% endhint %}
 
-## Tracking your submissions
+## 追踪你的提交
 
-You can view your submissions and their processing status at any time by navigating to [My Creations > Contracts](https://dune.xyz/browse/contracts/authored):
+你可以在任何时候通过浏览[我的创作 > 合约]来查看你的提交和他们的处理状态。(https://dune.xyz/browse/contracts/authored):
 
 ![](<../.gitbook/assets/Screen Shot 2022-01-03 at 14.43.07.png>)
 
-## Frequently Asked Questions
+## 常见的问题
 
-### Submitting contract information manually
+### 手动提交合约信息
 
-Although we try to fetch contract information such as the ABI, sometimes this information might not be available through our sources.&#x20;
+尽管我们试图获取合同信息，如ABI，但有时这些信息可能无法通过我们的来源获得。&#x20;
 
-In those instances, you will need to manually input the contract's name and its ABI. This information should be available in block explorers such as [Etherscan](http://etherscan.io/) or [Blockscout](https://blockscout.com/) if the contract is verified in any of those sites.
-
-{% hint style="info" %}
-If the contract being manually submitted is a Proxy contract, we recommend you to move on to the next section.
-{% endhint %}
-
-### Submitting a Proxy contract
-
-In order to properly decode transactions towards contracts that fit the Proxy pattern, Dune needs to map the Proxy contract's address with the implementation contract's ABI.&#x20;
-
-We avoid monitoring the implementation contract's address because its logic is accessed via usage of Delegatecall in transactions. This would cause us to miss out on any event logs in the implementation contract's logic, since these are actually fired by the caller (the Proxy in this case) when calling a function through Delegatecall.
-
-**When submitting proxy contracts to Dune, you should input the address of the Proxy contract.** We then will attempt to fetch the proxy's contract name and the implementation address it's pointing towards. After, we will attempt to source the implementation contract's ABI.
+这种情况下，你需要手动输入合约的名称和它的ABI。如果合约在[Etherscan](http://etherscan.io/)或[Blockscout](https://blockscout.com/)等区块浏览器中得到验证，那么这些信息应该可以得到。
 
 {% hint style="info" %}
-For correctly decoding a Proxy contract, Dune needs the **Proxy address** and the **Implementation ABI**.
+如果手动提交的合约是一个代理合约，我们建议你进入下一节。
 {% endhint %}
 
-### Re-submitting a contract
+### 提交代理合约
 
-Dune assumes each address in the blockchain can map to at most 1 contract. For this reason, submitting a contract with an address that already exists in `ethereum.contracts` will override it for Decoding purposes. This has a couple potential dangerous side effects:
+为了对符合Proxy模式的合同进行正确的交易解码，Dune需要将Proxy合同的地址与实现合同的ABI进行映射。&#x20;
 
-* If the project or contract name has changed, we will generate new tables for all of the contract's methods and events. In turn, previous tables will stop updating, data will be fragmented, and queries will stop working.
-* If the ABI has changed in a way that modifies an existing table's parameters, queries that depend on such table might break or become inaccurate.
+我们避免监控合约地址的实现，因为它的逻辑是通过使用事务中的Delegatecall来访问的。这会导致我们错过实现合约逻辑中的任何事件日志，因为这些事件实际上是由调用者（本例中的代理）在通过Delegatecall调用一个函数时触发。
 
-If you attempt to submit an already existent contract, make sure to include extra context as part of the submission so we can assess whether it's worth overriding the contract's data.&#x20;
+**在向Dune提交代理合约时，你应该输入代理合约的地址。** 然后我们将尝试获取代理的合约名称和它所指向的实现地址。之后，我们将尝试获取实现合约的ABI来源。
 
-Sometimes, the risk of accepting a re-submission is higher than the perceived value by us, and my result in a rejection. If you disagree, feel free to reach out to us at #decoding in the Dune Discord and we'll see what we can do.
+{% hint style="info" %}
+为了正确解码一个代理合约，Dune需要**代理地址** and the **实现ABI**.
+{% endhint %}
 
-### Decoding of Diamond Proxy contracts
+### 重新提交一个合约
 
-Similar to vanilla Proxy contracts, [EIP-2535](https://eips.ethereum.org/EIPS/eip-2535) contracts can be supported by passing in the address of the Diamond Proxy as well as **a single ABI representing the totality of all the facets interfaces**.
+Dune认为区块链中的每个地址最多可以映射到1个合约。出于这个原因，提交一个地址已经存在于“ethereum.contracts”中的合约，将为解码目的覆盖它会有几个潜在的危险：
 
-### My submission got rejected, why?
+* 如果项目或合约名称已经改变，我们将为合约的所有方法和事件生成新的表格。反过来，以前的表将停止更新，数据将被分割，查询将停止工作。
+* 如果ABI发生了变化导致现有表的参数变化，依赖该表的查询可能会中断或变得不准确。
 
-In the interest of data quality, we reject duplicative, incorrect or low quality submissions. To avoid that, make sure to submit accurate contract information.
+如果你想提交一个已经存在的合约，请确保提交的内容包含额外的前后文，这样我们可以评估是否值得覆盖合约的数据。&#x20;
 
-### Other questions
+有时接受重新提交的风险高于我们认为的价值，就会被拒绝。如果你不同意，请随时与我们联系，在Dune Discord的#decoding，我们会看看我们能做什么。
 
-Head over to #decoding on our [Discord](https://discord.gg/ErrzwBz) and we'll be happy to help!
+### 钻石代理合同的解码
+
+与普通的代理合约类似[EIP-2535](https://eips.ethereum.org/EIPS/eip-2535)合约可以通过传入钻石代理的地址以及**一个代表所有接口的ABI来支持**.
+
+### 我的提交为什么被拒绝了？
+
+为了保证数据质量，我们拒绝重复的、不正确的或低质量的提交。为了避免这种情况，请确保提交准确的合约信息。
+
+### 其他问题
+
+请到我们[Discord](https://discord.gg/ErrzwBz)的#decodingand来，我们很乐意提供帮助！
