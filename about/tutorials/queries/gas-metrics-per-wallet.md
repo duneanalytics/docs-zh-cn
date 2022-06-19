@@ -1,6 +1,6 @@
-# gas metrics per wallet
+# 每个钱包的gas花费
 
-### Running Total of Gas Paid in USD
+### 总的gas费用(USD)
 
 ```sql
 with alltransactions
@@ -33,7 +33,7 @@ ON date_trunc('minute', block_time) = minute
 ORDER BY block_time DESC
 ```
 
-### Running Total of Gas Paid in ETH
+### 总的gas费用(ETH)
 
 ```sql
 with alltransactions
@@ -58,7 +58,7 @@ FROM alltransactions
 ORDER BY block_time DESC
 ```
 
-### Average Gas Price Paid
+### 平均gas费用
 
 ```sql
 with alltransactions
@@ -81,7 +81,7 @@ SELECT
 FROM alltransactions
 ```
 
-### Average Gas Fee in USD
+### 平均gas费用(USD)
 
 ```sql
 with alltransactions
@@ -113,7 +113,7 @@ LEFT JOIN
 ON date_trunc('minute', block_time) = minute
 ```
 
-### Highest Gas Fee Paid in USD
+### 最高gas费用(USD)
 
 ```sql
 with alltransactions
@@ -145,7 +145,7 @@ LEFT JOIN
 ON date_trunc('minute', block_time) = minute
 ```
 
-### Gas Fees Paid by Month in USD
+### 每月gas费用(USD)
 
 ```sql
 with alltransactions
