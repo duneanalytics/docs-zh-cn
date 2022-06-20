@@ -1,185 +1,184 @@
 ---
-description: Graphs are good for condensing data points into a visualization.
+说明：图形有利于将数据浓缩到一个可视化中。
 ---
 
-# Graphs
+# 图形
 
-**Graphs are great for condensing data points into a visualization.**
+**图形是将数据点浓缩到一个可视化的好办法。**
 
 ![a graph with mixed line and scatter graphs](<../../.gitbook/assets/image (47).png>)
 
 ![a stacked bar chart](<../../.gitbook/assets/image (58).png>)
 
-### Dune offers you to create the following graph types:
+### Dune提供的图形样式：
 
-* bar charts
-* area charts
-* scatter charts
-* line charts
+* 柱状图
+* 面积图
+* 散点图
+* 线状图
 
-You can mix all of these graph types together in one visualization**.**\
+你可以在一个可视化中混合所有这些图形类型**.**\
 ****
 
-### Configuring your visualizations
+### 设置你的可视化
 
-All graph visualizations share a common editing schema.
+所有的图形可视化都有一个共同的编辑模式。
 
-In essence, you can define your visualization in detail here. The three different sections of this are explained below.
+实质上，你可以在这里详细地定义你的可视化。下面将解释其中的三个不同部分。
 
 ![](<../../.gitbook/assets/image (34).png>)
 
-### Chart options
+### 图表选项
 
-This section allows you to define how to display your data.
+这部分允许你定义如何显示你的数据。
 
 ![see explanations below](<../../.gitbook/assets/image (57).png>)
 
-**Title**
+**标题**
 
-* The title will appear in all instances of this graph prominently at the top.
-* The graph will always keep the name of the query, even if you edit this.
-
-<!---->
-
-* [ ] **Show chart legend**
+* 标题将出现在该图的所有实例的顶部，非常醒目。
+* 图形将始终保持查询的名称，即使你编辑它。
 
 <!---->
 
-* Ticking this box will enable or disable the legend for the chart.
+* [ ] **显示图表图例**
 
 <!---->
 
-* [ ] **Enable stacking**
+* 勾选此框将启用或禁用图表的图例。
 
 <!---->
 
-* If applicable, ticking this box will stack the chart values on top of each other based on the x-axis values.
-* If this is not turned on, the values will be plotted individually on the y-axis.
-* The calculation underpinning this will always group the value corresponding to one value on the x-axis. Make sure your data is clean in able for this to work (avoid gaps in your data).
+* [ ] **启用堆叠功能**
 
 <!---->
 
-* [ ] **Normalize to percentage data**
+* 勾选此框，将在X轴数值的基础上，将图表数值堆叠在一起。
+* 如果没有打开，这些值将被单独绘制在Y轴上。
+* 支持这个功能的计算将总是把对应于X轴上的数值分组。确保你的数据是干净的，这样才能发挥作用（避免你的数据出现空隙）。
 
 <!---->
 
-* This will normalize the chart to display percentage values of the chosen data table.
-* The calculation underpinning this will always group the value corresponding to one value on the x-axis. Make sure your data is clean in able for this to work (avoid gaps in your data).
+* [ ] **归一化为百分比数据**
 
 <!---->
 
-* [ ] **Show data labels**
+* 图表归一化并显示所选数据的百分比值。
+* 支持这个功能的计算将总是把对应于X轴上的数值分组。确保你的数据是干净的，这样才能发挥作用（避免你的数据出现空隙）。
+<!---->
+
+* [ ] **显示数据标签**
 
 <!---->
 
-* Ticking this box leads to the display of the individual datapoints inside of the graph.
-* This only makes sense in cases where you have few datapoints that are spread out far enough from each other to not overlap.
+* 勾选这个框，就可以在图中显示各个数据点。
+* 这只有在你的数据点很少，而且相互之间分布得很远，不会重叠的情况下才有意义。
 
-### Result data
+### 结果数据
 
-Here you can pick the data points that are to be displayed.
+在这里你可以挑选要显示的数据点。
 
 ![see explanations below](<../../.gitbook/assets/image (46).png>)
 
-You can choose one **x-axis** and multiple **y-axis.**
+你可以选择一个**x-axis**和多个**y-axis。**
 
-Alternatively, you can also choose one data series on the y-axis and choose to group it by a different column of your table (as shown in the example above).
+另外，你也可以在Y轴上选择一个数据系列，并选择按表格的不同列进行分组（如上例所示）。
 
-### **X-axis options**
+### **X轴选项**
 
-Using these options you can influence how your x-axis data gets displayed.
+使用这些选项，你可以改变X轴数据的显示方式。
 
 ![see explanations below](<../../.gitbook/assets/image (37).png>)
 
-**Axis title**&#x20;
+**坐标轴名称**&#x20;
 
-* This field allows you to specify a title for your x-axis.
-
-<!---->
-
-* [ ] **Sort Values**&#x20;
+* 这里可以修改X轴的名称。
 
 <!---->
 
-* by ticking this box you can specify if you want the values in your chart to be ordered.
-* If your x-axis is a timeseries, this will automatically happen.
+* [ ] **排序值**&#x20;
 
 <!---->
 
-* [ ] **Reverse value**
+* 通过勾选这个框，你可以指定你是否希望图表中的数值被排序。
+* 如果你的X轴是一个时间序列，这将自动发生。
 
 <!---->
 
-* Ticking this box will reverse the order of the values on the x-axis.
+* [ ] **数值反序**
 
 <!---->
 
-* [ ] **Logarithmic**
+* 勾选此框将反转X轴上数值的顺序。
 
 <!---->
 
-* Ticking this box will make your x-axis values display __ logarithmically.
+* [ ] **对数**
 
-### **Y-axis options**
+<!---->
 
-With these options you can influence how your x-axis data gets displayed.
+* 勾选此框将使你的X轴数值按对数显示。
+
+### **Y轴选项**
+
+使用这些选项，你可以改变Y轴数据的显示方式。
 
 ![see explanations below](<../../.gitbook/assets/image (40).png>)
 
-**Axis title**
+**坐标轴名称**
 
-* This field allows you to specify a title for your y-axis.
-
-<!---->
-
-* [ ] **Logarithmic**&#x20;
+* 这里可以修改Y轴的名称。
 
 <!---->
 
-* Ticking this box will make your x-axis values display __ logarithmically.
+* [ ] **对数**&#x20;
 
 <!---->
 
-* [ ] **Enable right y-axis**
+* 勾选此框将使你的Y轴数值按对数显示
 
 <!---->
 
-* Ticking this box will enable an additional y-axis that you can plot values on.
-* You can choose in the [chart series section](graphs.md#ordering-your-series) what you want to be displayed on the left and right axis.
+* [ ] **启用右Y轴**
 
-### **Tick formats**
+<!---->
+
+* 勾选此框将启用一个额外的Y轴，你可以在上面绘制数值。
+* 你可以再[图表部分](graphs.md#ordering-your-series)选择你想在左右轴上显示的内容。
+
+### **勾选格式**
 
 ****![](<../../.gitbook/assets/image (59).png>)****
 
-Tick formats will change how values in your chart and the axis labels will get displayed.
+勾选格式会改变你的图表中的数值和轴标签的显示方式。
 
-It follows this logic:
+它遵循这样的逻辑：
 
-| Value        | Tick format | Output          | Description                                                                                                                                           |
+| 值       | 勾选格式 | 输出          | 说明                                                                                                                                           |
 | ------------ | ----------- | --------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 1256784.3745 | left blank  | 1256784,3745000 | Display the full number and 7 decimals                                                                                                                |
-| 1256784.3745 | 0           | 1256784         | Only Display whole numbers                                                                                                                            |
-| 1256784.3745 | 0,0         | 1,256,784       | Only displays whole numbers with comma separator                                                                                                      |
-| 1256784.3745 | 0,0.00      | 1,256,784.38    | Displays the value with decimals points according to the count of zeroes after the dot                                                                |
-| 1256784.3745 | 0\[.]0a     | 1.2m            | <p>Displays the value in an abbreviated format.</p><p>Will display decimals of the abbreviated number according to count of zeroes after the dot.</p> |
-| 1256784.3745 | $0\[.]0a    | $1.2m           | Adheres to the same methods as before, but adds a $ prefix.                                                                                           |
+| 1256784.3745 | 空白  | 1256784,3745000 | 显示全部7位数字                                                                                                                |
+| 1256784.3745 | 0           | 1256784         | 只显示整数                                                                                                                           |
+| 1256784.3745 | 0,0         | 1,256,784       | 只显示带有逗号分隔符的整数                                                                                                      |
+| 1256784.3745 | 0,0.00      | 1,256,784.38    | 根据点后的零数显示带小数点的数值                                                                 |
+| 1256784.3745 | 0\[.]0a     | 1.2m            | <p>以简略的格式显示该值。</p><p>将根据点后的零数显示缩略数的小数。</p> |
+| 1256784.3745 | $0\[.]0a    | $1.2m           | 遵循与之前相同的方法，但增加了一个 $ 前缀。                                                                                           |
 
-### Ordering your series
+### 整理系列
 
 ![](<../../.gitbook/assets/image (50).png>)
 
-In this section of the visualization editor you can finalize your graph.
+在可视化编辑器的这一部分，你可以最终确定你的图表。
 
-* You can rename the "series" by simply clicking into the field.
-* You can change the chart type by clicking into the dropdown.
-* You can change the colors by clicking into the color box.
-* Finally you can also change the order of the series.
+* 你可以通过简单地点击字段来重新命名 "系列"。
+* 你可以通过点击下拉菜单来改变图表类型。
+* 你可以通过点击颜色框来改变颜色。
+* 最后你还可以改变系列的顺序。
 
-### Picking Colors
+### 选择颜色
 
-You can pick colors with your browser native color selector.
+你可以用你的浏览器本地颜色选择器来挑选颜色。
 
-This might look slightly different for you depending on which browser you use.
+这对每个人来说可能略有不同，这取决于你使用的浏览器。
 
 &#x20;
 
