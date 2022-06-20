@@ -1,27 +1,24 @@
 ---
 说明: >-
-  Parameters are an easy and powerful way to add variables to your
-  query/dashboard. This allows you and others to customize queries and
-  dashboards without having to touch the code.
+ 参数是一种简单而强大的方式，可以将变量添加到你的查询/仪表板上。你和其他人可以在不接触代码的情况下定制查询和仪表板。
 ---
 
-# Parameters
+# 参数
+## 什么是参数？
 
-## What are Parameters?
+**参数是dune的一个专门功能，允许你在查询代码的某些部分实现变量。这个变量可以从仪表板上改变，因此可以让你做一个互动的仪表板。**
 
-**Parameters are a specialized feature of dune that allow you to implement variables in certain parts of your query code. This variable can be changed from dashboards and therefore allows you to make an interactive dashboard.**
+参数允许你通过几个简单的点击对你的代码的某些定义参数进行修改。例如，代替硬编码“合约_地址”，“符号”或“日期范围”，你可以只使用参数功能来改变你这部分代码。这允许你建立一个交互式仪表板或可定制的查询，浏览者可以用它来查询他所需要的数据。
 
-Parameters allow you to make changes to certain defined parameters of your code with a few simple clicks. For instance instead of hard coding `contract_address` , `symbol` or `date ranges` you can just use the parameter function to change these aspects of your code using a parameter. This allows you to build an interactive dashboard or customizable query that the viewer can use to query for exactly the data he needs.
+参数在查询代码中被定义为`{{参数名}}，并将出现在查询的下方和任何使用了参数的查询可视化的仪表板中。
 
-Parameters are defined in the query code as `{{parametername}}` and will appear below the query and in any dashboards in which a query visualization with parameters is used in.
-
-You can pass on input to the parameter below the query or in the parameter field on a dashboard. \
+你可以在查询下方或仪表板上的参数字段中传递对参数的输入。\
 \
-Simply run the query to apply the parameter for a query within the query editor.\
+只需运行查询，就可以在查询编辑器中为查询应用该参数。\
 \
-On a dashboard you can either click `apply all` at the top or change the parameters individually and hit `Enter`. The `Enter` submission also works for dropdowns and the date picker.
+在仪表板上，你可以点击顶部的 "全部应用 "或单独改变参数并点击 "回车"。回车 "的提交方式也适用于下拉菜单和日期选择器。
 
-Parameters in a Dashboard can be shared between different queries, just make sure to use the same name, type and default value between all of them.
+仪表板中的参数可以在不同的查询之间共享，只要确保在所有的查询之间使用相同的名称、类型和默认值。
 
 ![](<../.gitbook/assets/image (30).png>)
 
@@ -29,7 +26,7 @@ Parameters in a Dashboard can be shared between different queries, just make sur
 
 ![](<../.gitbook/assets/image (29).png>)
 
-## How to use Parameters?
+## 如何使用参数？
 
 You can simply add a parameter to your queries by writing `{{parametername}}` or using the button below the query.&#x20;
 
