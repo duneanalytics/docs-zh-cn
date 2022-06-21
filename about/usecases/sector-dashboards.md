@@ -4,7 +4,7 @@
 
 让我们通过一些例子来探讨这个问题:
 
-## Dex Metrics
+## Dex指标
 
 [**https://dune.xyz/hagaetc/dex-metrics**](https://dune.xyz/hagaetc/dex-metrics)
 
@@ -20,7 +20,7 @@
 
 ![](<../../.gitbook/assets/image (9).png>)
 
-## Indices
+## 指数
 
 [**https://dune.xyz/0xBoxer/indices-products**](https://dune.xyz/0xBoxer/indices-products)
 
