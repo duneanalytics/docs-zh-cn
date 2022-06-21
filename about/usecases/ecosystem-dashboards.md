@@ -1,22 +1,22 @@
-# Ecosystem Dashboards
+# 生态仪表盘
 
-**Since Dune has all the data in one place you can also check more general metrics.**
+**由于Dune将所有数据集中在一个地方，你也可以检查更多的一般指标。**
 
-## Gas Prices
+## 矿工费(Gas)
 
 [https://dune.xyz/kroeger0x/gas-prices](https://dune.xyz/kroeger0x/gas-prices)
 
-You can easily assemble the data on average gas spent per tx, gas limit, gas spent in total in a block etc. using Dune.
+你可以用Dune很容易地收集到每个tx的平均耗气量(gas)、耗气量上限、一个区块的总耗气量等数据。
 
 ![](<../../.gitbook/assets/image (13) (2).png>)
 
 ![](<../../.gitbook/assets/image (21).png>)
 
-Data on gas spent and similar metrics can also be relevant to certain protocols, so do keep this in mind.
+花费的气费(gas)和类似指标的数据也可能与具体协议有关，所以要记住这一点。
 
-## **DeFi Adoption**
+## **DeFi用户**
 
-[Richard Chen](https://twitter.com/richardchen39) has compiled the user numbers of all important DeFi Protocols and compiled them in one Dashboard.
+[Richard Chen](https://twitter.com/richardchen39) 整合了所有重要的DeFi协议的用户数量，并将它们归入一个仪表板。
 
 ![](<../../.gitbook/assets/image (22).png>)
 
