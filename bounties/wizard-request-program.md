@@ -1,6 +1,6 @@
-# Wizard Request Program
+# Wizard需求计划
 
-#### For projects looking for Wizards&#x20;
+####对于想寻找Wizards的项目方&#x20;
 
 If you're a project looking to have more/better dashboards on Dune, we've created this program for you. This is how it works:
 
