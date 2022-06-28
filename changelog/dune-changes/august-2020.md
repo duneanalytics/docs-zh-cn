@@ -30,7 +30,8 @@
 
 以前`prices.usd` 是根据代币`symbol`进行分区的 , 它的主键是 `(symbol, minute)`。在此版本中，我们对此方案进行了更改，以允许多个`contract_address`映射到同一个`symbol`。在某些场景下它会发挥作用例如在Token合约发生迁移的时候。`prices.usd`现在在`contract_address`上进行了分区，它的主键是`(contract_address, minute)`。
 
-Note that this might yield some weird results for queries that rely on doing `SELECT minute, price FROM prices.usd WHERE symbol='x'` in certain cases where there are two contracts mapped to the symbol `x` in a time window. You may then receive several rows per minute. It is better to then use the primary key `contract_address` for filtering and joining.
+请注意，执行包含 `SELECT minute, price FROM prices.usd WHERE symbol='x'`的查询时可能会产生一些奇怪的结果。因为在某些情况下时间窗口中有两个contract映射到symbol `x`,然后您可能每分钟下会关联多多条数据。 这种情况下最好使用主键`contract_address`
+
 
 ```
       Column      │           Type          
