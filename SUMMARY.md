@@ -67,7 +67,7 @@
 
 ## Bounties
 
-* [Wizard Request Program](bounties/wizard-request-program.md)
+* [Wizard需求计划](bounties/wizard-request-program.md)
 
 ## Dune Charts across the web <a href="#sharing" id="sharing"></a>
 
