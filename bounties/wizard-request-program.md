@@ -17,7 +17,7 @@
 
 
 
-#### For Wizards looking for :moneybag::moneybag::moneybag:
+#### 对于想寻找:moneybag::moneybag::moneybag:的Wizards
 
 If you are a wizard looking for bounties, make sure to join [our Discord](https://discord.gg/ErrzwBz), go to our “freelancer-listing” channel and click on the flying dollar bill emoji there. Also follow the [bounty bot](https://twitter.com/Dune\_Bounties) on Twitter.
 
