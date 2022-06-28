@@ -61,11 +61,12 @@ description: Dune Analytics version 2.0
 
 **无需登录即可查看所有内容** - 只需复制并分享您所在页面的链接即可。将内容设为私有的付费用户除外，详情请参阅我们的[定价](https://hackmd.io/YOP3YIgaRAejTPE190sOjw?view) 页面。
 
-**Errors show on the relevant line** - when running your queries you will see error messages directly on the relevant line in your code.
+**错误显示在相关行** -运行查询时，您将直接在代码的相关行上看到错误消息。
 
-**Click query title to go to query from a dashboard**
+**单击查询标题以从仪表板进行查询**
 
-We’d love to get your feedback on your experience with Dune v2 in the #feedback channel in our [Discord](https://discord.com/invite/ErrzwBz). You can also contact [support@dune.xyz](mailto:support@dune.xyz) if you face any issues.
+我们很乐意在[Discord](https://discord.com/invite/ErrzwBz)的#feedback 频道中获得您对 Dune v2 体验的反馈。如果您遇到任何问题，也可以联系 [support@dune.xyz](mailto:support@dune.xyz)。
+
 
 Happy querying!
 
