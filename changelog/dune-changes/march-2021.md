@@ -53,13 +53,14 @@ This means that your dashboards will always be kept up to date when they are bei
 
 我们还对Dune中的排队方式进行了调整。 当您在查询里手动单击**Run**按钮时，一个查询会进入队列。Dune 上的每个用户都可以同时排队3个查询（专业用户有更多，请参阅我们的[定价](https://hackmd.io/YOP3YIgaRAejTPE190sOjw?view) 页面了解更多信息）
 
-## Other updates <a href="#other-updates" id="other-updates"></a>
+## 其他更新 <a href="#other-updates" id="other-updates"></a>
 
-**A faster and better looking Dune** - the whole Dune app including all the charts have gotten a big facelift. The app is now also many times faster.
+**一个更快、更好看的Dune** -包括所有图表在内的整个Dune应用程序都进行了重大改造。这个应用比之前快了很多倍。
 
-**Query parameters** - what is probably Dune’s most underrated feature has gotten a major upgrade. It’s now super easy to filter any query or dashboard for a token, address or anything really. Meaning you can turn your queries and dashboards into interactive apps for onchain data.
+**查询参数** -这个可能是 Dune 最被低估的功能已经得到了重大升级。现在通过Token、地址或任何东西筛选任何查询或仪表板都非常容易。这意味着您可以将查询和仪表板变成用于链上数据的交互式应用程序。
 
-**See all content without having to log in** - simply copy and share the link from the page you are on. The exception is for paid users that make their content private, more details on our [pricing page](https://hackmd.io/YOP3YIgaRAejTPE190sOjw?view).
+
+**无需登录即可查看所有内容** - 只需复制并分享您所在页面的链接即可。将内容设为私有的付费用户除外，详情请参阅我们的[定价](https://hackmd.io/YOP3YIgaRAejTPE190sOjw?view) 页面。
 
 **Errors show on the relevant line** - when running your queries you will see error messages directly on the relevant line in your code.
 
