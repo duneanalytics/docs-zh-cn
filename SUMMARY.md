@@ -63,7 +63,7 @@
 
 ## Onboarding
 
-* [Onboarding to Dune](onboarding/onboarding-to-dune.md)
+* [入门Dune](onboarding/onboarding-to-dune.md)
 
 ## Bounties
 
