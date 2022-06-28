@@ -20,16 +20,13 @@ description: Dune Analytics version 2.0
 **保存**
 
 默认情况下**新查询不会保存**因此您可以快速尝试以及测试各种想法。如果您想保留您的工作成果，请记住点击 **“保存”按钮**并为您的查询命名。
-
 这意味着，如果您在没有保存的情况下离开页面，您的工作成果就会丢失。如果您在浏览器中允许来自[dune.xyz](http://dune.xyz/) 的通知，当您离开未保存的内容时，该应用程序会通知您。
-
-
 这同样适用于forks。在您单击 **保存按钮**以及为您的 fork 命名之前，不会将 fork 保存到您的查询中。
 
 
-**Running**
+**执行**
+我们将旧的保存和执行按钮合并为一个按钮，**运行**。当您在已保存的查询上单击**运行**时，您对查询文本所做的任何更改都会被保存，并且查询会排队等待执行。
 
-We’ve merged the old save and execute buttons into a single button, **Run**. When you click **Run** on a saved query, any changes you’ve made to the query text is saved and the query is queued for execution.
 
 > _**Useful tip:**_ Press `CMD / CTRL + Enter` to run your query.
 
