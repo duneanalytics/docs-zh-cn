@@ -19,7 +19,7 @@
 
 #### 对于想寻找:moneybag::moneybag::moneybag:的Wizards
 
-If you are a wizard looking for bounties, make sure to join [our Discord](https://discord.gg/ErrzwBz), go to our “freelancer-listing” channel and click on the flying dollar bill emoji there. Also follow the [bounty bot](https://twitter.com/Dune\_Bounties) on Twitter.
+如果您是寻找赏金的wizard，请务必加入[我们的 Discord](https://discord.gg/ErrzwBz)，进入我们的“自由职业者列表”频道，然后单击那里的美元钞票的emoji。 您还可以在Twitter上关注。[赏金机器人](https://twitter.com/Dune\_Bounties) 。
 
 
 
