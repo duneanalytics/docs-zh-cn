@@ -41,9 +41,10 @@ We’re also “decoding” events that are emitted without parameters. These ev
 | `evt_block_time`   | `timestamptz` |
 | `evt_block_number` | `bigint`      |
 
-#### Decoding call outputs <a href="#decoding-call-outputs" id="decoding-call-outputs"></a>
+#### 解码 Call Output <a href="#decoding-call-outputs" id="decoding-call-outputs"></a>
 
-We’ve added function return values to decoded `call` tables. Whenever a function has a named return value it will be decoded into `output_{{name}}`, and when it is not named it will be decoded into `output_{{i}}` where `i` is a counter that starts at 0. Consider the following case, counting success and error codes for calls to the Compound CERC20 `mint` function:
+
+我们已将函数返回值添加到已解码的`call`table中。 每当一个有命名函数有一个返回值时，它将被解码为 `output_{{name}}`，当它没有命名时，它将被解码为`output_{{i}}`，其中 i 是一个从 0 开始的计数器。参考以下案例，计算调用 Compound CERC20 mint 函数的成功和错误代码：
 
 ```
 SELECT output_0, count(*) 
@@ -54,7 +55,8 @@ GROUP BY 1;
 
 #### traces.success <a href="#tracessuccess" id="tracessuccess"></a>
 
-**TLDR**: we’ve added a `success` field to `ethereum.traces` that you can use to figure out if an exact call was successful. Useful for e.g. calculating balances. Here’s an example:
+**TLDR**: 我们向 `ethereum.traces`添加了一个`success`字段，您可以使用它来确定确切的调用是否成功。 对例如有用 计算余额。 这是一个例子:
+
 
 ```
 SELECT sum(amount)                                                         
