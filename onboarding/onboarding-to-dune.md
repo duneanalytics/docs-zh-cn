@@ -19,9 +19,9 @@ Dune团队经常被问到关于”可能的合作”以及“合作方式”.我
 
 ****
 
-### How to find a freelancer
+### 如何找到一个自由职业者
 
-There is quite a few people in the web3 scene which either specialized in building on dune or have the skillset in their repertoire. To reach out to this pool of freelancers, you can **fill in this** [**form**](http://bounties.dune.xyz/) **** and freelancers will get back to you in little to no time. Alternatively, you could also use platforms like gitcoin or layer3.xyz to find suitable freelancers.
+Web3场景中有很多这样的人，他们要么专职在Dune上building，要么在他们本身有这个技能点。如果您想要联系这群自由职业者，您可以填写这个 **fill in this** [**表格**](http://bounties.dune.xyz/) and freelancers will get back to you in little to no time. Alternatively, you could also use platforms like gitcoin or layer3.xyz to find suitable freelancers.
 
 If hiring a freelancer for the first time, please make sure to check their past works and dashboards to verify that they are indeed capable of solving the task at hand.
 
