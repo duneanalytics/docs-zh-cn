@@ -19,7 +19,7 @@ description: Dune Analytics version 2.0
 
 **保存**
 
-默认情况下**新查询不会保存**因此您可以快速尝试以及测试各种想法。如果您想保留您的工作成果，请记住点击** “保存”按钮**并为您的查询命名。
+默认情况下**新查询不会保存**因此您可以快速尝试以及测试各种想法。如果您想保留您的工作成果，请记住点击**“保存”按钮**  并为您的查询命名。
 
 This means that if you navigate away from a page without saving, your work is lost. If you allow notifications from [dune.xyz](http://dune.xyz/) in your browser, the app will notify you when you navigate away from unsaved content.
 
