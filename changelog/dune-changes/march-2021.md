@@ -12,14 +12,15 @@ description: Dune Analytics version 2.0
 * 刷新
 * 其他各种更新
 
-新版本的Dune无论是前端上还是底层都对查询和刷新方式做了调整
+新版本的Dune无论是前端上还是底层都对查询和刷新方式做了调整。
 
 
-## Queries <a href="#queries" id="queries"></a>
+## 查询 <a href="#queries" id="queries"></a>
 
-**Saving**
+**保存**
 
-By default, **new queries are not saved** to your queries so you can play around and test various ideas quickly. If you want to keep your work, remember to hit the **Save button** and give your query a name.
+默认情况下**新查询不会保存**因此您可以快速尝试以及测试各种想法。如果您想保留您的工作成果，请记住点击
+**“保存”按钮**并为您的查询命名。
 
 This means that if you navigate away from a page without saving, your work is lost. If you allow notifications from [dune.xyz](http://dune.xyz/) in your browser, the app will notify you when you navigate away from unsaved content.
 
