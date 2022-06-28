@@ -109,7 +109,7 @@ Note that the field `tx_success` field denotes the success of the transaction as
 
 #### 其他<a href="#misc" id="misc"></a>
 
-Renamed some curvefi-contracts:
+重命名了一些curvefi-contracts:
 
 | schema  | name         | Address                                    |
 | ------- | ------------ | ------------------------------------------ |
