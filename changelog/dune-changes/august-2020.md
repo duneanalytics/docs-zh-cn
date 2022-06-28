@@ -2,13 +2,13 @@
 
 
 
-#### Price Provider Switch <a href="#price-provider-switch" id="price-provider-switch"></a>
+#### 价格数据源切换 <a href="#price-provider-switch" id="price-provider-switch"></a>
+我们已将价格数据源从 Coincap 更改为 Coinpaprika，以及现在在 prices.usd 和 prices.layer1_usd 表中拥有 230 多种资产的价格！ 有一点需要注意的是，以前我们有截至当前时间的所有分钟的价格，但我们现在有截至当前时间前 5 分钟的价格。
 
-We’ve changed price providers from Coincap to Coinpaprika, and in turn now have prices for 230+ assets in the `prices.usd` and `prices.layer1_usd` tables! A slight caveat is that while previously we had prices for all minutes up to current time, we now have prices up to 5 minutes before current time.
+**新表prices.layer1_usd**
 
-**New table prices.layer1\_usd**
+我们已将所有非以太坊代币的资产移至它们的表 prices.layer1_usd。 该表按symbol分区并具有（symbol,minute）
 
-We’ve moved all assets that are not tokens on Ethereum to their own table `prices.layer1_usd`. This table is partitioned on `symbol` and has `(symbol, minute)` as primary key as before.
 
 ```
  Column │           Type           
