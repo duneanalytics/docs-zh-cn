@@ -32,11 +32,12 @@ description: Dune Analytics version 2.0
 
 > _**有用的tip:**_ 按住 `CMD / CTRL + Enter`可以快速运行您的查询.
 
-**Running query snippets**
+**运行查询部分片段**
+如果您标记查询的一部分，按钮将变为**Run selection**，并执行您标记的查询部分。这将更新项目中中的结果和可视化，但**不保存**查询。
 
-If you mark parts of your query, the button changes to **Run selection**, and executes the part of the query that you’ve marked. This will updates the results and visualizations in the process but _**not save**_ the query.
 
-> _**Useful tip:**_ if you want to execute the whole query without saving it, select all of the query (CMD / CTRL + A) and then hit **Run selection**.
+
+> _**有用的tip:**_ 如果你想执行整个查询而**不保存**它，选择所有查询（CMD / CTRL + A）然后点击**Run selection**
 
 ## Refreshing <a href="#refreshing" id="refreshing"></a>
 
