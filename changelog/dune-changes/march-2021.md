@@ -4,15 +4,16 @@ description: Dune Analytics version 2.0
 
 # March 2021
 
-## Overview of changes <a href="#overview-of-changes" id="overview-of-changes"></a>
+## 更新概览<a href="#overview-of-changes" id="overview-of-changes"></a>
 
-* Queries
-  * Saving
-  * Running
-* Refreshing
-* Various other upgrades
+* 查询
+  * 保存
+  * 执行
+* 刷新
+* 其他各种更新
 
-While all the core functionality you expect from Dune is available in Dune v2 the new version of Dune brings changes to how queries and refreshing work, both on the surface and under the hood.
+新版本的Dune无论是前端上还是底层都对查询和刷新方式做了调整
+
 
 ## Queries <a href="#queries" id="queries"></a>
 
