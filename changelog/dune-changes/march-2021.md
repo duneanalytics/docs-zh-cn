@@ -48,7 +48,6 @@ description: Dune Analytics version 2.0
 
 查询创建者不需要设置刷新计划，并且计划功能已被弃用，因为它不再需要一直去刷新结果。
 
-This means that your dashboards will always be kept up to date when they are being viewed.
 ## 队列 <a href="#queues" id="queues"></a>
 
 我们还对Dune中的排队方式进行了调整。 当您在查询里手动单击**Run**按钮时，一个查询会进入队列。Dune 上的每个用户都可以同时排队3个查询（专业用户有更多，请参阅我们的[定价](https://hackmd.io/YOP3YIgaRAejTPE190sOjw?view) 页面了解更多信息）
