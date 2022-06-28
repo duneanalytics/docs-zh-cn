@@ -82,9 +82,13 @@ FROM (
 ;
 ```
 
-**Longer Story**: Dune ingests transaction traces from Parity OpenEthereum. OpenEthereum returns a tree-like datastructure of function call traces, where some can have a non-null `error` field. Where previously we ingested the traces more or less _as is_, today we’ve added a `success` field to `ethereum.traces`. This `success` field is `true` for a given trace if no trace above it in the trace hierarchy has a non-null `error` field.
+**更长的故事**: Dune 从 Parity OpenEthereum 提取交易traces。 OpenEthereum 返回一个的函数的call traces(树状数据结构)，其中一些可能会有非空`error`字段。以前我们或多或少地提取过traces，今天我们在 ethereum.traces 中添加了一个`success`字段。如果在traces层次结构中有非空`error`字段但是它上面没有traces，则它的success字段为true。
+ 
 
-It came to our attention that if a _parent_ trace-entry has a non-null `error` field, the _child_ call is considered failed in the EVM as well. Previously in Dune, in order to correctly assess whether or not a given function call’s state change was included in the blockchain you would’ve needed to write a slightly complex query to check if any traces in the same branch of the trace tree had an error. With the addition of the `success` field today, this has become much easier.
+
+我们注意到，如果父级tracese-entry有一个非空`error`字段，则子call用在 EVM 中也被视为失败。以前在 Dune 中为了正确评估给定函数调用的状态更改是否包含在区块链中，您需要编写一个稍微复杂的查询来检查跟踪树的同一分支中的任何traces 是否有错误.随着今天success字段的加入，这变得容易多了。
+
+
 
 Note that the field `tx_success` field denotes the success of the transaction as a whole, and that a `true` `tx_success`-field, does not necessarily mean that every function call in the transaction has a `true` `success` field. Here are the potential combinations
 
