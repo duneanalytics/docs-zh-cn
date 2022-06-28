@@ -24,7 +24,8 @@ description: Dune Analytics version 2.0
 这意味着，如果您在没有保存的情况下离开页面，您的工作成果就会丢失。如果您在浏览器中允许来自[dune.xyz](http://dune.xyz/) 的通知，当您离开未保存的内容时，该应用程序会通知您。
 
 
-The same applies to forks. A fork is not saved to your queries before you click the **Save button** and give your fork a name.
+这同样适用于forks。在您单击 **保存按钮**以及为您的 fork 命名之前，不会将 fork 保存到您的查询中。
+
 
 **Running**
 
