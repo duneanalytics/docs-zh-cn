@@ -4,7 +4,8 @@
 
 如果你是一个想要在Dune上拥有更多或者更好仪表盘的项目方，我们已经为你创建的了这个项目。以下是一个关于它是如何工作的说明：
 
-1. Project fills out [this form](https://bounties.dune.xyz) explaining what they're all about and the kind of insights they'd like to see surfaced on Dune and how much they're willing to pay for it.\
+1. 项目方填写这个[表格](https://bounties.dune.xyz)去详细解释他们的全部内容以及他们想要在Dune上看到的insights类型以及他们愿意为此支付多少钱
+
 
 2. We share this with our community and interested wizards get in touch with you.\
 
