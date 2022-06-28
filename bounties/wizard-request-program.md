@@ -31,14 +31,15 @@ _-我需要大量数据，我应该发布多少需求？?_
 
 
 \
-_- I’m an analyst. How do I enroll?_
+_- 我是一名分析师。我该如何报名？_
 
 目前，您唯一需要做的就是加入[我们的Discord](https://discord.gg/dunecom),进入我们的“自由职业者列表”频道，然后单击那里美元钞票的emoji这样您就会在新请求到达时收到通知。你绝对应该关注 Twitter 上[的赏金机器人](https://twitter.com/Dune_Bounties) 。
 \
-_- I want to create a requests but I don’t know how much should I pay/offer for it_
+_- 我想创建一个需求，但我不知道我应该为此支付/提供多少钱_
 
-Well, that really depends on how much work/complexity your request entails but to the extent that you can, we encourage you to be generous. If you ain’t sure you can always ask on our Discord!
+嗯，这实际上取决于您的需求的工作量/复杂性有多少，但在您可以的范围内，我们鼓励您慷慨。如果你不确定你可以随时在我们的 Discord 上提问！
 
-_- Does Dune take a cut?_
+_- Dune会抽成吗？?_
 
-No we don’t. In fact, Dune does not take part in closing the deal or following up over time, this is strictly between the wizard and the project.
+我们不会。 事实上，Dune 不参与完成交易的过程或后续跟进，这完全是在wizard和项目之间的事情。
+
