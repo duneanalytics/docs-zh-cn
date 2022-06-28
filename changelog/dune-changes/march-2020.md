@@ -2,13 +2,13 @@
 
 
 
-Big release on the data front this month.
+本月在数据方面有较大的更新。
 
-#### Denormalization of `block_time` and `block_number` <a href="#denormalization-of-block_time-and-block_number" id="denormalization-of-block_time-and-block_number"></a>
+#### `block_time`以及`block_number`的的非规范化 <a href="#denormalization-of-block_time-and-block_number" id="denormalization-of-block_time-and-block_number"></a>
 
-We’ve added `block_time` and `block_number` to all decoded events and calls, with names `evt_block_time`, `evt_block_number` and `call_block_time`, `call_block_number` respectively. This will eliminate the most painful joins on the platform, joining with `ethereum.transactions` in order to get a time dimension into your queries.
+我们为所有解码的事件和调用添加了 `block_time`和`block_number`，分别命名为 `evt_block_time`, `evt_block_number` 和`call_block_time`, `call_block_number` 这将消除平台上最痛苦的关联查询，关联`ethereum.transactions`以便在您的查询中获得时间维度。
 
-Where previously would need to do
+过去我们可能需要这样做
 
 ```
 SELECT date_trunc('day', tx.block_time), count(*)
@@ -17,7 +17,7 @@ INNER JOIN ethereum.transactions tx ON tp.evt_tx_hash = tx.hash
 GROUP BY 1;
 ```
 
-in order to get the number of daily `TokenPurchase`-events on Uniswap, you can now simply do
+为了获得 Uniswap 上每日 `TokenPurchase`-events 的数量，你现在可以很简单地实现
 
 ```
 SELECT date_trunc('day', evt_block_time), count(*)
@@ -25,9 +25,11 @@ FROM uniswap."Exchange_evt_TokenPurchase"
 GROUP BY 1;
 ```
 
-eliminating a painful and costly join. Joining across two decoded tables can also be done without involving any of the `ethereum`-tables by using `evt_block_number` or `call_block_number`.
+消除了令人痛苦以及消耗较大的join。通过使用`evt_block_number`或`call_block_number`，也可以在不涉及任何以太坊表的情况下完成两个解码表的连接。
 
-#### Decoding events without parameters <a href="#decoding-events-without-parameters" id="decoding-events-without-parameters"></a>
+
+
+####无参数解码事件 <a href="#decoding-events-without-parameters" id="decoding-events-without-parameters"></a>
 
 We’re also “decoding” events that are emitted without parameters. These events have their own tables, but only include Dune-added fields i.e.:
 
