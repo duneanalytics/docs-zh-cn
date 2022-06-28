@@ -70,4 +70,4 @@ description: Dune Analytics version 2.0
 
 Happy querying!
 
-**PS.** There are a few visualisation types that are currently not supported in Dune v2: pivot, cohort, funnel, heatmap and bubble. We’ve emailed the users that are affected. If you have not been emailed all your queries and visualisations should work seamlessly in v2.
+**PS.** Dune v2 目前不支持一些可视化类型：数据透视、队列、漏斗、热图和气泡。我们已向受影响的用户发送电子邮件。如果您没有收到电子邮件，您的所有查询和可视化应该在 v2 中正常运行。
