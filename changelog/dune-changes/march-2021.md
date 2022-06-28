@@ -21,7 +21,8 @@ description: Dune Analytics version 2.0
 
 默认情况下**新查询不会保存**因此您可以快速尝试以及测试各种想法。如果您想保留您的工作成果，请记住点击 **“保存”按钮**并为您的查询命名。
 
-This means that if you navigate away from a page without saving, your work is lost. If you allow notifications from [dune.xyz](http://dune.xyz/) in your browser, the app will notify you when you navigate away from unsaved content.
+这意味着，如果您在没有保存的情况下离开页面，您的工作成果就会丢失。如果您在浏览器中允许来自[dune.xyz](http://dune.xyz/) 的通知，当您离开未保存的内容时，该应用程序会通知您。
+
 
 The same applies to forks. A fork is not saved to your queries before you click the **Save button** and give your fork a name.
 
