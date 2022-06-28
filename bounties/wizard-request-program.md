@@ -2,7 +2,7 @@
 
 #### 对于想寻找Wizards的项目方
 
-If you're a project looking to have more/better dashboards on Dune, we've created this program for you. This is how it works:
+如果你是一个想要在Dune上拥有更多或者更好仪表盘的项目方，我们已经为你创建的了这个项目。以下是一个关于它是如何工作的说明：
 
 1. Project fills out [this form](https://bounties.dune.xyz) explaining what they're all about and the kind of insights they'd like to see surfaced on Dune and how much they're willing to pay for it.\
 
