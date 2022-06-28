@@ -120,7 +120,7 @@ Note that the field `tx_success` field denotes the success of the transaction as
 | curvefi | busd         | 0x79a8c46dea5ada233abaffd40f3a0a2b1e5a4f27 |
 | curvefi | compound\_v3 | 0xa2b47e3d5c44877cca798226b7b8118f9bfb7a56 |
 
-Moved onesplit contracts to their own schema.
+将onesplit的的contracts移动到它们自己的schema下.
 
 | schema   | name     | address                                                |
 | -------- | -------- | ------------------------------------------------------ |
