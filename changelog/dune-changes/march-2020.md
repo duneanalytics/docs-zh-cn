@@ -98,15 +98,16 @@ Note that the field `tx_success` field denotes the success of the transaction as
 | `true`      | `false` |
 | `false`     | `false` |
 
-As you can see a call can be _not successful_ in a _successful_ transaction, but can not be _successful_ in a _not successful_ transaction…
+正如你所看到的，一个成功的transaction中的一个call也可能是失败的，但在一个失败的的transaction中call都会是失败的.....
 
-Also note that where previously the field `call_success` on decoded tables where calculated as `traces.tx_success && !traces.error`, it is now directly copied from `traces.success`.
+另请注意，以前解码表上的字段 `call_success`计算为`traces.tx_success && !traces.error`，现在直接从`traces.success`复制
+
 
 #### Postgresql 12.2 <a href="#postgresql-122" id="postgresql-122"></a>
 
-Upgraded the databases to postgresql 12.2. Changelog [here](https://www.postgresql.org/docs/current/release-12-2.html).
+将数据库升级到 postgresql 12.2。 更改日志在[这里](https://www.postgresql.org/docs/current/release-12-2.html)。
 
-#### Misc <a href="#misc" id="misc"></a>
+#### 其他<a href="#misc" id="misc"></a>
 
 Renamed some curvefi-contracts:
 
