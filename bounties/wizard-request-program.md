@@ -23,9 +23,9 @@
 
 
 
-**FAQs about the program**
+**关于这个项目的FAQs**
 
-_- I need a lot of data, how many requests should I post?_
+_-我需要大量数据，我应该发布多少需求？?_
 
 Think of every request as a dashboard. If you’d like to see all of your information in just one dashboard, then just one request. If, on the other hand, you’d like to see three different dashboards we recommend you create three requests. Creating three requests doesn’t necessarily mean working with three different analysts, that will be up to you to decide.
 
