@@ -4,16 +4,16 @@
 
 如果你是一个想要在Dune上拥有更多或者更好仪表盘的项目方，我们已经为你创建的了这个项目。以下是一个关于它是如何工作的说明：
 
-1. 项目方填写这个[表格](https://bounties.dune.xyz)去详细解释他们的全部内容以及他们想要在Dune上看到的insights类型以及他们愿意为此支付多少钱
+1. 项目方填写这个[表格](https://bounties.dune.xyz)去详细解释他们的全部内容以及他们想要在Dune上看到的insights类型以及他们愿意为此支付多少钱。
 
 
-2. We share this with our community and interested wizards get in touch with you.\
+2. 我们将与社区这些以及感兴趣的wizards会联系你。
 
-3. Project screens wizards and chooses who to work with.\
+3. 项目方筛选以及选择跟谁合作。
 
-4. The data flows.
+4. 数据就流动了起来。
 
-As opposed to more traditional bounty programs, the Wizard Request program is meant to unlock long-lasting relationships/collaborations between the analysts and the projects at large.
+与更传统的赏金计划相反，Wizard需求计划旨在解锁分析师与项目方之间的长期关系/合作。
 
 
 
