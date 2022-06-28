@@ -19,7 +19,7 @@
 
 #### 对于想寻找:moneybag::moneybag::moneybag:的Wizards
 
-如果您是寻找赏金的wizard，请务必加入[我们的 Discord](https://discord.gg/ErrzwBz)，进入我们的“自由职业者列表”频道，然后单击那里的美元钞票的emoji。 您还可以在Twitter上关注。[赏金机器人](https://twitter.com/Dune\_Bounties) 。
+如果您是寻找赏金的wizard，请务必加入[我们的 Discord](https://discord.gg/ErrzwBz)，进入我们的“自由职业者列表”频道，然后单击那里美元钞票的emoji。 您还可以在Twitter上关注。[赏金机器人](https://twitter.com/Dune\_Bounties) 。
 
 
 
@@ -27,13 +27,13 @@
 
 _-我需要大量数据，我应该发布多少需求？?_
 
-Think of every request as a dashboard. If you’d like to see all of your information in just one dashboard, then just one request. If, on the other hand, you’d like to see three different dashboards we recommend you create three requests. Creating three requests doesn’t necessarily mean working with three different analysts, that will be up to you to decide.
+将每个需求都当作一个仪表板。如果您想在一个仪表板中查看所有信息，那么只需一个需求。另一方面，如果您希望看到三个不同的仪表板，我们建议您创建三个需求。创建三个需求并不一定意味着与三个不同的分析师合作，这取决于您的想法。
+
 
 \
 _- I’m an analyst. How do I enroll?_
 
-For the moment the only thing you need to do is join [our Discord](https://discord.gg/dunecom), go to our “freelancer-listing” channel and click on the flying dollar bill emoji there, this way you’ll get notified when new requests arrive. Oh and you should definitely follow the [bounty bot](https://twitter.com/Dune_Bounties) on Twitter.
-
+目前，您唯一需要做的就是加入[我们的Discord](https://discord.gg/dunecom),进入我们的“自由职业者列表”频道，然后单击那里美元钞票的emoji这样您就会在新请求到达时收到通知。你绝对应该关注 Twitter 上[的赏金机器人](https://twitter.com/Dune_Bounties) 。
 \
 _- I want to create a requests but I don’t know how much should I pay/offer for it_
 
