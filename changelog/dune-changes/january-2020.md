@@ -1,12 +1,14 @@
 # January 2020
 
 ## Postgres 12.1 <a href="#postgres-121" id="postgres-121"></a>
+我们已将数据库从 postgres 11 升级到 postgres 12.1。这应该会使性能得到全面的改进。
 
-We’ve upgraded the database from postgres 11 to postgres 12.1. This should result in performance improvements across the board.
 
-## ERC20 Transfer and Approval tables <a href="#erc20-transfer-and-approval-tables" id="erc20-transfer-and-approval-tables"></a>
 
-You can now query the `erc20."ERC20_evt_Transfer"` and `erc20."ERC20_evt_Approval"` tables to get decoded token transfers and approvals. These tables should include all events that could be decoded using the ABI of the ERC20 standard. This means that all transfers from all tokens can be queried through this table. The table is large (240M rows at time of writing), so please let us know your experience of the query performance.
+##ERC20 转移和授权表<a href="#erc20-transfer-and-approval-tables" id="erc20-transfer-and-approval-tables"></a>
+
+您现在可以查询`erc20."ERC20_evt_Transfer"`和`erc20."ERC20_evt_Approval"`表以获取解码的Token转移和授权表。这些表回包括可以使用 ERC20 标准的 ABI 解码的所有事件。这意味着所有代币的所有转账都可以通过这张表查询。该表很大（撰写本文时为240M行），因此请告诉我们您对查询性能的体验。
+
 
 `erc20."ERC20_evt_Transfer"` schema:
 
