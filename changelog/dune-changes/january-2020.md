@@ -114,7 +114,7 @@ ORDER BY 2 desc;
 * 现在可以分别在`gnosis_sight`、`gnosis_safe` 和`gnosis_dfusion`模式中找到 Gnosis vision、safe 和 dfusion 的数据。
 * Synthetix 代币合约现在有了正确的名称`Synthetix`并且可以在`synthetix`模式中找到
 * `prices.usd_dai`已重命名为`prices.usd_sai`，Symbol更改为 SAI - 不幸的是，我们仍然没有 DAI 价格，因为我们的价格提供者没有提供。
-* `prices.usd_rep`现在为迁移后的条目提供了正确的`REP`Token地址。 以前所有条目都有旧地址。
+* `prices.usd_rep`现在为迁移后的条目提供了正确的`REP`Token地址。以前所有条目都有旧地址。
 
 
 
