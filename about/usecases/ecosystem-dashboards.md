@@ -1,22 +1,22 @@
 # 生态仪表盘
 
-**由于Dune将所有数据集中在一个地方，你也可以检查更多的一般指标。**
+**Dune汇总了所有数据集，因此你也可以探索更多的一般性指标。**
 
 ## 矿工费(Gas)
 
 [https://dune.xyz/kroeger0x/gas-prices](https://dune.xyz/kroeger0x/gas-prices)
 
-你可以用Dune很容易地收集到每个tx的平均耗气量(gas)、耗气量上限、一个区块的总耗气量等数据。
+你可以用Dune很容易地收集到每个tx的平均矿工费(gas)、矿工费上限、一个区块的总矿工费等数据。
 
 ![](<../../.gitbook/assets/image (13) (2).png>)
 
 ![](<../../.gitbook/assets/image (21).png>)
 
-花费的气费(gas)和类似指标的数据也可能与具体协议有关，所以要记住这一点。
+花费的矿工费(gas)和类似指标的数据也可能与具体协议有关，请记住这一点。
 
 ## **DeFi用户**
 
-[Richard Chen](https://twitter.com/richardchen39) 整合了所有重要的DeFi协议的用户数量，并将它们归入一个仪表板。
+[Richard Chen](https://twitter.com/richardchen39) 整合了所有重要的DeFi协议的用户数量，并将它们纳入了一个仪表板。
 
 ![](<../../.gitbook/assets/image (22).png>)
 
