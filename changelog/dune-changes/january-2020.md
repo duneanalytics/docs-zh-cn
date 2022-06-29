@@ -54,11 +54,9 @@ WHERE symbol = 'MKR'
 LIMIT 10
 ```
 
-Note though that
+**例子**
 
-**Examples**
-
-**Top token holders**
+**Token头部持有者**
 
 ```
 WITH transfers AS (
@@ -83,7 +81,7 @@ ORDER BY 2 desc
 LIMIT 10
 ```
 
-**Token Balances**
+**Token余额**
 
 ```
 WITH transfers AS (
@@ -107,13 +105,18 @@ GROUP BY 1
 ORDER BY 2 desc;
 ```
 
-## Fallback decoding <a href="#fallback-decoding" id="fallback-decoding"></a>
+## 反向解码 <a href="#fallback-decoding" id="fallback-decoding"></a>
 
-The above tables are generated with a new feature we call “fallback decoding”. Essentially it breaks down to being able to decode logs regardless of the events contract address or contract bytecode. If you know other cases where this decoding can be useful feel free to let us know at [hello@dune.xyz](mailto:hello@dune.xyz)
+上面的表格是使用我们称为“反向解码”的新功能生成的。本质上，它能拆解为为能够被解码的日志，而无所谓事件的合约地址或合约字节码。如果您知道此解码可能有用的其他情况，请随时通过  [hello@dune.xyz](mailto:hello@dune.xyz)告诉我们
 
-## Misc <a href="#misc1" id="misc1"></a>
+## 其他 <a href="#misc1" id="misc1"></a>
 
-* Data for Gnosis sight, safe and dfusion can now be found in `gnosis_sight`, `gnosis_safe` and `gnosis_dfusion` schemas respectively.
-* Synthetix token-contracts now have the correct name `Synthetix` and are found in the `synthetix` schema
-* `prices.usd_dai` have been renamed to `prices.usd_sai`, and the symbol changed to `SAI` - we still don’t have `DAI` prices unfortunately, as our price provider has not listed it.
-* `prices.usd_rep` now has the correct token address for `REP` for entries after the migration. Previsouly all entries had the old address.
+* 现在可以分别在`gnosis_sight`、`gnosis_safe` 和`gnosis_dfusion`模式中找到 Gnosis vision、safe 和 dfusion 的数据。
+* Synthetix 代币合约现在有了正确的名称`Synthetix`并且可以在`synthetix`模式中找到
+* `prices.usd_dai`已重命名为`prices.usd_sai`，Symbol更改为 SAI - 不幸的是，我们仍然没有 DAI 价格，因为我们的价格提供者没有提供。
+* `prices.usd_rep`现在为迁移后的条目提供了正确的`REP`Token地址。 以前所有条目都有旧地址。
+
+
+
+
+
