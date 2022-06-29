@@ -27,7 +27,7 @@
 
 ## Data Tables
 
-* [Data tables](data-tables/data-tables/README.md)
+* [数据表](data-tables/data-tables/README.md)
   * [nft.trades](data-tables/data-tables/nft.trading.md)
   * [原始数据](data-tables/data-tables/raw-data/README.md)
     * [Ethereum data](data-tables/data-tables/raw-data/ethereum-data.md)
@@ -63,11 +63,11 @@
 
 ## Onboarding
 
-* [Onboarding to Dune](onboarding/onboarding-to-dune.md)
+* [入门Dune](onboarding/onboarding-to-dune.md)
 
 ## Bounties
 
-* [Wizard Request Program](bounties/wizard-request-program.md)
+* [Wizard需求计划](bounties/wizard-request-program.md)
 
 ## Dune Charts across the web <a href="#sharing" id="sharing"></a>
 
