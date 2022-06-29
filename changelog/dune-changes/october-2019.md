@@ -1,12 +1,12 @@
 # October 2019
 
-#### New data structure <a href="#new-data-structure" id="new-data-structure"></a>
+#### 新的数据结构 <a href="#new-data-structure" id="new-data-structure"></a>
 
-If you are forking old queries you need to be aware of these changes to you can replace old table and column names with new ones.
+如果您要分叉旧查询，则需要注意这些变化，您可以用新的替换旧的表和列名。
 
-#### USD price tables <a href="#usd-price-tables" id="usd-price-tables"></a>
 
-Previously the usd price table was named `coincap."tokens/usd"` this is now changed to `prices.usd` with the fields
+#### USD价格表<a href="#usd-price-tables" id="usd-price-tables"></a>
+以前美元价格表被命名为`coincap."tokens/usd"`现在改为`prices.usd`。
 
 ```
 symbol -- unchanged
