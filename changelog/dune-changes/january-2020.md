@@ -32,7 +32,8 @@
 | `evt_tx_hash`      | `bytea`   |
 | `evt_index`        | `bigint`  |
 
-Here `contract_address` refers to the contract emmitting the event, i.e. the token address, while `evt_tx_hash` and `evt_index` conveniently lets you join with `ethereum.logs` using a query like
+这里的`contract_address`是指发出事件的合约，即代币地址，`evt_tx_hash`和`evt_index`可以方便地让您使用类似的查询关联`ethereum.logs`。
+
 
 ```
 SELECT *
@@ -42,7 +43,7 @@ ON apps.evt_tx_hash = logs.tx_hash AND apps.evt_index = logs.index
 LIMIT 100;
 ```
 
-Also note that you can join these tables with `erc20.tokens` to get human readable token symbols and the number of decimals like
+另请注意，您可以将这些表与`erc20.tokens`连接起来，以获得人类可读的Token符号和小数位数，如
 
 ```
 SELECT value/10^decimals, tr.*
