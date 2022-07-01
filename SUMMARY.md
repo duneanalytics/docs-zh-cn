@@ -69,17 +69,17 @@
 
 * [Wizard需求计划](bounties/wizard-request-program.md)
 
-## Dune Charts across the web <a href="#sharing" id="sharing"></a>
+## 跨网站使用Dune图表 <a href="#sharing" id="sharing"></a>
 
 * [Attribution](sharing/attribution.md)
-* [Embeds](sharing/embeds/README.md)
+* [嵌入第三方平台](sharing/embeds/README.md)
   * [Discord](sharing/embeds/discord.md)
   * [Twitter](sharing/embeds/twitter.md)
   * [Webpages](sharing/embeds/webpages.md)
   * [Mirror.xyz](sharing/embeds/mirror.xyz.md)
   * [Known Issues](sharing/embeds/known-issues.md)
 
-## Resources
+## 资源
 
 * [Press Kit](resources/press-kit.md)
 
