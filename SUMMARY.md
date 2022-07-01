@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Introduction to Dune](README.md)
+* [Dune介绍](README.md)
 
 ## 关于Dune <a href="#about" id="about"></a>
 
@@ -85,16 +85,16 @@
 
 ## FAQ
 
-* [How does Dune get it's data ?](faq/how-does-dune-get-its-data.md)
-* [Does Dune have an API?](faq/does-dune-have-an-api.md)
-* [Does Dune have a Token?](faq/does-dune-have-a-token.md)
-* [How are results refreshing?](faq/how-are-results-refreshing.md)
+* [Dune是如何获取数据的?](faq/how-does-dune-get-its-data.md)
+* [Dune有API吗?](faq/does-dune-have-an-api.md)
+* [Dune有代币吗?](faq/does-dune-have-a-token.md)
+* [查询结果如何刷新?](faq/how-are-results-refreshing.md)
 
 ## 更新日志
 
 * [Changes to Dune](changelog/dune-changes/README.md)
   * [2021年3月](changelog/dune-changes/march-2021.md)
-  * [August 2020](changelog/dune-changes/august-2020.md)
-  * [March 2020](changelog/dune-changes/march-2020.md)
-  * [January 2020](changelog/dune-changes/january-2020.md)
-  * [October 2019](changelog/dune-changes/october-2019.md)
+  * [2020年8月](changelog/dune-changes/august-2020.md)
+  * [2020年3月](changelog/dune-changes/march-2020.md)
+  * [2020年1月](changelog/dune-changes/january-2020.md)
+  * [2019年10月](changelog/dune-changes/october-2019.md)
