@@ -71,7 +71,7 @@
 
 ## 跨网站使用Dune图表 <a href="#sharing" id="sharing"></a>
 
-* [Attribution](sharing/attribution.md)
+* [版权归属](sharing/attribution.md)
 * [嵌入第三方平台](sharing/embeds/README.md)
   * [Discord](sharing/embeds/discord.md)
   * [Twitter](sharing/embeds/twitter.md)
@@ -93,7 +93,7 @@
 ## 更新日志
 
 * [Changes to Dune](changelog/dune-changes/README.md)
-  * [March 2021](changelog/dune-changes/march-2021.md)
+  * [2021年3月](changelog/dune-changes/march-2021.md)
   * [August 2020](changelog/dune-changes/august-2020.md)
   * [March 2020](changelog/dune-changes/march-2020.md)
   * [January 2020](changelog/dune-changes/january-2020.md)
