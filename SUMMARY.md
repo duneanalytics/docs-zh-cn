@@ -25,7 +25,7 @@
     * [USD price for a token from Uniswap](about/tutorials/queries/untitled-2.md)
     * [Token (and USD value) per token over time for an address](about/tutorials/queries/untitled-1.md)
 
-## Data Tables
+## 数据表
 
 * [数据表](data-tables/data-tables/README.md)
   * [nft.trades](data-tables/data-tables/nft.trading.md)
@@ -44,28 +44,28 @@
   * [第三方数据](data-tables/data-tables/community-data/README.md)
     * [Flashbots](data-tables/data-tables/community-data/flashbots.md)
 
-## Dune Engine V2 (beta)
+## Dune V2 (beta)
 
-* [Dune V2 Intro](dune-engine-v2-beta/dunes-new-query-engine.md)
-* [Query Engine](dune-engine-v2-beta/query-engine.md)
-* [Abstractions in Dune V2](dune-engine-v2-beta/abstractions-in-dunev2.md)
+* [Dune V2介绍](dune-engine-v2-beta/dunes-new-query-engine.md)
+* [查询引擎](dune-engine-v2-beta/query-engine.md)
+* [Dune V2抽象表](dune-engine-v2-beta/abstractions-in-dunev2.md)
 
 ## Dune App <a href="#duneapp" id="duneapp"></a>
 
-* [Query Editor](duneapp/query-editor.md)
-* [Visualizations](duneapp/visualizations/README.md)
-  * [Graphs](duneapp/visualizations/graphs.md)
-  * [Counters](duneapp/visualizations/counters.md)
-  * [Pie Charts](duneapp/visualizations/pie-charts.md)
-* [Dashboards](duneapp/dashboards.md)
-* [Parameters](duneapp/parameters.md)
-* [Adding new contracts](duneapp/adding-new-contracts.md)
+* [查询编辑器](duneapp/query-editor.md)
+* [可视化](duneapp/visualizations/README.md)
+  * [图表](duneapp/visualizations/graphs.md)
+  * [计数器](duneapp/visualizations/counters.md)
+  * [饼图](duneapp/visualizations/pie-charts.md)
+* [仪表盘](duneapp/dashboards.md)
+* [参数](duneapp/parameters.md)
+* [添加新合约](duneapp/adding-new-contracts.md)
 
 ## Onboarding
 
 * [入门Dune](onboarding/onboarding-to-dune.md)
 
-## Bounties
+## 赏金计划
 
 * [Wizard需求计划](bounties/wizard-request-program.md)
 
@@ -90,7 +90,7 @@
 * [Does Dune have a Token?](faq/does-dune-have-a-token.md)
 * [How are results refreshing?](faq/how-are-results-refreshing.md)
 
-## Changelog
+## 更新日志
 
 * [Changes to Dune](changelog/dune-changes/README.md)
   * [March 2021](changelog/dune-changes/march-2021.md)
