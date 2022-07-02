@@ -38,7 +38,7 @@ DuneV2 改变了我们的整个数据库架构。我们正在从 PostgresQL 数�
 
 DuneV2 中的抽象将在 [dbt](https://docs.getdbt.com/docs/introduction)（数据构建工具）上运行。dbt 使分析工程师能够通过简单地编写选择语句来转换其数据仓库中的数据。dbt 将这些选择语句处理转换为 [数据表](https://docs.getdbt.com/terms/table) 和 [视图](https://docs.getdbt.com/terms/view)。
 
-这将使 abstractions 更加健壮、可扩展且更易于使用。
+这将使 abstractions 更加健全、可扩展且更易于使用。
 
 {% content-ref url="abstractions-in-dunev2.md" %}
 [abstractions-in-dunev2.md](abstractions-in-dunev2.md)
@@ -46,4 +46,4 @@ DuneV2 中的抽象将在 [dbt](https://docs.getdbt.com/docs/introduction)（数
 
 ### 反馈
 
-最后一点，由于查询引擎仍处于 **beta** 状态，您可能会遇到错误或对如何改进它有反馈，请随时在 [Discord](https://discord.com/invite/ErrzwBz) 和 [Canny](https://dune.canny.io/) 上与我们分享。
+最后一点，由于查询引擎仍处于测试 **(beta)** 状态，您可能会遇到错误或对如何改进它有反馈，请随时在 [Discord](https://discord.com/invite/ErrzwBz) 和 [Canny](https://dune.canny.io/) 上与我们分享。
