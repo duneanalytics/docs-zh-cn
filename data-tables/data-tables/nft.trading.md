@@ -10,7 +10,7 @@
 
 `nft.trades` 旨在让 Dune 上的每个人都能轻松获得 NFT 交易数据。该表将不同数据平台之间的数据聚合和标准化，并在同一张表中提供辅助信息和元数据。
 
-最重要的是这是一个数据集，使得在所有索引平台上查询任何与 NFT 相关的交易数据变得非常容易。
+最重要的是使用该数据集，让在所有索引平台上查询任何与 NFT 相关的交易数据变得非常容易。
 
 到目前为止，我们已经对以下平台的数据进行了索引：
 
@@ -69,15 +69,15 @@ group by 2,3
 
 **捆绑交易（Bundle Trade）**
 
-也可能存在单个交易包含多个项目的交易。这些项目中的每一个都通过 `nft_contract_address` 和 `token_id` 的组合来唯一标识。不幸的是，在这些交易中，没有明确的方法来确定每个项目对应的 `usd_amount` 。一种可能的解决方法是将商品数量除以捆绑商品的付款金额，但是当非实物/价值的商品捆绑出售时，这种逻辑很快就会崩溃。我们建议从您正在使用的数据集中删除捆绑转移，因为它会严重影响任一方向的结果。请注意，如果在同一交易中转移具有不同Token ID 或 erc 类型的代币，则 `token_id` 和 `erc_standard` 将为空（Null）。
+单次交易也可能包含多个物品。这些物品中的每一个都通过 `nft_contract_address` 和 `token_id` 的组合来唯一标识。然而在这些交易中，没有明确的方法来确定每个物品对应的 `usd_amount` 。一种可能的解决方法是将商品数量除以捆绑商品的付款金额，但是当非实物/价值的商品捆绑出售时，这种逻辑就不成立了。我们建议从您正在使用的数据集中删除捆绑转移，因为它会严重影响任一方向的结果。请注意，如果在同一交易中转移具有不同Token ID 或 erc 类型的代币，则 `token_id` 和 `erc_standard` 将为空（Null）。
 
 **聚合贸易（Aggregator Trade）**
 
-也可能存在单个交易包含多个项目的交易，尤其是在使用 NFT 聚合器平台时。我们的方法是解开聚合器交易，以便每一行对应一个被交易的唯一商品，及其关联的 ID、价格、分类等。重要的是，`trade_type` 将指示为`聚合贸易` ，平台名称和地址可以在 `nft.aggregators` [数据表](https://github.com/duneanalytics/abstractions/blob/master/ethereum/nft/aggregators.sql) 中找到。如果该表中缺少您的聚合平台，欢迎您提交 PR 以添加它。
+在使用 NFT 聚合器平台时，也会出现单次交易包含多个物品的情况。我们的方法是分解聚合器交易，以便每一行对应一个被交易的唯一商品，及其关联的 ID、价格、分类等。重要的是，`trade_type` 将指示为`聚合贸易` ，平台名称和地址可以在 `nft.aggregators` [数据表](https://github.com/duneanalytics/abstractions/blob/master/ethereum/nft/aggregators.sql) 中找到。如果该表中缺少您的聚合平台，欢迎您提交 PR 以添加它。
 
 **平台和版税费用**
 
-在最新版本的 `nft.trades` 中，当能够检索到这些信息时，可以获得有关原始金额和美元的特许权使用费金额和百分比的信息。版税归创作者所有，平台费用由 NFT 平台收取。请注意，版税费用并非总是能检索，所以默认设置为 null。
+在最新版本的 `nft.trades` 中，如果销售许可费(royalty fees)的原始金额，美元金额以及百分比的信息在数据库中存在，那么检索时是一并提供的。版税归创作者所有，平台费用由 NFT 平台收取。请注意，版税费用并非总是能检索，所以默认设置为 null。
 
 ### **示例仪表板**
 
@@ -141,13 +141,13 @@ group by 2,3
 
 ## **鸣谢**
 
-以下 Dune 用户在 NFT 方面的惊人先驱性工作：
+以下 Dune 用户在 NFT 方面的惊叹的先驱性工作：
 
 * [https://dune.xyz/rchen8](https://dune.xyz/rchen8)
 * [https://dune.xyz/keeganead](https://dune.xyz/keeganead)
 * [https://dune.xyz/eliasimos](https://dune.xyz/eliasimos)
 
-以下高级用户以各种方式提供帮助：
+以下高级用户提供了多方面的帮助：
 
 * [https://dune.xyz/0xBoxer](https://dune.xyz/0xBoxer)
 * [https://dune.xyz/danner\_eth](https://dune.xyz/danner\_eth)
