@@ -28,7 +28,7 @@ Dune 将区块链数据聚合到一个可访问的 PostgreSQL 数据库中。可
 
 Dune 的不同用例需要不同的数据表来提取数据，仔细研究这些数据表，您将认识到每种数据表类型对查询和仪表板的重要性。
 
-Dune 上的大多数表都是由 Dune 填充的，只是将区块链数据转换为 SQL 表，但在 [abstractions](abstractions.md) 和 dune\_user\_generated 表的情况下，您实际上可以创建自己的表，根据您的需要聚合或修改数据集。
+Dune 上的大多数表都是由 Dune 填充的，只是将区块链数据转换为 SQL 表，但对于 [abstractions](abstractions.md) 和 dune\_user\_generated 表，您实际上可以自己创建，并根据您的需要来聚合或修改数据集。
 
 {% content-ref url="raw-data/" %}
 [原始数据](raw-data/)
