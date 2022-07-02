@@ -24,7 +24,7 @@
 
 {% embed url="https://youtu.be/UDu23Eyvo_Y" %}
 
-## 第3集: Simple Queries and recreating Fees.wtf in Dune
+## 第3集: 简单query实例以及重建Fees.wtf查询
 
 这个视频是对Dune内部查询的一个很好的介绍。我们的社区经理Boxer在Dune中重新创建了Fees.wtf，所以视频主要集中在gas交易方面。
 
