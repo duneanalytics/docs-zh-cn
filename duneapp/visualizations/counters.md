@@ -23,7 +23,7 @@
 #### 行
 
 * 通过行设置，可以定义你想要显示的底层数据表格的哪一行，例如第1行。
-* Usually this requires you to sort or limit your query results in order for row 1 to show the wanted results.&#x20;
+* 这通常需要你进行排序或者限定结果来确保第一行是你想展示的内容
 
 ### 格式化
 
