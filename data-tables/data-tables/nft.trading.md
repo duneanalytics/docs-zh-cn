@@ -1,14 +1,14 @@
 ---
 说明: >-
-  nft.trades 在 Dune 上向所有人提供 NFT 交易数据。
-  nft.trades 将跨多个 NFT 平台的数据聚合到一张简单的表格中。
+  NFT交易表 在 Dune 上向所有人提供 NFT 交易数据。
+  NFT交易表 将跨多个 NFT 平台的数据聚合到一张简单的表格中。
 ---
 
-# nft.trades
+# NFT交易表（nft.trades）
 
 ## **一种查询 NFT 数据的简单方法**
 
-`nft.trades` 旨在让 Dune 上的每个人都能轻松获得 NFT 交易数据。该表将不同数据平台之间的数据聚合和标准化，并在同一张表中提供辅助信息和元数据。
+NFT交易表（nft.trades）旨在让 Dune 上的每个人都能轻松获得 NFT 交易数据。该表将不同数据平台之间的数据聚合和标准化，并在同一张表中提供辅助信息和元数据。
 
 最重要的是使用该数据集，让在所有索引平台上查询任何与 NFT 相关的交易数据变得非常容易。
 
@@ -36,7 +36,7 @@ where nft_contract_address = '\xb47e3cd837ddf8e4c57f05d70ab865de6e193bbb' -- 这
 * [**过去 24 小时内在给定平台上的交易**](https://dune.xyz/queries/146152)
 
 ```sql
-select date_trunc('day', block_time), usd_amount, nft_contract_address, token_id from nft.trades 
+select date_trunc('day', block_time), usd_amount, nft_contract_address, token_id from  
 
 where platform = 'OpenSea' -- 仅显示给定平台上的交易
 

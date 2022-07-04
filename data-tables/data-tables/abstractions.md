@@ -35,7 +35,7 @@ Dune 团队和社区一直在改进这些细分领域抽象，我们总是欢迎
 
 与仅构建视图相比，这里的主要优势是你可以在我们的抽象表中处理大量数据，因为我们可以每隔几个小时在后台自动运行它们。
 
-### 查找表抽象（Lookup abstractions）
+### 查找抽象表（Lookup abstractions）
 
 这类抽象表中最引人注目的是 `erc20.tokens` 抽象表，我们将代币映射到它们的小数和符号。其他还有 `erc20.stablecoins` 或 `compound.view_c_tokens` 等。
 
