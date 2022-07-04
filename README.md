@@ -1,81 +1,81 @@
 ---
-description: Welcome to Dune
+说明： 欢迎使用Dune
 ---
 
-# Introduction to Dune
+# Dune介绍
 
-## Introduction
+## 简介
 
-**Dune is a powerful tool for blockchain research. Dune gives you all the tools to query, extract, and visualize vast amounts of data from the blockchain. Dune is unlocking the power of public blockchain data by making it accessible to everyone. This documentation will help you answer questions like:**
+**Dune是一款强大的区块链研究工具。通过Dune你可以查询，导出和可视化区块链上浩如烟海的数据。Dune让公共的区块链数据对每个人都触手可及，从而使其有了无限的可能。该文档将会帮你解答类似如下的问题：**
 
-[How much volume flows through Uniswap each day?](https://dune.xyz/queries/3)
+[Uniswap每天的交易资金有多少？](https://dune.xyz/queries/3)
 
-[Which Dex has the highest volume?](https://dune.xyz/queries/1847)
+[哪家去中心交易所的交易额最高？](https://dune.xyz/queries/1847)
 
-[How are important Stablecoins behaving today?](https://dune.xyz/hagaetc/stablecoins)
+[重要的稳定币有什么链上行为？](https://dune.xyz/hagaetc/stablecoins)
 
-## Dune Basics
+## Dune基础
 
-#### Dune App
+#### Dune应用
 
-While navigating Dune, it helps to have a good understanding of [queries](./#queries), [visualizations](duneapp/visualizations/), and [dashboards](duneapp/dashboards.md). These are the basic building blocks that act as your portal to the world's blockchain information. As a blockchain analyst, you can create custom queries to fetch data, visualize the results of these queries, and then tell stories with your data using dashboards.
+理解[查询](./#queries), [可视化](duneapp/visualizations/)和 [仪表盘](duneapp/dashboards.md)的概念将对你畅游Dune很有帮助。 他们是你通往区块链信息大门的基础区块。作为一名区块链分析师，你可以查询数据信息，可视化你的结果，然后进一步用仪表盘来讲述你的内容。 
 
-#### Data available on Dune
+#### Dune的数据可视化
 
-Behind the scenes, Dune transforms difficult-to-access data into human-readable tables. Using SQL queries, you can query for exactly the information you need.
+在屏幕背后，Dune将晦涩的数据转换成容易阅读的数据表。使用SQL查询，你能准确得筛选出你需要的信息。
 
-Dune has raw blockchain data and decoded blockchain data available. Decoded data is only available if somebody signaled to us before that a contract needs to be decoded. You can signal a decoding request to us via our [website](https://dune.xyz/contracts/new).\
+Dune既提供原始区块链数据也提供已解码的数据。只有有用户向我们提出了合约解码的需求，我们才提供对应的解码数据。 你可以在这里提交解码需求[网页](https://dune.xyz/contracts/new).\
 \
-You can currently query data from **Ethereum, Polygon, Binance Smart Chain, Optimism** and **Gnosis Chain**.
+目前你可以查询以下的链上数据 **Ethereum, Polygon, Binance Smart Chain, Optimism** 和 **Gnosis Chain**.
 
-Dune picks up events and internal calls from the blockchains we index, we don't have state/storage data.
+Dune提取区块链上我们索引的时间和内部调用，我们不规定和存储数据。
 
-## Queries
+## 查询
 
-Dune aggregates blockchain data into SQL databases that can be easily queried. Queries are used to specify what data from the blockchain should be returned.
+Dune将区块链的数据聚合到易于检索的数据库中。通过查询，你可以限定输出哪些数据。 
 
-Maybe you want to know _all the Dex trades that happened today_, or the _total value of stablecoins minted this year_. Whatever the question, the answer likely starts with a Dune query.
+你也许想了解 _今天所有去中心化交易所的交易额_, 或者 _今年稳定币的铸造数量_。 不管是哪个问题，你都可以通过查询来解答。
 
-Queries return rows and columns of data (same as traditional SQL queries) that can later be visualized and presented.
+查询同时返回数据的行和列 (与传统的SQL查询类似)，你可以用来可视化展示。
 
 ![Screen Shot 2021-04-22 at 9 56 34 AM](https://user-images.githubusercontent.com/76178256/115726979-357d1380-a351-11eb-83ee-16f0d57c6ecb.png)
 
-There are a few ways that a blockchain analyst (ie. you!) can get started running queries:
+一名区块链分析师（比如你）可以有很多途径开始一条查询：
 
-1. Use Dune _abstractions_ to query commonly used data tables. This is the simplest and most common way to use Dune. Some popular abstractions include `dex.trades`, `lending.borrow`, and `stablecoin.transfer` (you can find a complete list of abstractions [here](https://github.com/duneanalytics/abstractions))
-2. Query the raw ethereum data including blocks, logs, and transactions.
-3. It is also possible to query centralized exchange data. Use `prices.usd` to quickly return the price of almost any cryptoasset
+1. 使用Dune的 _抽象表_ 来查询常用数据表。这是最简单的也是最常用的使用Dune的方式。一些常用的抽象表包括`dex.trades`，`lending.borrow`和`stablecoin.transfer` (你可以在这里找到完整的抽象表列表[这里](https://github.com/duneanalytics/abstractions))
+2. 查询区块、日志和交易在内的原始以太坊数据。
+3. 中心化交易所的数据也是可以查询的。通过使用`prices.usd`可以迅速的返回几乎任意一种加密货币的价格。
 
-## Visualizations
+## 可视化
 
-Data presented in table form (rows and columns) can be difficult to read. Visualizations take the results of a query and present the information in a clear & precise way.
+表中的数据 (行和列)有时不易阅读。结果的可视化可以更清晰准确地展示信息。
 
-You can use visualizations to begin to tell a story with your data. With Dune visualizations it is easy to transform this:
+你可以开始通过可视化来讲述你的内容。通过Dune你可以轻松地将:
 
 ![Screen Shot 2021-04-22 at 10 59 48 AM](https://user-images.githubusercontent.com/76178256/115737269-fa331280-a359-11eb-9a31-c0dfe4b038e6.png)
 
-Into this:
+转化为:
 
 ![Screen Shot 2021-04-22 at 11 01 02 AM](https://user-images.githubusercontent.com/76178256/115737692-5b5ae600-a35a-11eb-8145-bdcf9396cd03.png)
 
-The bar chart visualization makes it clear that April 19th had the highest transfer volume, and helps the audience see the trend over time.
+这个柱状图清晰地展示了最高的交易量发生在4月19日，同时帮助观众了解了时间趋势。
 
-Dune offers a variety of visualizations that you can use to visually present data including bar charts, area charts, line charts, pie charts, and more.
+Dune提供了可是展示数据的一系列的可视化选择，包括柱状图，面积图，线图，饼图等等。
 
-## Dashboards
+## 仪表盘
 
-Using carefully planned visuals, a clever blockchain analyst can tell a story about a particular group of data. For example, in the below[ dashboard](https://dune.xyz/hagaetc/dex-metrics) it is clear at the top that 'Dex' as a category is growing. Below, the audience sees which dex's are the most popular by volume, and finally can view a stacked bar chart that shows changes over time. By just looking at this single dashboard, the audience sees a clear picture of the entire DEX market.
+使用精心设计的视觉展示，聪明的区块链分析师可以讲述关于特定数据组的内容。例如，在下文中，[仪表盘](https://dune.xyz/hagaetc/dex-metrics) 顶部展示了'Dex'在增长。观众来可以通过下面的展示发现，哪些去中心化交易所的交易额是较高的，最终通过累积的柱状图来能发现随时间变化的趋势。只需要看这一个仪表盘，观众就能清楚地看到整个DEX市场的情况。
 
 ![Screen Shot 2021-04-23 at 10 51 25 AM](https://user-images.githubusercontent.com/76178256/115889404-e7841080-a421-11eb-9e30-8d43e58e28f4.png)
 
-## Dune is a collaborative effort
+## Dune是一项协作的
 
-On Dune, all queries and datasets are public by default.
+Dune默认所有查询和数据库都是公开的。
 
-This introduces an interesting dynamic in which you, the user, can fork and remix the queries of other creators with ease and build on top of their knowledge. On the other side, every time you write a new query, you contribute to the collection of queries that help people query for data on dune. That way, the Dune Community succeeds together through an ever improving range of queries that allow you to easily query for just the stats you need.
+这引入了一个有趣的动态，在这个动态中，用户可以轻松地分叉和混合其他创建者的查询，并在他们的知识基础上进行构建。另一方面，每次编写新查询时，你都会参与查询贡献，帮助人们查询Dune上的数据。Dune社区通过不断改进的查询范围获得共同成功，你可以轻松查询所需的统计信息。
 
-If you do need Privacy for your Queries, the [pro Plan](https://dune.xyz/pricing) has got you covered.
+如果你对查询的隐私性有需求, 你可以订阅[pro Plan](https://dune.xyz/pricing)。
 
-Join our [Community Discord](https://discord.gg/BJBHFR6sdy) to get world class support from our team and the community.
+加入我们 [Discord社区](https://discord.gg/BJBHFR6sdy) 来获得我们团队和社区的帮助。
 
-If you have any feedback, whether feature requests or bug reports, you can submit it [here](https://feedback.dune.xyz/).
+如果有任何反馈意见，不管是功能需求还是报告错误，你都可以在这里提交[这里](https://feedback.dune.xyz/).
