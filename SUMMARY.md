@@ -71,7 +71,7 @@
 
 ## 跨网站使用Dune图表 <a href="#sharing" id="sharing"></a>
 
-* [版权归属](sharing/attribution.md)
+* [内容归属](sharing/attribution.md)
 * [嵌入第三方平台](sharing/embeds/README.md)
   * [Discord](sharing/embeds/discord.md)
   * [Twitter](sharing/embeds/twitter.md)
