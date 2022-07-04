@@ -4,13 +4,13 @@
 
 DuneV2 改变了我们的整个数据库架构。我们正在从 PostgreSQL 数据库过渡到托管在 Databricks 上的 Apache Spark 实例。两种系统的区别可以总结如下：
 
-* 我们现在使用 Databricks SQL，而不是 PostgresQL。SQL 关键字的变化很小，但可能与您的某些查询书写习惯有关。
+* 我们现在使用 Databricks SQL，而不是 PostgresQL。SQL 关键字的变化很小，但可能与你的某些查询书写习惯有关。
 * 与 PostgresQL 的面向行的方法相反，Spark 是一个面向列的数据库。
 * 传统的索引被列块级别的 `最小/最大` 值替换。
 
 ### Databricks SQL <> PostgresQL 操作符的变化
 
-两种编码语言语法和关键字运算符之间的变化非常小，但是您应该注意下面这些差异：
+两种编码语言语法和关键字运算符之间的变化非常小，但是你应该注意下面这些差异：
 
 | 描述                                                              | DuneV1                                                                                                                                                                    | DuneV2                                                                                                                      |
 | ------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
@@ -27,9 +27,9 @@ DuneV2 改变了我们的整个数据库架构。我们正在从 PostgreSQL 数�
 | **定义 NULL 数组**                                                    | `NULL::integer[]`                                                                                                                                                         | `CAST(NULL AS ARRAY<int>))`                                                                                                 |
 | <p><strong>获取json对象的差异</strong></p>  | <p><code>("takerOutputUpdate"-></code><br><code>'deltaWei'->'value'</code>)<br><br><br><code>decode(substring(("addressSet"->'baseAsset')::TEXT, 4,40), 'hex')</code></p> | <p><code>get_json_object(get_json_object(takerOutputUpdate,'$.deltaWei'),'$.value')</code><br><br><code>'0x'</code></p>     |
 
-如果您发现任何其他需要注意的重要更改，请随时向我们的文档提交 PR 或在 [Discord](https://discord.com/dunecom) 中给我们反馈！
+如果你发现任何其他需要注意的重要更改，请随时向我们的文档提交 PR 或在 [Discord](https://discord.com/dunecom) 中给我们反馈！
 
-在搜索 SQL 问题时，您现在应该搜索 `Databricks SQL median`，而不是搜索 `PGSQL median`。Databricks 在其网站上有一个有据可查的内置函数索引。
+在搜索 SQL 问题时，你现在应该搜索 `Databricks SQL median`，而不是搜索 `PGSQL median`。Databricks 在其网站上有一个有据可查的内置函数索引。
 
 {% embed url="https://docs.databricks.com/sql/language-manual/sql-ref-functions-builtin.html" %}
 
@@ -37,7 +37,7 @@ DuneV2 改变了我们的整个数据库架构。我们正在从 PostgreSQL 数�
 
 **数据库是如何工作的？**
 
-在非常高的层次上，数据库将数据从存储读取到内存中，以返回您的查询结果。数据库通常会受到其将数据读入内存的速度的限制。这是一个经典的计算机科学问题，通常被称为 [I/O 边界](https://en.wikipedia.org/wiki/I/O\_bound)。
+在非常高的层次上，数据库将数据从存储读取到内存中，以返回你的查询结果。数据库通常会受到其将数据读入内存的速度的限制。这是一个经典的计算机科学问题，通常被称为 [I/O 边界](https://en.wikipedia.org/wiki/I/O\_bound)。
 
 #### **面向行的数据库**
 
@@ -85,7 +85,7 @@ DuneV2 改变了我们的整个数据库架构。我们正在从 PostgreSQL 数�
 
 不幸的是，字符串的 `最小/最大` 值通常不是很有用。特别是区块链系统中的 `tx_hash` 字符串和 `address` 字符串不适合这种 `最小/最大` 数据收集，因为它们是随机生成的。这意味着数据库将无法基于这些字符串跳过文件或列块，因此查询将非常低效，因为它需要数据库实际将所有页加载到内存中。
 
-也就是说，由于整个查询引擎仍然能够非常有效地读取存储这些字符串的各个列，因此大多数情况下这不会对您的查询执行速度产生很大影响。
+也就是说，由于整个查询引擎仍然能够非常有效地读取存储这些字符串的各个列，因此大多数情况下这不会对你的查询执行速度产生很大影响。
 
 这主要与 `ethereum.transactions`、`bnb.logs`、`erc20_ethereum.erc20_evt_transfer` 等基表相关，这些基表包含未经预过滤的非常大的数据集。
 
@@ -102,7 +102,7 @@ Select * from ethereum.transactions
 where hash = '0xce1f1a2dd0c10fcf9385d14bc92c686c210e4accf00a3fe7ec2b5db7a5499cff'
 ```
 
-如果使用我们之前学到的所有知识再次考虑这一点，希望您能明白此查询非常低效。我们这里唯一的过滤条件是 `hash` 字符串，因此我们基本上强制查询引擎读取所有存储 `tx_hash` 列数据的页。我们可能可以跳过那些存储在每个 parquet 文件的页脚中的最小/最大值是 `0xa0 - 0xcd` 的部分列块，但这些只是一个罕见的例外。
+如果使用我们之前学到的所有知识再次考虑这一点，希望你能明白此查询非常低效。我们这里唯一的过滤条件是 `hash` 字符串，因此我们基本上强制查询引擎读取所有存储 `tx_hash` 列数据的页。我们可能可以跳过那些存储在每个 parquet 文件的页脚中的最小/最大值是 `0xa0 - 0xcd` 的部分列块，但这些只是一个罕见的例外。
 
 鉴于我们在搜索一个 `哈希` 时基本上对以太坊主网的整个历史进行了全面扫描（在撰写本文时为 1.6b 个条目），这个查询在大约 6 分钟内运行完成是相当令人印象深刻的。
 
@@ -120,7 +120,7 @@ and hash = '0xce1f1a2dd0c10fcf9385d14bc92c686c210e4accf00a3fe7ec2b5db7a5499cff'
 
 在这种情况下，查询执行期间发生的情况是，数据库引擎能够读取 parquet 文件的页脚，能够确定许多 parquet 文件的 `最小/最大` 值不符合定义的标准，并且有效地跳过它们。一旦我们找到了一个真正满足我们条件的 parquet 文件，我们可以简单地深入到列块的 `最小/最大` 值，找到正确的列块，将剩下的几页列数据加载到内存中，然后找到也匹配“ `哈希` 条件的部分。由于我们从这个查询中的逻辑行中选择所有条目，我们实际上还需要访问一些其他页，但如果我们只对几行执行此操作，这是一个相当有效的操作。
 
-**经验：** 以数据库能够合理使用文件和列块的 `最小/最大` 值的方式定义您的条件，以便它可以高效地找到您需要的逻辑行。
+**经验：** 以数据库能够合理使用文件和列块的 `最小/最大` 值的方式定义你的条件，以便它可以高效地找到你需要的逻辑行。
 
 **在大量逻辑行上聚合数据**
 
@@ -134,10 +134,10 @@ Select avg(gas_used) from ethereum.transactions
 
 **经验：** 跨大量逻辑行查询数据现在更加高效，并且许多以前由于超时而完全不可能的查询现在已经可以正常执行。
 
-[hildobby 的](https://twitter.com/hildobby\_) [Ethereum 概述](https://dune.com/hildobby/Ethereum-Overview) 仪表板就是一个很好的例子来说明这一点。这是以前根本无法实现的数据处理级别。
+[hildobby 的](https://twitter.com/hildobby\_) [Ethereum 概述](https://dune.com/hildobby/Ethereum-Overview) 仪表盘就是一个很好的例子来说明这一点。这是以前根本无法实现的数据处理级别。
 
 ### 结束语
 
 一些在我们的 v1 数据库中被大量索引的查询在 DuneV2 中可能会感觉有点尴尬。对于 erc20 事件转移表(event transfer)、`ethereum.transactions` 和 `ethereum.logs` 以及它们在其他区块链上的对应物来说尤其如此。这是我们愿意为大规模启用区块链分析而做出的权衡。我们将继续对这些数据集和我们的数据库架构进行创新，以使每个查询在 DuneV2 上尽可能快地运行，但是像 `tx_hash` 的查询速度很慢只是这个新数据库系统的本质。也就是说，我们认为我们在启用大量新用例和加速大量现有查询方面做得非常好。
 
-如果您对新系统有任何反馈或遇到问题，我们都会倾听并等待您在 [Canny](https://feedback.dune.xyz) 和 [Discord](https://discord.com/dunecom) 上的反馈。
+如果你对新系统有任何反馈或遇到问题，我们都会倾听并等待你在 [Canny](https://feedback.dune.xyz) 和 [Discord](https://discord.com/dunecom) 上的反馈。

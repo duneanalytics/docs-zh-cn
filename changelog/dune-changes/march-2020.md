@@ -6,7 +6,7 @@
 
 #### `block_time`以及`block_number`的的非规范化 <a href="#denormalization-of-block_time-and-block_number" id="denormalization-of-block_time-and-block_number"></a>
 
-我们为所有解码的事件和调用添加了 `block_time`和`block_number`，分别命名为 `evt_block_time`, `evt_block_number` 和`call_block_time`, `call_block_number` 这将消除平台上最痛苦的关联查询，关联`ethereum.transactions`以便在您的查询中获得时间维度。
+我们为所有解码的事件和调用添加了 `block_time`和`block_number`，分别命名为 `evt_block_time`, `evt_block_number` 和`call_block_time`, `call_block_number` 这将消除平台上最痛苦的关联查询，关联`ethereum.transactions`以便在你的查询中获得时间维度。
 
 过去我们可能需要这样做
 
@@ -55,7 +55,7 @@ GROUP BY 1;
 
 #### traces.success <a href="#tracessuccess" id="tracessuccess"></a>
 
-**TLDR**: 我们向 `ethereum.traces`添加了一个`success`字段，您可以使用它来确定确切的调用是否成功。 对例如有用 计算余额。 这是一个例子:
+**TLDR**: 我们向 `ethereum.traces`添加了一个`success`字段，你可以使用它来确定确切的调用是否成功。 对例如有用 计算余额。 这是一个例子:
 
 
 ```
@@ -86,7 +86,7 @@ FROM (
  
 
 
-我们注意到，如果父级tracese-entry有一个非空`error`字段，则子call用在 EVM 中也被视为失败。以前在 Dune 中为了正确评估给定函数调用的状态更改是否包含在区块链中，您需要编写一个稍微复杂的查询来检查跟踪树的同一分支中的任何traces 是否有错误.随着今天success字段的加入，这变得容易多了。
+我们注意到，如果父级tracese-entry有一个非空`error`字段，则子call用在 EVM 中也被视为失败。以前在 Dune 中为了正确评估给定函数调用的状态更改是否包含在区块链中，你需要编写一个稍微复杂的查询来检查跟踪树的同一分支中的任何traces 是否有错误.随着今天success字段的加入，这变得容易多了。
 
 
 

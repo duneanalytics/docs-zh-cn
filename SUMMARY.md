@@ -5,8 +5,8 @@
 ## 关于Dune <a href="#about" id="about"></a>
 
 * [使用案例](about/usecases/README.md)
-  * [项目仪表板](about/usecases/project-dashboards.md)
-  * [行业仪表盘](about/usecases/sector-dashboards.md)
+  * [项目仪表盘](about/usecases/project-dashboards.md)
+  * [细分仪表盘](about/usecases/sector-dashboards.md)
   * [生态仪表盘](about/usecases/ecosystem-dashboards.md)
 * [教程](about/tutorials/README.md)
   * [网络课程](about/tutorials/our-network-course.md)
@@ -92,7 +92,7 @@
 
 ## 更新日志
 
-* [Changes to Dune](changelog/dune-changes/README.md)
+* [Dune的变化](changelog/dune-changes/README.md)
   * [2021年3月](changelog/dune-changes/march-2021.md)
   * [2020年8月](changelog/dune-changes/august-2020.md)
   * [2020年3月](changelog/dune-changes/march-2020.md)

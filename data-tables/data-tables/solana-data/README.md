@@ -8,7 +8,7 @@
 
 下面的所有表格都是在 Dune 平台的更新版本中构建的，需要对 wizards 在平台中编写查询的方式进行轻微更改。新的数据平台利用 Spark 来提高查询速度、数据规模并支持多链查询。
 
-在您开始查询 Solana 表时使用的参考文档可在此处获得：
+在你开始查询 Solana 表时使用的参考文档可在此处获得：
 
 {% embed url="https://spark.apache.org/docs/latest/sql-ref-ansi-compliance.html" %}
 

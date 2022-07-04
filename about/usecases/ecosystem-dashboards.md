@@ -16,7 +16,7 @@
 
 ## **DeFi用户**
 
-[Richard Chen](https://twitter.com/richardchen39) 整合了所有重要的DeFi协议的用户数量，并将它们纳入了一个仪表板。
+[Richard Chen](https://twitter.com/richardchen39) 整合了所有重要的DeFi协议的用户数量，并将它们纳入了一个仪表盘。
 
 ![](<../../.gitbook/assets/image (22).png>)
 

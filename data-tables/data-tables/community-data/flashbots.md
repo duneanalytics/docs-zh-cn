@@ -5,7 +5,7 @@
 
 # Flashbots
 
-**注意：** mev-inspect-py 是 Flashbots 用于生成 MEV 数据的开源引擎，用于为 mev-explore 和 Dune 的 Flashbots 集成等仪表板提供动力。在我们的社区和贡献者的帮助下，我们一直在寻求改进、修复错误、覆盖边缘情况并尽我们所能增加协议覆盖率。我们鼓励研究人员和开发人员报告并帮助纠正任何发现的错误，或实现任何新功能！ 请随时查阅文档并加入 Flashbots discord，以获取有关我们的数据和 mev-inspect 的更多信息和更新。
+**注意：** mev-inspect-py 是 Flashbots 用于生成 MEV 数据的开源引擎，用于为 mev-explore 和 Dune 的 Flashbots 集成等仪表盘提供动力。在我们的社区和贡献者的帮助下，我们一直在寻求改进、修复错误、覆盖边缘情况并尽我们所能增加协议覆盖率。我们鼓励研究人员和开发人员报告并帮助纠正任何发现的错误，或实现任何新功能！ 请随时查阅文档并加入 Flashbots discord，以获取有关我们的数据和 mev-inspect 的更多信息和更新。
 
 **文档：** [https://docs.flashbots.net/](https://docs.flashbots.net)
 

@@ -24,21 +24,21 @@
 
 DuneV2 改变了我们的整个数据库架构。我们正在从 PostgresQL 数据库过渡到托管在 Databricks 上的 Apache Spark 实例。两种系统的区别可以总结如下：
 
-* 我们现在使用 Databricks SQL，而不是 PostgresQL。SQL 关键字的变化很小，但可能与您的某些查询书写习惯有关。&#x20;
+* 我们现在使用 Databricks SQL，而不是 PostgresQL。SQL 关键字的变化很小，但可能与你的某些查询书写习惯有关。&#x20;
 * 与 PostgresQL 的面向行的方法相反，Spark 是一个面向列的数据库。
 * 传统的索引被列块级别的`最小/最大`值替换。
 
-**您可以在此处阅读有关SQL变化的更多信息：**
+**你可以在此处阅读有关SQL变化的更多信息：**
 
 {% content-ref url="query-engine.md" %}
 [query-engine.md](query-engine.md)
 {% endcontent-ref %}
 
-### Abstractions（数据抽象）
+### 抽象表（Abstractions）
 
-DuneV2 中的抽象将在 [dbt](https://docs.getdbt.com/docs/introduction)（数据构建工具）上运行。dbt 使分析工程师能够通过简单地编写选择语句来转换其数据仓库中的数据。dbt 将这些选择语句处理转换为 [数据表](https://docs.getdbt.com/terms/table) 和 [视图](https://docs.getdbt.com/terms/view)。
+DuneV2 中的抽象表将在 [dbt](https://docs.getdbt.com/docs/introduction)（数据构建工具）上运行。dbt 使分析工程师能够通过简单地编写选择语句来转换其数据仓库中的数据。dbt 将这些选择语句处理转换为 [数据表](https://docs.getdbt.com/terms/table) 和 [视图](https://docs.getdbt.com/terms/view)。
 
-这将使 abstractions 更加健全、可扩展且更易于使用。
+这将使抽象表更加健全、可扩展且更易于使用。
 
 {% content-ref url="abstractions-in-dunev2.md" %}
 [abstractions-in-dunev2.md](abstractions-in-dunev2.md)
@@ -46,4 +46,4 @@ DuneV2 中的抽象将在 [dbt](https://docs.getdbt.com/docs/introduction)（数
 
 ### 反馈
 
-最后一点，由于查询引擎仍处于测试 **(beta)** 状态，您可能会遇到错误或对如何改进它有反馈，请随时在 [Discord](https://discord.com/invite/ErrzwBz) 和 [Canny](https://dune.canny.io/) 上与我们分享。
+最后一点，由于查询引擎仍处于测试 **(beta)** 状态，你可能会遇到错误或对如何改进它有反馈，请随时在 [Discord](https://discord.com/invite/ErrzwBz) 和 [Canny](https://dune.canny.io/) 上与我们分享。

@@ -2,7 +2,7 @@
 
 #### 中心化交易所交易数据 <a href="#centralised-exchanges-trading-data" id="centralised-exchanges-trading-data"></a>
 
-代币成交量很好，但您通常想知道智能合约活动的美元价值。您可以使用我们从 coinpaprika API 中提取的数据轻松获取该信息并将其与链上数据相结合。
+代币成交量很好，但你通常想知道智能合约活动的美元价值。你可以使用我们从 coinpaprika API 中提取的数据轻松获取该信息并将其与链上数据相结合。
 
 价格是基于实时市场数据的成交量加权价格，转换为美元。
 
@@ -10,7 +10,7 @@
 
 该表支持一系列 erc20.tokens 。
 
-如果您想要的代币未在此处列出，请向我们的 [github 存储库](https://github.com/duneanalytics/abstractions/tree/master/prices) 提交拉取请求 **** 或使用去中心化价格馈送（price feed） **dex.view\_token\_prices.**
+如果你想要的代币未在此处列出，请向我们的 [github 存储库](https://github.com/duneanalytics/abstractions/tree/master/prices) 提交拉取请求 **** 或使用去中心化价格馈送（price feed） **dex.view\_token\_prices.**
 
 | <p></p><p>列名</p> | 描述                                   |
 | ------------------------- | --------------------------------------------- |
@@ -43,6 +43,6 @@ Note that `WETH` can be used for ETH price.
 | 列名       | 描述                                                          |
 | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | contract\_address | erc20 合约地址                                                                               |
-| sample\_size      | 该资产在所有去中心化交易所发生的交易数量（如果数量非常少，您可能希望排除数据，这可能会导致不准确）。|
+| sample\_size      | 该资产在所有去中心化交易所发生的交易数量（如果数量非常少，你可能希望排除数据，这可能会导致不准确）。|
 | median\_price     | 任何给定小时内资产的中位数价格                                                                                                     |
 | hour              | 此表按每小时为单位计算                                                                                                             |

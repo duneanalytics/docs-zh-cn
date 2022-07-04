@@ -7,7 +7,7 @@
 
 ##ERC20 转移和授权表<a href="#erc20-transfer-and-approval-tables" id="erc20-transfer-and-approval-tables"></a>
 
-您现在可以查询`erc20."ERC20_evt_Transfer"`和`erc20."ERC20_evt_Approval"`表以获取解码的Token转移和授权表。这些表回包括可以使用 ERC20 标准的 ABI 解码的所有事件。这意味着所有代币的所有转账都可以通过这张表查询。该表很大（撰写本文时为240M行），因此请告诉我们您对查询性能的体验。
+你现在可以查询`erc20."ERC20_evt_Transfer"`和`erc20."ERC20_evt_Approval"`表以获取解码的Token转移和授权表。这些表回包括可以使用 ERC20 标准的 ABI 解码的所有事件。这意味着所有代币的所有转账都可以通过这张表查询。该表很大（撰写本文时为240M行），因此请告诉我们你对查询性能的体验。
 
 
 `erc20."ERC20_evt_Transfer"` schema:
@@ -32,7 +32,7 @@
 | `evt_tx_hash`      | `bytea`   |
 | `evt_index`        | `bigint`  |
 
-这里的`contract_address`是指发出事件的合约，即代币地址，`evt_tx_hash`和`evt_index`可以方便地让您使用类似的查询关联`ethereum.logs`。
+这里的`contract_address`是指发出事件的合约，即代币地址，`evt_tx_hash`和`evt_index`可以方便地让你使用类似的查询关联`ethereum.logs`。
 
 
 ```
@@ -43,7 +43,7 @@ ON apps.evt_tx_hash = logs.tx_hash AND apps.evt_index = logs.index
 LIMIT 100;
 ```
 
-另请注意，您可以将这些表与`erc20.tokens`连接起来，以获得人类可读的Token符号和小数位数，如
+另请注意，你可以将这些表与`erc20.tokens`连接起来，以获得人类可读的Token符号和小数位数，如
 
 ```
 SELECT value/10^decimals, tr.*
@@ -107,7 +107,7 @@ ORDER BY 2 desc;
 
 ## 反向解码 <a href="#fallback-decoding" id="fallback-decoding"></a>
 
-上面的表格是使用我们称为“反向解码”的新功能生成的。本质上，它能拆解为为能够被解码的日志，而无所谓事件的合约地址或合约字节码。如果您知道此解码可能有用的其他情况，请随时通过  [hello@dune.xyz](mailto:hello@dune.xyz)告诉我们
+上面的表格是使用我们称为“反向解码”的新功能生成的。本质上，它能拆解为为能够被解码的日志，而无所谓事件的合约地址或合约字节码。如果你知道此解码可能有用的其他情况，请随时通过  [hello@dune.xyz](mailto:hello@dune.xyz)告诉我们
 
 ## 其他 <a href="#misc1" id="misc1"></a>
 

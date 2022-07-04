@@ -10,7 +10,7 @@
 
 ## 使用抽象表（abstractions）
 
-使用Dune Analytics进行分析的最简单方法是使用准备好的[abstractions](.../.../data-tables/data-tables/abstractions.md)表，如`dex.trades`。所有的表都是经过清理的，包含了数据和元数据（如人类可读的标记符号），使它们查询会非常便捷。
+使用Dune Analytics进行分析的最简单方法是使用准备好的[抽象表](.../.../data-tables/data-tables/abstractions.md)表，如`dex.trades`。所有的表都是经过清理的，包含了数据和元数据（如人类可读的标记符号），使它们查询会非常便捷。
 
 ## 在查询中使用以太坊地址
 
@@ -86,7 +86,7 @@ AND event."asset" = p.contract_address
 
 ## 用参数过滤查询和仪表盘
 
-参数可以把你的查询或仪表板变成区块链数据的应用程序。
+参数可以把你的查询或仪表盘变成区块链数据的应用程序。
 
 在查询编辑器页面上点击SQL编辑器右下方的`Add parameter`。
 
