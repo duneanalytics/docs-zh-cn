@@ -1,16 +1,15 @@
 ---
 说明: >-
-  Sharing data on Twitter is probably the most common use case of Dune's
-  Visualizations.
+  在推特上分享是Dune的可视化内容最常见的使用场景了。
 ---
 
-# Twitter
+# 推特
 
-You can use embeds to share Dune's visualizations on Twitter.
+你可以使用嵌入功能在推特上分享可视化内容。
 
-Twitter will render the visualizations automatically and they will update automatically  as time progresses.&#x20;
+推特将自动呈现可视化效果，并随着时间的推移自动更新。&#x20;
 
-Definitely a better experience compared to static screenshots!
+与静态的截图相比这绝对是更好的体验！
 
 ![Twitter automatically renders the embed link correctly](<../../.gitbook/assets/2021-11-01 14-45-28.gif>)
 
