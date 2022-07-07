@@ -1,6 +1,6 @@
-# raw transactions per wallet
+# 每个钱包的原始交易
 
-### Total # of Transactions
+### 总交易笔数
 
 ```sql
 with alltransactions
@@ -24,7 +24,7 @@ FROM alltransactions
 
 ```
 
-### Transaction Success Rate
+### 交易成功率
 
 ```sql
 with alltransactions
@@ -50,7 +50,7 @@ GROUP by success
 ORDER BY success DESC
 ```
 
-### Running Total of # of Transactions
+### 某时间的总交易笔数
 
 ```sql
 with alltransactions

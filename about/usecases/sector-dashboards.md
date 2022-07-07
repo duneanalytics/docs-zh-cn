@@ -1,18 +1,18 @@
-# Sector Dashboards
+# 细分仪表盘
 
-**Sector Dashboards allow you to glance at an entire sector of our new Economy and analyse what's happening in real time.**
+**细分仪表盘让你可以一览细分的新兴领域，并实时分析正在发生的事情。**
 
-Let's explore this with some examples:
+让我们通过一些例子来探讨这个问题:
 
-## Dex Metrics
+## Dex指标
 
 [**https://dune.xyz/hagaetc/dex-metrics**](https://dune.xyz/hagaetc/dex-metrics)
 
-This Dashboard allows you to take a look at the entirety of decentralized exchanges at once.
+这个仪表盘让你可以一次看清整个去中心化交易所的情况。
 
-You can see Dex Volume, Market share, Total Volume across all exchanges and many more stats all on one glance. This allows you to compare the performance of different dexes with each other and at the same time evaluate the performance of the entire sector.
+你可以看到Dex交易量、市场份额、所有交易所的总交易量以及更多的统计数据，一目了然。这让你可以比较不同交易所之间的表现，同时评估整个细分领域的表现。
 
-All of this updates in real time and is maintained by the community, if a new dex wants to be on this dashboard, all they have to do is submit their code to our public github. More on this in [abstractions](../../data-tables/data-tables/abstractions.md).
+所有这些都是实时更新的，并由社区维护，如果一个新的dex想出现在这个仪表盘上，他们所要做的就是提交他们的代码到我们的公开github。更多内容见[抽象表](../../data-tables/data-tables/abstractions.md).
 
 ![](<../../.gitbook/assets/image (7).png>)
 
@@ -20,30 +20,29 @@ All of this updates in real time and is maintained by the community, if a new de
 
 ![](<../../.gitbook/assets/image (9).png>)
 
-## Indices
+## 指数
 
 [**https://dune.xyz/0xBoxer/indices-products**](https://dune.xyz/0xBoxer/indices-products)
 
-Another interesting Dashboard we have is a dashboard on decentralized indices.
+另一个有趣的仪表盘是关于去中心化指数的仪表盘。
 
-Here again, you can evaluate the entire state of a sector in one glance, being able to compare different products and projects to each other with ease.
-
+在这里，你也可以一目了然地评估一个细分领域的整体状况，能够轻松地将不同的产品和项目相互比较
 ![](<../../.gitbook/assets/image (10).png>)
 
 ![](<../../.gitbook/assets/image (11).png>)
 
 ![](<../../.gitbook/assets/image (12).png>)
 
-## Lending
+## 借贷
 
-The same applies for lending protocols, it allows you to easily check the state of lending protocols and compare them to each other with ease.
+这同样适用于借贷协议，它让你你轻松地了解借贷协议的状况并相互比较。
 
 ![](<../../.gitbook/assets/image (13).png>)
 
 ![](<../../.gitbook/assets/image (14).png>)
 
-## Summary
+## 总结
 
-Sector Dashboards allow your audience to make assumptions on a whole sector of this nascent Industry. This is very useful for comparing different products with each other and trying to spot trends.
+细分仪表盘允许你的关注者对某一新兴领域的整个情况做出假设。这对于比较不同的产品和试图发现趋势是非常有用的。
 
-Most Sector Dashboards are relying on one or many [abstraction](../../data-tables/data-tables/abstractions.md) tables which make it easy to query for vast amounts of data and standardizing between the different protocols.
+大多数细分仪表盘都依赖于一个或许多[抽象表)](.../.../data-tables/data-tables/abstractions.md)表，这使得它很容易查询大量的数据并在不同的协议之间实现标准化。

@@ -1,18 +1,19 @@
 ---
-description: >-
-  Leverage Dune to generate Insights for yourself, your project or your
-  organisation.
+说明: >-
+    利用Dune来为你个人，你的项目，你的机构提供洞见。
+
 ---
 
-# Use Cases
+# 使用案例
 
-## Dune is an open platform
+## Dune是一个开放平台
 
-Dune is a data analytics platform that surfaces blockchain data turns on chain data into human readable data available to users for free. Users can query on chain data using PostgreSQL and create dashboards that group queries together to tell a story. Queries on Dune are public goods and are available for anyone to view and fork with the exception of private queries, which are available to users who have the pro plan subscription.
+Dune是一个区块链数据的分析平台，它将链上数据变成用户可读的数据并免费提供给用户。用户可以使用PostgreSQL来查询链上的数据，同时可以创建多个查询组成的仪表盘来讲述故事。Dune上的查询(query)是公开的，任何人都可以查看和分叉(fork)，但隐私查询(private query)是非公开的，该功能只对订阅专业计划(Pro Plan)的用户开放。&#x20;
 
-## **What is Dune used for?**
 
-Since pretty much everything is possible on Dune, there really aren't any limitations as to what you can query in regards to on-chain data. There still is some distinct Use Cases we can establish:
+## **Dune用途有哪些?**
+
+在Dune上几乎所有的事情都是可能的，所以在链上数据的查询方面，它没有任何限制。但我们可以展示一些具体的使用案例:&#x20;
 
 {% content-ref url="sector-dashboards.md" %}
 [sector-dashboards.md](sector-dashboards.md)
@@ -27,14 +28,11 @@ Since pretty much everything is possible on Dune, there really aren't any limita
 {% endcontent-ref %}
 
 \
-What type of content is generated on Dune?
+Dune上的创作内容是哪些类型？
 ------------------------------------------
 
-To get more insights into how people use Dune, you can follow our Twitter account where we retweet the most interesting things that happen on Dune.\
-\
-Just click through the last few tweets and see what people are up to on Dune currently!
+为了获得更多关于用户如何使用Dune的洞见，你可以关注我们的推特账户，我们会转发Dune上最有趣的创作内容。\
+&#x20;\
+只要点击一下最近的几条推文，就可以看到用户在Dune上的最新作品了！
 
 {% embed url="https://twitter.com/DuneAnalytics" %}
-
-\
-\\
