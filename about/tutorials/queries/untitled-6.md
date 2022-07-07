@@ -1,4 +1,4 @@
-# 查询一段时间的用户和交易量
+# Users and amount over a trailing period
 
 ```sql
 SELECT  date_trunc('day', evt_block_time),

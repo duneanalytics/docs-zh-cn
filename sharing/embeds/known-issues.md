@@ -1,10 +1,10 @@
 ---
-说明: 并不是所有网站有想要嵌入功能。
+description: Sadly not every website wants to make it.
 ---
 
-# 已知问题
+# Known Issues
 
-这些网站目前还不支持Dune的嵌入功能:
+These websites currently sadly do not support dune embeds:
 
 * substack
 * medium

@@ -1,8 +1,8 @@
-# 代币在一段时间内的总供应量
+# total supply over time of a token
 
 
 
-你可以使用该token的合约表，只要他们被解码([decoded](../../../data-tables/data-tables/decoded-data.md)):
+You can either use that token's specific tables as long as they are [decoded](../../../data-tables/data-tables/decoded-data.md):
 
 ```sql
 SELECT
@@ -24,8 +24,9 @@ UNION
 ) as net;
 ```
 
-或者你可以使用一些更通用的方式查询，就像这个：
-（请注意，虽然这对大多数ERC20代币都有效，但有些代币的结构有细微变化，这个查询就会不起作用。）
+Or you can use a more general purpose query like this one:
+
+(Please note that while this works for most tokens, some tokens do have slight changes in their structure that break this query)
 
 ```sql
 Select 

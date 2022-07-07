@@ -1,6 +1,6 @@
-# 价格查询
+# price queries
 
-### 中心化交易所价格数据
+### Centralized exchange price data
 
 ```sql
 Select 
@@ -14,7 +14,7 @@ WHERE symbol = '{{1. Symbol}}'
 and minute > now() - interval '1hour'
 ```
 
-### 去中心化交易所价格数据
+### Decentralized exchange price data
 
 ```sql
 Select 
@@ -28,9 +28,9 @@ WHERE symbol = '{{1. Symbol}}'
 and hour > now() - interval '1000hour'
 ```
 
-这个查询以来erc20.tokens表，当该小时内没有提交的交易时，可能会出现空隙。
+This Query depends on the erc20.tokens table and can have gaps when there are no trades that been committed in that hour.
 
-对于一个更好但更复杂的版本，使用这个：
+For a better but more complicated to navigate version use this:
 
 ```sql
 with dex_trades AS (
@@ -107,4 +107,4 @@ with dex_trades AS (
     AND d.hour < b.next_hour -- Yields an observation for every hour after the first transfer until the next hour with transfer
 ```
 
-这将根据dex交易数据按小时返回价格，并填补没有进行过交易的空白行。你可以在第53行调整所需的交易样本量，以便获取价更好的格数据。这可以帮助修正arbritrage机器人在dexes上获得奇怪价格的异常情况。如果你有这方面的问题，请在Discord上与我们联系。
+This will return the price by hour according to dex trading data and fill in gaps where there have been no trades commited. You can adjust the sample size of trades required to carry the price data forward in line 53. This can help ammend edge cases where arbritrage bots get weird prices on dexes. If you have issues with this, please reach out to us on Discord.

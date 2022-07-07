@@ -1,6 +1,6 @@
-# 一个地址的每个代币（和美元价值）在一段时间内的情况
+# Token (and USD value) per token over time for an address
 
-请注意，当在很长一段时间内有许多代币和转让时，这个查询会变得非常繁重。
+Note that this query can get very heavy when there are many tokens and transfers over a long period of time.
 
 ```sql
 WITH transfers AS (

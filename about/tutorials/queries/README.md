@@ -1,12 +1,13 @@
-# 查询模板
+# Query templates
 
-**根据我们的经验，你最好在Dune周围寻找你可能感兴趣的查询，并查看这些查询的源代码来学习。**
+**In our experience, you are best off looking around Dune and finding queries that you might find interesting and looking at the source code of those to learn.**
 
-Dune是一个由用户共享的协作的平台。所有数据分析师的复合知识将使你以最快的方式获得结果。
-看到查询的结果和反馈，确实可以让你更直观地参与到内容中去，学习得更快。\
-**找到优秀的查询创建者，并将他们的查询分叉，以获得最大的效率。**
+Dune is a collaborative endeavour that is shared by it's users. The compounded knowledge of all analysts will allow you to get to results the fastest way.\
+Seeing the queries live and in action does allow you to more intuitively engage with the content and learn faster.
 
-**我们一些最好的创作者：**
+**Find great query creators and fork their queries for maximum efficiency.**
+
+**Some of our best creators are these:**
 
 * [https://dune.xyz/hagaetc](https://dune.xyz/hagaetc)
 * [https://dune.xyz/rchen8](https://dune.xyz/rchen8)
@@ -16,7 +17,7 @@ Dune是一个由用户共享的协作的平台。所有数据分析师的复合�
 * \*\*\*\*[https://dune.xyz/Siang513](https://dune.xyz/Siang513)
 * [https://dune.xyz/keeganead](https://dune.xyz/keeganead)
 
-**我们在此收集了一些查询，以做简单介绍:**
+**Nevertheless we have collected some queries here for a simple introduction:**
 
 {% content-ref url="untitled-6.md" %}
 [untitled-6.md](untitled-6.md)

@@ -1,7 +1,8 @@
 ---
-说明: >-
-  本部分包含由第三方数据提供商提交并托管在 Dune 上的数据
+description: >-
+  This section contains data that has been submitted and hosted on Dune by 3rd
+  party data providers
 ---
 
-# 第三方数据
+# Third Party Data
 

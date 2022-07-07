@@ -1,15 +1,15 @@
-# 原始数据表
+# Raw Data
 
 {% content-ref url="ethereum-data.md" %}
-[以太坊数据（ethereum）](ethereum-data.md)
+[ethereum-data.md](ethereum-data.md)
 {% endcontent-ref %}
 
 {% content-ref url="xdai-data.md" %}
-[XDai 数据（xdai）.md](xdai-data.md)
+[xdai-data.md](xdai-data.md)
 {% endcontent-ref %}
 
 {% content-ref url="../solana-data/" %}
-[Solana 数据（solana）](../solana-data/)
+[solana-data](../solana-data/)
 {% endcontent-ref %}
 
 

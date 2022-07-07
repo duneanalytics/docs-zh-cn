@@ -1,4 +1,4 @@
-# 获取一个事件(event)的代币美元价值
+# USD value of token utilised for an event
 
 ### &#x20;<a href="#usd-value-of-token-utilised-for-an-event" id="usd-value-of-token-utilised-for-an-event"></a>
 

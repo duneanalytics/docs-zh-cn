@@ -1,10 +1,10 @@
-# 某一代币在Uniswap上的美元价格
+# USD price for a token from Uniswap
 
-在Dune Analytics上获取代币美元价格的最常见和最简单的方法是使用`prices.usd`表。然而，这个数据是从中心化交易所获取的，所以对于长尾（小众）的代币，最好的方法是从Uniswap获取价格。
+The most common and easiest way to get token USD prices on Dune Analytics is with the `prices.usd` table. However, this data is fetched from centralised exchanges so for a long tail of tokens the best approach is to get prices from Uniswap.
 
-这个查询使用WETH对，用来映射到美元价格。该查询可以被修改，以适用于任何有`prices.usd`价格的代币。
+This query uses WETH pairs, which is used to map to USD price. The query can be modified to work with any token that has a price in `prices.usd`
 
-你可以在这里找到相关内容[这里](https://explore.dune.xyz/queries/11050/source?p\_Token%20address=0xeb4c2781e4eba804ce9a9803c67d0893436bb27d).
+You can find this query on Dune [here](https://explore.dune.xyz/queries/11050/source?p\_Token%20address=0xeb4c2781e4eba804ce9a9803c67d0893436bb27d).
 
 ```sql
 WITH weth_pairs AS ( -- Get exchange contract address and "other token" for WETH

@@ -1,5 +1,5 @@
-# Dune V2 中的抽象表（Abstractions）
+# Abstractions in Dune V2
 
-此文档页面仍在建设中。你可以在我们的 github 存储库的自述文件中找到关于如何参与abstractions贡献的早期版本：&#x20;
+This docs page is still under construction, you can find an early version for contributing to abstractions in the readme in our github repo:&#x20;
 
 {% embed url="https://github.com/duneanalytics/abstractions#readme" %}
