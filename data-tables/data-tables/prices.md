@@ -1,51 +1,48 @@
-# Prices
+# 价格表（Prices）
 
-#### Centralized exchanges trading data <a href="#centralised-exchanges-trading-data" id="centralised-exchanges-trading-data"></a>
+#### 中心化交易所交易数据 <a href="#centralised-exchanges-trading-data" id="centralised-exchanges-trading-data"></a>
 
-Token volume is great, but more often than not you want to know the USD value of smart contract activity.\
-You can easily get and combine that information with on-chain data using the data we pull from the coinpaprika API.
+代币成交量很好，但你通常想知道智能合约活动的美元价值。你可以使用我们从 coinpaprika API 中提取的数据轻松获取该信息并将其与链上数据相结合。
 
-The Price is the volume-weighted price based on real-time market data, translated to USD.
+价格是基于实时市场数据的成交量加权价格，转换为美元。
 
 **prices.usd**
 
-This table support a range of erc20.tokens. \
-If the token you desire is not listed in here, please make a pull request to our [github repository](https://github.com/duneanalytics/abstractions/tree/master/prices) **** or use the decentralized price feed **dex.view\_token\_prices.**
+该表支持一系列 erc20.tokens 。
 
-| <p></p><p>column name</p> | description                                   |
+如果你想要的代币未在此处列出，请向我们的 [github 存储库](https://github.com/duneanalytics/abstractions/tree/master/prices) 提交拉取请求 **** 或使用去中心化价格馈送（price feed） **dex.view\_token\_prices.**
+
+| <p></p><p>列名</p> | 描述                                   |
 | ------------------------- | --------------------------------------------- |
-| contract\_address         | the contract address of the erc20 token       |
-| symbol                    | the identifier of the asset (ticker, cashtag) |
-| price                     | the price of the asset in any given minute    |
-| minute                    | the resolution for this table is by minute    |
+| contract\_address         | erc20 合约地址      |
+| symbol                    | 资产的标识符（股票代码、现金标签） |
+| price                     | 任何给定分钟内的资产价格    |
+| minute                    | 此表是按分钟为单位计算的   |
 
 Note that `WETH` can be used for ETH price.
 
 **prices.layer\_1usd**
 
-This table also supports layer 1 assets on other blockchains.
+该表还支持其他区块链上的第 1 层（Layer 1）资产。
 
-| column name       | description                                   |
+| 列名       | 描述                                   |
 | ----------------- | --------------------------------------------- |
-| contract\_address | the contract address of the erc20 token       |
-| symbol            | the identifier of the asset (ticker, cashtag) |
-| price             | the price of the asset in any given minute    |
-| minute            | the resolution for this table is by minute    |
+| contract\_address | erc20 合约地址        |
+| symbol            | 资产的标识符（股票代码、现金标签） |
+| price             | 任何给定分钟内的资产价格    |
+| minute            | 此表是按分钟为单位计算的    |
 
 ****
 
 **dex.view\_token\_prices**
 
-We created a decentralized price feed that calculates prices based on decentralized exchange trading data. **This table covers much more assets than prices.usd.** This table is very resource intensive and can therefore only be updated every few hours, please keep that in mind when utilizing it.
+我们创建了一个去中心化的价格馈送（price feed），它根据去中心化的交易所交易数据计算价格。**此表涵盖的资产比 price.usd 多得多**。此表非常占用资源，因此只能每隔几个小时更新一次，使用时请记住这一点。
 
-This table currently only exists for Ethereum data.
+该表目前仅在以太坊数据集中存在。
 
-| column name       | description                                                                                                                                                                     |
+| 列名       | 描述                                                          |
 | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| contract\_address | the contract address of the erc20 token                                                                                                                                         |
-| sample\_size      | the number of trades that occurred for this asset on all decentralized exchanges (If the number is very small you might want to exclude the data, it can lead to inaccuracies). |
-| median\_price     | the median price of the asset in any given hour                                                                                                                                 |
-| hour              | the resolution for this table is hourly                                                                                                                                         |
-
-
-
+| contract\_address | erc20 合约地址                                                                               |
+| sample\_size      | 该资产在所有去中心化交易所发生的交易数量（如果数量非常少，你可能希望排除数据，这可能会导致不准确）。|
+| median\_price     | 任何给定小时内资产的中位数价格                                                                                                     |
+| hour              | 此表按每小时为单位计算                                                                                                             |

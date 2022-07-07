@@ -1,27 +1,27 @@
 ---
-description: >-
-  The Schema dune_user_generated is an easy way to construct your own view,
-  function or table inside of our database.
+说明: >-
+  dune_user_generated 模式是一种在我们的数据库中构建你自己的视图、函数或表的简单方法。
 ---
 
-# User Generated
+# 用户生成表
 
-#### Note that these tables are not guaranteed to contain correct data, please use these with caution if you haven't created them yourself.
+#### 请注意，这些表不保证包含数据的准确性，如果不是你自己创建的，请谨慎使用。
 
-**Always save the constructor arguments for your views. Sometimes we have to drop views in order to be able to change some decoding troubles or proxy dependencies and you might have to redeploy your view.**
+**请始终为你的视图保存构造函数参数。有时我们必须删除视图以便能够更改一些解码问题或代理依赖关系，你可能必须重新部署你的视图。**
 
-## Usecases
+## 用例
 
-There is several ways in which you can utilize your own views and tables inside of Dune to make working with your data on Dune even easier.\
-Your own tables, views and function all have an important part to play in creating content on Dune and make maintenance of your dashboards and queries easier if used correctly.
+你可以通过多种方式在 Dune 中使用自己的视图和表格，从而更轻松地在 Dune 上处理数据。
 
-If you are unfamiliar with tables, views, materialized views and functions please consult the [pgSQL documentation](https://www.postgresqltutorial.com/postgresql-views/) or check out our [Tutorials](../../about/tutorials/).
+你自己的表、视图和函数都可以在 Dune 上创建内容方面发挥重要作用，如果使用得当，可以更轻松地维护仪表盘和查询。
 
-### Storing Information
+如果你不熟悉表、视图、物化视图和函数，请查阅 [pgSQL 文档](https://www.postgresqltutorial.com/postgresql-views/) 或查看我们的 [教程](../../about/tutorials/)。
 
-Sometimes certain references or information that you do need for your data extraction are not properly stored in available tables or stored in many different tables, which would makes the query quite hard to work with. In these cases, you are best off storing the necessary information in a view and referencing that view.
+### 存储信息
 
-An example of this would be the mapping of certain vault or lending tokens to their respective underlying tokens.
+有时，数据提取所需的某些参考或信息未正确存储在可用表中或存储在许多不同的表中，这会使查询非常难以处理。在这些情况下，你最好将必要的信息存储在视图中并引用该视图。
+
+这方面的一个例子是将某些金库或借贷代币映射到它们各自的基础代币。
 
 ```sql
 CREATE OR REPLACE VIEW dune_user_generated.view_test (symbol, contract_address, decimals, underlying_token_address) AS VALUES
@@ -34,24 +34,25 @@ CREATE OR REPLACE VIEW dune_user_generated.view_test (symbol, contract_address, 
 ('yBTC'::text, '\x04EF8121aD039ff41d10029c91EA1694432514e9'::bytea, 8::numeric, '\x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599'::bytea)
 ```
 
-This table generates a view that you can use to join on your query.
+此表生成一个视图，你可以在你的查询中将它用于关联（join）。
 
-[Look at the table](https://dune.xyz/queries/41577).
+[看看这个表](https://dune.xyz/queries/41577).
 
-### Aggregating Data
+### 聚合数据
 
-Views can also be used to aggregate the actions of multiple smart contracts into one view that contains all the necessary data.
+视图还可用于将多个智能合约的操作聚合到一个包含所有必要数据的视图中。
 
-This is especially useful if you are working with the same dataset over and over and only change the way you display or aggregate the data. That way, instead of having to query for your dataset again and again, you just put it into a view once and then can start referencing that view.\
-This will allow you to change the base query that constructs your dataset without having to go through multiple different instances of your query. Think about it like splitting your data collection and the actual work/display you do with that data into two different parts that function independently of each other.
+如果你一遍又一遍地使用相同的数据集并且只更改显示或聚合数据的方式，这将特别有用。这样，你不必一次又一次地查询数据集，只需将其放入视图一次，然后就可以开始引用该视图。
 
-Utilizing this will make the maintenance of your dashboards much easier since you can just change the **dune\_user\_generated** view instead of having to go through all queries individually.
+这将允许你更改构建数据集的基本查询，而无需逐个检查一个查询的多个不同实例。想一想，就像将你的数据收集和你使用该数据所做的实际工作/显示分成两个彼此独立运行的不同部分。
 
-A great example of this in action is almost all queries on [this dashboard](https://dune.xyz/keeganead/cryptoart\_1). The Creator made one base dataset in the **dune\_user\_generated** schema and uses that to base all of his queries on.
+使用它将使仪表盘的维护变得更加容易，因为你只需更改 **dune\_user\_generated** 视图，而不必单独处理所有查询。
 
-Please do note that while this approach works for most cases, views can get very computationally expensive and you might be better off constructing a materialized view or table in our [abstractions](abstractions.md).
+一个很好的例子就是 [这个仪表盘](https://dune.xyz/keeganead/cryptoart\_1) 上的几乎所有查询。创建者在 **dune\_user\_generated** 模式中创建了一个基础数据集，并使用它来作为他所有查询的基础。
 
-This example takes the data from uniswap\_v3 and standardises the data for the dex.trades table.
+请注意，虽然这种方法适用于大多数情况，但视图的算力成本可能会很高，你最好在我们的 [抽象表](abstractions.md) 中构建物化视图或表。
+
+此示例从 uniswap\_v3 中获取数据，并对 dex.trades 表的数据进行标准化。
 
 ```sql
 CREATE OR REPLACE view dune_user_generated.uniswap_v3 as 
@@ -65,7 +66,7 @@ CREATE OR REPLACE view dune_user_generated.uniswap_v3 as
         project,
         version,
         category,
-        coalesce(trader_a, tx."from") as trader_a, -- subqueries rely on this COALESCE to avoid redundant joins with the transactions table
+        coalesce(trader_a, tx."from") as trader_a, -- 子查询依赖此 COALESCE 来避免与 transactions 表的冗余连接
         trader_b,
         token_a_amount_raw,
         token_b_amount_raw,
@@ -119,36 +120,36 @@ CREATE OR REPLACE view dune_user_generated.uniswap_v3 as
 
 [https://dune.xyz/queries/42779](https://dune.xyz/queries/42779)
 
-### Testing Abstractions
+### 测试抽象表（Testing Abstractions）
 
-Another great use case of utilizing the "create" function is to test out if the Pull Request you are making to our abstractions github actually produce the intended results. Simply try running the query with the schema **dune\_user\_generated** instead of the actual schema that you want in Github.
+另一个使用“create”函数的好用例是测试你对我们的 abstractions github 存储库发出的拉取请求是否真的产生了预期的结果。只需尝试使用模式 **dune\_user\_generated** 而不是你在 Github 中想要的实际模式运行查询。
 
-If the test succeeds, you can proceed in making the Pull Request. If you can please attach the "Test Table/View" into the Pull Request.
+如果测试成功，你可以继续进行拉取请求。如果可以，请将“测试表/视图”附加到拉取请求中。
 
-### View Definition
+### 视图定义
 
-To find out how a particular view got created you can run queries against pgsql base tables.
+要了解特定视图是如何创建的，你可以对 pgsql 基础表运行查询。
 
-**A particular view**
+**某个特定视图**
 
 ```sql
 select definition from pg_views 
 where viewname = 'view_name_here'
 ```
 
-**All views**
+**所有视图**
 
 ```sql
 select * from pg_views 
 where schemaname = 'dune_user_generated'
 ```
 
-### View dependencies
+### 视图依赖
 
-If you build multiple views that are dependent on each other it might sometimes happen that you can't change `view1` because `view2` depends on `view1` . This can be remedied by running the query below to fix any dependency issues.
+如果你构建多个相互依赖的视图，有时可能会发生你无法更改 `view1` 的情况，因为 `view2` 依赖于 `view1`。这可以通过运行下面的查询来修复任何依赖问题来解决。
 
 ```sql
--- source: https://stackoverflow.com/a/48770535/1838257
+-- 来源: https://stackoverflow.com/a/48770535/1838257
 
 --CREATE OR REPLACE VIEW dune_user_generated.gosuto_view_dependencies AS
 SELECT DISTINCT srcobj.oid AS src_oid,
@@ -165,11 +166,11 @@ FROM pg_class srcobj
   LEFT JOIN pg_namespace tgtnsp ON tgtobj.relnamespace = tgtnsp.oid
 WHERE tgtdep.deptype = 'i'::"char" AND tgtobj.relkind = 'v'::"char"
 
--- filter like so:
+-- 像这样过滤:
 -- SELECT * FROM dune_user_generated.gosuto_view_dependencies
 -- WHERE src_objectname LIKE '%filter_word%'
 ```
 
-You need to temporarily break the dependencies in order to be able to change `view1`.
+你需要暂时中断依赖关系才能更改 `view1`。
 
-Find the query [here](https://dune.xyz/queries/70916). Big thanks to gosuto for uncovering this.
+在 [此处](https://dune.xyz/queries/70916) 找到该查询。非常感谢 gosuto 发现了这一点。
