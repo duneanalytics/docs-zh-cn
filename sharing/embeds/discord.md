@@ -1,14 +1,14 @@
 ---
-说明: Dune可以完美地嵌入Discord展示!
+description: Dune's embeds display beautifully in Discord!
 ---
 
 # Discord
 
-Dune嵌入功能在discord上的效果非常好:
+Dune embeds work very well in Discord:
 
-你可以简单地在聊天框里发送链接，相应的可视化内容就会被展示。
+You can simply drop the link in the chat and the corresponding visualization will get displayed.
 
-这也非常适合编程一个机器人，以便在命令中返回相应的图表。
+This also lends itself very well to programming a bot to return the corresponding charts on command.
 
 ![](<../../.gitbook/assets/2021-11-02 18-39-01.gif>)
 

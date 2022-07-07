@@ -1,41 +1,41 @@
 ---
-说明: 嵌入功能使你能跨网站地使用实时更新的Dune图表！
+description: Embeds allow you to enjoy beautiful, updating dune charts across the web!
 ---
 
-# 嵌入功能
+# Embeds
 
-## 使用嵌入功能
+## Using Embeds
 
-**截图是无趣和过时的。**
+**Screenshots are boring and tech of the past.**
 
-Dune自带可以跨平台使用的嵌入功能，而不是使用形式不一的截图功能。&#x20;
+Instead of using static screenshots in varying forms of quality, Dune has a native embed function that works across most platforms.&#x20;
 
-你可以在查询标题生成嵌入链接或者选择右上角的嵌入功能。
+You can generate embed links by clicking on any query title and selecting the embed function in the top right corner.
 
 ![generating an embedd link](<../../.gitbook/assets/2021-11-01 14-30-33.gif>)
 
 
 
-### 参数化嵌入
+### Parameterized embeds
 
-参数化的查询也是可以实现的，但这需要一点技巧：
+Embed links also work with parameterized queries, but it is a bit tricky to get them to work:
 
-生成的嵌入链接并不包含必要的参数，尽管查询已经被执行过。我们正在致力于实现自动化的生成链接，但是目前仅有这一条途径能够做到。
+The embed link that gets generated does not include the necessary parameters yet, even if you have ran the query with it. We are already working on automating the link generation, but for now the  is the only way for us to handle this.
 
-现在你需要在链接前手动输入参数。
+For now you need to manually prefix the parameter link with the parameters.
 
-输入参数的写法是这样的：
+The syntax for this is:
 
 `link?name_of_parameter1=xxxx&?name_of_parameter2=yyyy&...` __&#x20;
 
-一个示例：
+An example of this would be:
 
 `>https://dune.xyz/embeds/118220/238460/aa002dd3-f9e2-4d63-86c8-b765569306c6NFT?address=0xff9c1b15b16263c61d017ee9f65c50e4ae0113d7&rolling_n_trades=500`\
 ``
 
-### 在不同平台上嵌入
+### Embeds across different platforms
 
-这里有几个使用Dune嵌入的示例：
+Here is a couple of exemplary use cases for Dune embeds:
 
 {% content-ref url="discord.md" %}
 [discord.md](discord.md)
@@ -55,9 +55,9 @@ Dune自带可以跨平台使用的嵌入功能，而不是使用形式不一的�
 
 
 
-### 已知问题
+### Known Issues
 
-然而嵌入功能在一些比较流行的网站上还不能实现，这包括：
+Unfortunately, embeds do not work in a couple of fairly popular sites, this includes:
 
 * substack
 * medium

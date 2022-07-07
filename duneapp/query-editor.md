@@ -1,97 +1,89 @@
-# 查询编辑器
+# Query Editor
 
-**查询编辑器是查询数据的地方。**
+**The query editor is the place to query for your data.**
 
-![](<../.gitbook/assets/image (45).png>)
+![](<../.gitbook/assets/image (46).png>)
 
-查询编辑器由三部分组成：
+The Query Editor consists of three parts:
 
-* 左边的 [**数据资源管理器**](query-editor.md#data-explorer)
-* 右边的 [**查询窗口**](query-editor.md#query-window) 
-* 底部的 [**查询结果**](query-editor.md#query-results) 
+* the [**data explorer**](query-editor.md#data-explorer) on the left
+* the [**query window**](query-editor.md#query-window) on the right
+* the [**query results**](query-editor.md#query-results) at the bottom
 
-你可以通过拖动Dune的标志来改变每个部分的大小。
+You can change the sizing of each of these parts by dragging the dune logo around.
 
 ![changing the layout is easy](<../.gitbook/assets/2021-12-08 22-33-19.gif>)
 
-让我们更详细地看看这每一个部分。
+Let's take a look at each of these parts in more detail.
 
-### 数据资源管理器
+### Data explorer
 
-在数据（集）资源管理器中可以搜索数据集，以便在查询中使用。
+The data(-set) explorer allows you to search for datasets to use in your queries.
 
-要了解更多关于Dune的数据集的内容，请移步[数据集部分](../data-tables/data-tables/)。
+To learn more about Dune's datasets, please visit the [section datasets](../data-tables/data-tables/).
 
 ![](<../.gitbook/assets/2021-12-08 22-44-18.gif>)
 
-你可以简单地在顶部的搜索栏中输入任何关键词、协议名称、合约名称或任何你想到的，将数据集列表过滤到只剩下你可能需要的那些。\
-搜索栏能用空格分隔，这样你就可以构建一个多关键词搜索。
+You can simply put in any keywords, protocol names, contract names or anything else into the search bar at the top to filter the list of available datasets down to only those you might need at that moment.\
+The search bar also accepts spaces, that way you can construct a multi keyword search.
 
 \
-让我们通过几个查询表的例子进一步说明：\
+Let's explore a few examples of querying for tables to further elaborate on this:\
 \
-搜索 `uniswap_v2` _会出现所有与_ `uniswap_v2` 相关的内容。
+Searching for `uniswap_v2.` \_\_ will bring up all tables related to _the_ `uniswap_v2` _schema_
 
-搜索 `uniswap_v2. evt` 会出现所有与 `uniswap_v2` 相关的事件表。
+Searching for `uniswap_v2. evt` will bring up only event tables related to the `uniswap_v2` schema
 
-搜索 `uniswap` 会出现所有包含关键词 `uniswap` 的列表。
+Searching for just `uniswap` will bring up all tables that contain the keyword `uniswap` in some form.
 
+**Takeaways**
 
+* Always query for data schemas where applicable
+* Use spaces to filter down for events, calls or specific contracts after a schema.\\
 
-**经验之谈**
+### Query window
 
-* 搜索合适的关键词；
-* 在关键词后添加事件、呼叫、智能合约等辅助词进行搜索，用空格分隔。
-
-
-### 查询窗口
-
-查询窗口是你在Dune中施展拳脚的地方。\
+The query window is where you can work your magic in Dune.\
 \
-你可以输入任何SQL代码并执行它。
+You can input any SQL code and execute it.
 
-![](<../.gitbook/assets/image (44).png>)
+![](<../.gitbook/assets/image (45).png>)
 
-**自动完成功能**
+**Autocomplete function**
 
-你可以使用右上角的齿轮来启用/禁用查询编辑器的自动完成功能。自动完成功能将只显示PGSQL关键字和已经使用过的表和别名。\
+You can enable/disable the autocomplete function of the query editor using the gear wheel in the top right corner. The autocomplete feature will only bring up PGSQL keywords and already used tables and aliasses.\
 \
 ![](<../.gitbook/assets/image (36).png>)
 
+**Shortcuts**
 
+A few shortcuts to make working in the query editor easier are provided below.\\
 
-**快捷键**
+| Shortcut      | Action                         |
+| ------------- | ------------------------------ |
+| ctrl + enter  | execute the query              |
+| ctrl + # or / | comments out the selected code |
+| ctrl + space  | brings up a list of keywords   |
+| crtl + z      | undoes your last changes       |
+| ctrl + y      | redoes your last changes       |
+| ctrl + f      | search for keywords            |
+| ctrl + h      | search and replace keywords    |
 
-一些查询编辑器中常用的快捷键：\
+### Query results
 
+The query results section contains a table with the results of your query.
 
-| 快捷键        | 效果                         |
-| ------------ | -----------------------------|
-| ctrl + enter | 执行查询                      |
-| ctrl + # or /| 对选中的代码评论               |
-| ctrl + space | 调出关键词列表                 |
-| crtl + z     | 撤销上一个操作                 |
-| ctrl + y     | 重复上一个操作                 |
-| ctrl + f     | 搜索关键词                    |
-| ctrl + h     | 搜索并替换关键词               |
+![](<../.gitbook/assets/image (58).png>)
 
-### 查询结果
+You can change the formatting and appearance of your table with the options below the table. We don't currently support hiding individual columns for displaying this table on a dashboard, but we are looking to implement this function soon.
 
-查询结果部分包含一个查询结果的表格。
+The tick formats follow this logic:
 
-![](<../.gitbook/assets/image (56).png>)
-
-你可以通过表格下面的选项来改变表格的格式和外观。我们目前不支持在仪表盘显示时隐藏个别列，但我们希望尽快实现这一功能。
-
-勾选格式遵循这个逻辑：
-
-
-
-| 值        | 刻度格式 | 输出          | 概述                                                                                                                                         |
+| Value        | Tick format | Output          | Description                                                                                                                                           |
 | ------------ | ----------- | --------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 1256784.3745 | 空白  | 1256784,3745000 | 显示全部7位数                                                                                                                |
-| 1256784.3745 | 0           | 1256784         | 只显示整数                                                                                                                         |
-| 1256784.3745 | 0,0         | 1,256,784       | 只显示带有逗号分隔符的整数                                                                                                    |
-| 1256784.3745 | 0,0.00      | 1,256,784.38    | 显示精度随设置的小数点后的零数而定                                                             |
-| 1256784.3745 | 0\[.]0a     | 1.2m            | <p>以缩略格式显示数值 /p><p>根据小数点后的零数显示缩略数的小数点</p> |
-| 1256784.3745 | $0\[.]0a    | $1.2m           |  遵循与之前相同的方法，但添加了$前缀                                                                                           |
+| 1256784.3745 | left blank  | 1256784,3745000 | Display the full number and 7 decimals                                                                                                                |
+| 1256784.3745 | 0           | 1256784         | Only Display whole numbers                                                                                                                            |
+| 1256784.3745 | 0,0         | 1,256,784       | Only displays whole numbers with comma separator                                                                                                      |
+| 1256784.3745 | 0,0.00      | 1,256,784.38    | Displays the value with decimals points according to the count of zeroes after the dot                                                                |
+| 1256784.3745 | 0\[.]0a     | 1.2m            | <p>Displays the value in an abbreviated format.</p><p>Will display decimals of the abbreviated number according to count of zeroes after the dot.</p> |
+| 1256784.3745 | $0\[.]0a    | $1.2m           | Adheres to the same methods as before, but adds a $ prefix.                                                                                           |

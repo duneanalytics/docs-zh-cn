@@ -4,70 +4,68 @@ description: Dune Analytics version 2.0
 
 # March 2021
 
-## 更新概览<a href="#overview-of-changes" id="overview-of-changes"></a>
+## Overview of changes <a href="#overview-of-changes" id="overview-of-changes"></a>
 
-* 查询
-  * 保存
-  * 执行
-* 刷新
-* 其他各种更新
+* Queries
+  * Saving
+  * Running
+* Refreshing
+* Various other upgrades
 
-新版本的Dune无论是前端上还是底层都对查询和刷新方式做了调整。
+While all the core functionality you expect from Dune is available in Dune v2 the new version of Dune brings changes to how queries and refreshing work, both on the surface and under the hood.
 
+## Queries <a href="#queries" id="queries"></a>
 
-## 查询 <a href="#queries" id="queries"></a>
+**Saving**
 
-**保存**
+By default, **new queries are not saved** to your queries so you can play around and test various ideas quickly. If you want to keep your work, remember to hit the **Save button** and give your query a name.
 
-默认情况下**新查询不会保存**因此你可以快速尝试以及测试各种想法。如果你想保留你的工作成果，请记住点击 **“保存”按钮**并为你的查询命名。
+This means that if you navigate away from a page without saving, your work is lost. If you allow notifications from [dune.xyz](http://dune.xyz/) in your browser, the app will notify you when you navigate away from unsaved content.
 
-这意味着，如果你在没有保存的情况下离开页面，你的工作成果就会丢失。如果你在浏览器中允许来自[dune.xyz](http://dune.xyz/) 的通知，当你离开未保存的内容时，该应用程序会通知你。
+The same applies to forks. A fork is not saved to your queries before you click the **Save button** and give your fork a name.
 
-这同样适用于forks。在你单击 **保存按钮**以及为你的 fork 命名之前，不会将 fork 保存到你的查询中。
+**Running**
 
+We’ve merged the old save and execute buttons into a single button, **Run**. When you click **Run** on a saved query, any changes you’ve made to the query text is saved and the query is queued for execution.
 
-**执行**
-我们将旧的保存和执行按钮合并为一个按钮，**Run**。当你在已保存的查询上单击**Run**时，你对查询文本所做的任何更改都会被保存，并且查询会排队等待执行。
+> _**Useful tip:**_ Press `CMD / CTRL + Enter` to run your query.
 
+**Running query snippets**
 
-> _**有用的tip:**_ 按住 `CMD / CTRL + Enter`可以快速运行你的查询.
+If you mark parts of your query, the button changes to **Run selection**, and executes the part of the query that you’ve marked. This will updates the results and visualizations in the process but _**not save**_ the query.
 
-**运行查询部分片段**
-如果你标记查询的一部分，按钮将变为**Run selection**，并执行你标记的查询部分。这将更新项目中中的结果和可视化，但**不保存**查询。
+> _**Useful tip:**_ if you want to execute the whole query without saving it, select all of the query (CMD / CTRL + A) and then hit **Run selection**.
 
+## Refreshing <a href="#refreshing" id="refreshing"></a>
 
+There’s also changes to how results are refreshed. Over the last months we’ve been redesigning our entire query execution backend to bring large improvements to how Dune works.
 
-> _**有用的tip:**_ 如果你想执行整个查询而**不保存**它，选择所有查询（CMD / CTRL + A）然后点击**Run selection**
+When a visualization is viewed, either on a query page or on a dashboard, the Dune backend will inspect the age of the most recent result. If the result is stale (currently defined as >3 hours old), Dune will automatically queue an execution for this query and run it in the background.
 
-## 刷新 <a href="#refreshing" id="refreshing"></a>
-结果的刷新方式也发生了变化。 在过去的几个月里，我们一直在重新设计整个查询执行后端，以极大地改进 Dune 。
+This means that your dashboards will always be kept up to date when they are being viewed.
 
-当在查询页面或仪表盘上查看可视化时，Dune 后端将检查最新结果的年龄。 如果结果过时（当前定义为 >3 小时前），Dune 将自动排队执行此查询并在后台运行它。
+Query creators does not need to set a refresh scheduele and the scheduling feature has been deprecated as it is no longer needed to keep results fresh.
 
-这意味着你的仪表盘在查看时将始终保持最新状态。
+## Queues <a href="#queues" id="queues"></a>
 
-查询创建者不需要设置刷新计划，并且计划功能已被弃用，因为它不再需要一直去刷新结果。
+We’re also bringing changes to how queueing works in Dune. When you manually click **Run** on a query an execution is queued. Every user on Dune can queue 3 queries at the same time (pro users have more, see our [pricing](https://hackmd.io/YOP3YIgaRAejTPE190sOjw?view) page for more info).
 
-## 队列 <a href="#queues" id="queues"></a>
+Automatically refreshed results (as we talked about above) does not use the query creators queuing credits nor the viewing user’s.
 
-我们还对Dune中的排队方式进行了调整。 当你在查询里手动单击**Run**按钮时，一个查询会进入队列。Dune 上的每个用户都可以同时排队3个查询（专业用户有更多，请参阅我们的[定价](https://hackmd.io/YOP3YIgaRAejTPE190sOjw?view) 页面了解更多信息）
+## Other updates <a href="#other-updates" id="other-updates"></a>
 
-## 其他更新 <a href="#other-updates" id="other-updates"></a>
+**A faster and better looking Dune** - the whole Dune app including all the charts have gotten a big facelift. The app is now also many times faster.
 
-**一个更快、更好看的Dune** -包括所有图表在内的整个Dune应用程序都进行了重大改造。这个应用比之前快了很多倍。
+**Query parameters** - what is probably Dune’s most underrated feature has gotten a major upgrade. It’s now super easy to filter any query or dashboard for a token, address or anything really. Meaning you can turn your queries and dashboards into interactive apps for onchain data.
 
-**查询参数** -这个可能是 Dune 最被低估的功能已经得到了重大升级。现在通过Token、地址或任何东西筛选任何查询或仪表盘都非常容易。这意味着你可以将查询和仪表盘变成用于链上数据的交互式应用程序。
+**See all content without having to log in** - simply copy and share the link from the page you are on. The exception is for paid users that make their content private, more details on our [pricing page](https://hackmd.io/YOP3YIgaRAejTPE190sOjw?view).
 
+**Errors show on the relevant line** - when running your queries you will see error messages directly on the relevant line in your code.
 
-**无需登录即可查看所有内容** - 只需复制并分享你所在页面的链接即可。将内容设为私有的付费用户除外，详情请参阅我们的[定价](https://hackmd.io/YOP3YIgaRAejTPE190sOjw?view) 页面。
+**Click query title to go to query from a dashboard**
 
-**错误显示在相关行** -运行查询时，你将直接在代码的相关行上看到错误消息。
-
-**单击查询标题以从仪表盘进行查询**
-
-我们很乐意在[Discord](https://discord.com/invite/ErrzwBz)的#feedback 频道中获得你对 Dune v2 体验的反馈。如果你遇到任何问题，也可以联系 [support@dune.xyz](mailto:support@dune.xyz)。
-
+We’d love to get your feedback on your experience with Dune v2 in the #feedback channel in our [Discord](https://discord.com/invite/ErrzwBz). You can also contact [support@dune.xyz](mailto:support@dune.xyz) if you face any issues.
 
 Happy querying!
 
-**PS.** Dune v2 目前不支持一些可视化类型：数据透视、队列、漏斗、热图和气泡。我们已向受影响的用户发送电子邮件。如果你没有收到电子邮件，你的所有查询和可视化应该在 v2 中正常运行。
+**PS.** There are a few visualisation types that are currently not supported in Dune v2: pivot, cohort, funnel, heatmap and bubble. We’ve emailed the users that are affected. If you have not been emailed all your queries and visualisations should work seamlessly in v2.

@@ -1,32 +1,34 @@
-# 视频教程系列
+# Video Series
 
-我们在Youtube上制作了一系列的视频教程 [Youtube频道](https://www.youtube.com/channel/UCPrm9d2hLd\_YxSExH7oRyAg).&#x20;
+We have produced a video tutorial series on our [Youtube Channel](https://www.youtube.com/channel/UCPrm9d2hLd\_YxSExH7oRyAg).&#x20;
 
-## Dune 5分钟入门
+## Dune Analytics 5 Minute Intro
 
-这个视频是了解Dune的最快速和最好的方法，一定要看一看。
+This Video is the quickest and best way to get an introduction to Dune, be sure to check it out.
+
 {% embed url="https://www.youtube.com/watch?v=S-cctFmR828" %}
 
-## 课程介绍
+## Intro to the Course
 
-本视频是对整个课程的概述和介绍。
+This Video serves as an overview and intro to the whole course.
+
 {% embed url="https://youtu.be/USTIesVPk68" %}
 
-## 第1集: 案例和应用
+## Episode 1: Usecases and Applications
 
-本视频解释了Dune的基础知识和它可以用来做什么。
+This Video explains the basics of Dune and what it can be used for.
 
 {% embed url="https://www.youtube.com/watch?v=IHC8HAZvw_Q" %}
 
-## 第2集: 数据库
+## Episode 2: The database
 
-本视频介绍了Dune中的数据表以及数据库的工作方式。
+This Video goes over the Data tables in Dune and how the database works.
 
 {% embed url="https://youtu.be/UDu23Eyvo_Y" %}
 
-## 第3集: 简单query实例以及重建Fees.wtf查询
+## Episode 3.1: Simple Queries and recreating Fees.wtf in Dune
 
-这个视频是对Dune内部查询的一个很好的介绍。我们的社区经理Boxer在Dune中重新创建了Fees.wtf，所以视频主要集中在gas交易方面。
+This Video is a great introduction to querying inside of Dune. Our Community Manager Boxer recreates Fees.wtf inside of Dune, so the Video mostly focuses on gas transactions.
 
 {% embed url="https://youtu.be/ez3VfcfNwvc" %}
 

@@ -1,38 +1,39 @@
-# 饼图
+# Pie Charts
 
-**饼状图能很好地显示某物的构成。**
+**Pie charts are great for showing the composition of something.**
 
-![Marketshare of different decentralized exchanges on https://dune.xyz/hagaetc/dex-metrics](<../../.gitbook/assets/image (49).png>)
+![Marketshare of different decentralized exchanges on https://dune.xyz/hagaetc/dex-metrics](<../../.gitbook/assets/image (51).png>)
 
-## 设置你的饼图
-![](<../../.gitbook/assets/image (53).png>)
+## Configuring your pie chart
 
-### 图表选项
+![](<../../.gitbook/assets/image (55).png>)
 
-#### 标题
+### Chart Options
 
-* 标题将出现在该图的所有实例中，并在顶部醒目位置。
-* 如果留空，查询名称将是唯一留下的东西。
-* 
-<!---->
+#### Title
 
-* [ ] **显示数据标签**
+* The Title will appear in all instances of this graph prominently at the top
+* If left blank the query name will be the only thing that is left standing
 
 <!---->
 
-* 勾选此框会导致在图表中显示单个数据点。
-* 这只有在你的数据点很少，而且彼此之间的距离足够远，不会重叠的情况下才有意义。
+* [ ] **Show data labels**
 
-### 结果数据
+<!---->
 
-这里你可以挑选要显示的数据点。
+* Ticking this box leads to the display of the individual datapoints inside of the graph.
+* This only makes sense in cases where you have few datapoints that are spread out far enough from each other to not overlap.
+
+### Result data
+
+Here you can pick the data points that are to be displayed.
 
 ![The configuration for the chart above](<../../.gitbook/assets/image (33).png>)
 
-你可以选择一个**X轴**和一个Y轴。
+You can choose one **x-axis** and one y-axis.
 
-### 饼图选项
+### Pie Options
 
-**标签格式**
+**Label format**
 
-* 这部分允许你定义数据标签的[勾选格式](https://docs.dune.xyz/duneapp/visualizations#tick-formats)。
+* This field allows you to define the [tick format](https://docs.dune.xyz/duneapp/visualizations#tick-formats) of the data labels.

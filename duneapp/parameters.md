@@ -1,46 +1,49 @@
 ---
-说明: >-
- 参数是一种简单而强大的方式，可以将变量添加到你的查询/仪表盘上。你和其他人可以在不接触代码的情况下定制查询和仪表盘。
+description: >-
+  Parameters are an easy and powerful way to add variables to your
+  query/dashboard. This allows you and others to customize queries and
+  dashboards without having to touch the code.
 ---
 
-# 参数
-## 什么是参数？
+# Parameters
 
-**参数是dune的一个专门功能，允许你在查询代码的某些部分实现变量。这个变量可以从仪表盘上改变，因此可以让你做一个互动的仪表盘。**
+## What are Parameters?
 
-参数允许你通过几个简单的点击对你的代码的某些定义参数进行修改。例如，代替硬编码“合约_地址”，“符号”或“日期范围”，你可以只使用参数功能来改变你这部分代码。这允许你建立一个交互式仪表盘或可定制的查询，浏览者可以用它来查询他所需要的数据。
+**Parameters are a specialized feature of dune that allow you to implement variables in certain parts of your query code. This variable can be changed from dashboards and therefore allows you to make an interactive dashboard.**
 
-参数在查询代码中被定义为`{{参数名}}，并将出现在查询的下方和任何使用了参数的查询可视化的仪表盘中。
+Parameters allow you to make changes to certain defined parameters of your code with a few simple clicks. For instance instead of hard coding `contract_address` , `symbol` or `date ranges` you can just use the parameter function to change these aspects of your code using a parameter. This allows you to build an interactive dashboard or customizable query that the viewer can use to query for exactly the data he needs.
 
-你可以在查询下方或仪表盘上的参数字段中传递对参数的输入。\
+Parameters are defined in the query code as `{{parametername}}` and will appear below the query and in any dashboards in which a query visualization with parameters is used in.
+
+You can pass on input to the parameter below the query or in the parameter field on a dashboard. \
 \
-只需运行查询，就可以在查询编辑器中为查询应用该参数。\
+Simply run the query to apply the parameter for a query within the query editor.\
 \
-在仪表盘上，你可以点击顶部的 "全部应用 "或单独改变参数并点击 "回车"。回车 "的提交方式也适用于下拉菜单和日期选择器。
+On a dashboard you can either click `apply all` at the top or change the parameters individually and hit `Enter`. The `Enter` submission also works for dropdowns and the date picker.
 
-仪表盘中的参数可以在不同的查询之间共享，只要确保在所有的查询之间使用相同的名称、类型和默认值。
+Parameters in a Dashboard can be shared between different queries, just make sure to use the same name, type and default value between all of them.
 
 ![](<../.gitbook/assets/image (30).png>)
 
-![](<../.gitbook/assets/image (27) (1) (2) (2).png>)
+![](<../.gitbook/assets/image (30) (1).png>)
 
 ![](<../.gitbook/assets/image (29).png>)
 
-## 如何使用参数？
+## How to use Parameters?
 
-你可以通过写“{{参数名}}” 或使用查询下面的按钮，简单地在你的查询中添加一个参数。&#x20;
+You can simply add a parameter to your queries by writing `{{parametername}}` or using the button below the query.&#x20;
 
-你可以通过点击查询编辑器中参数旁边的齿轮来编辑单个参数的属性。你可以设置一个默认值，定义一个可能的参数列表或改变参数的类型。如果你想在一个仪表盘上的不同查询之间共享参数，请确保它们在名称、类型和默认值方面完全匹配。
+You can edit the properties of single parameters by clicking on the gear wheel next to the parameter in the query editor. This allows you to set a default value, define a list of possible parameters or change the type of of the parameter. If you want to share parameters between different queries on a dashboard make sure they exactly match in regards to name, type and default value.
 
 ![](<../.gitbook/assets/2021-12-10 15-41-07.gif>)
 
 
 
-## 查询示例
+## Example Query
 
-该查询返回以美元计算的已付gas费的总额。
+This query returns the running total of Gas Paid in USD.
 
-查询作者选择 "钱包地址"、"开始日期 "和 "结束日期"作为参数。
+The Query Author has chosen to include a parameter for `wallet address`, `start date` and `end date`.
 
 ```sql
 with alltransactions
@@ -73,32 +76,32 @@ ON date_trunc('minute', block_time) = minute
 ORDER BY block_time DESC
 ```
 
-可以在[这里]找到这个查询。(https://dune.xyz/queries/64430/128463)
+Find this query [here](https://dune.xyz/queries/64430/128463)
 
-## 嵌入参数化仪表盘和查询
+## Embedding parameterized Dashboards and Queries
 
 
 
-## **仪表盘示例**
+## **Example Dashboards**
 
-**通过这个仪表盘找到关于以太坊钱包的有趣统计数据：**\
+**Find interesting stats on Ethereum Wallets with this dashboard:**\
 [https://dune.xyz/kevdnlol/Transaction-Breakdown](https://dune.xyz/kevdnlol/Transaction-Breakdown)
 
-_作者在该仪表盘中包含了 "钱包地址"、"开始日期 "和 "结束日期 "等参数。_
+_The author has included the parameters `wallet address`, `start date` and `end date` in this Dashboard._
 
-**深入研究Barnbridge's Smart Yield Product:**\
+**Drill down into the single pools of Barnbridge's Smart Yield Product:**\
 [https://dune.xyz/0xBoxer/Barnbridge-or-Smart-Yield](https://dune.xyz/0xBoxer/Barnbridge-or-Smart-Yield)
 
-_作者选择在这里将参数 "poolsymbol "变成一个下拉列表。这样就可以方便地访问所有相关的池子，并对这些池子进行详细的统计。_
+_The Author has chosen to make the parameter `poolsymbol` into a drop down list here. This allows for easy access to all the relevant pools and detailed statistics on those._
 
-**了解有多少人在参与Yearn Vaults：**\
+**Find out how many people are participating in Yearn Vaults:**\
 [https://dune.xyz/msilb7/Yearn-How-Many-Addresses-are-Participating](https://dune.xyz/msilb7/Yearn-How-Many-Addresses-are-Participating)
 
-**了解你的$KLIMA投资:**
+**Find out how your investment in $KLIMA is doing:**
 
 ****[**https://dune.xyz/0xrusowsky/KLIMA-Wallet-Activity**](https://dune.xyz/0xrusowsky/KLIMA-Wallet-Activity)****
 
-## 总结
+## Summary
 
-参数允许你SQL查询的某一部分成为动态的，从而提供你和查询、仪表盘互动的机会。这样就可以很容易地在仪表盘上让许浏览者根据自己的需要定制仪表盘。\
-你可以认为参数就像过滤器，但使用功能的可能性超出了这个范围。
+Parameters allow you to make a certain part of your SQL query dynamic and thereby offer you to make queries and dashboards interactive. That way you can easily display detailed data on your dashboard since it allows the viewer to customize the dashboard for his needs.\
+You could think of parameters like filters, but the possibilities of using this feature go beyond that.

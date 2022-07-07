@@ -1,45 +1,36 @@
-# Wizard需求计划
+# Wizard Request Program
 
-#### 对于想寻找Wizards的项目方
+#### For projects looking for Wizards
 
-如果你是一个想要在Dune上拥有更多或者更好仪表盘的项目方，我们已经为你提供了一个途径。以下是它如何工作的说明：
+If you're a project looking to have more/better dashboards on Dune, we've created this program for you. This is how it works:
 
-1. 项目方填写这个[表格](https://bounties.dune.xyz)去详细阐明他们的全部内容以及他们想要在Dune上看到的insights类型以及他们愿意为此支付的金额。
+1. Project fills out [this form](https://bounties.dune.xyz) explaining what they're all about and the kind of insights they'd like to see surfaced on Dune and how much they're willing to pay for it.\\
+2. We share this with our community and interested wizards get in touch with you.\\
+3. Project screens wizards and chooses who to work with.\\
+4. The data flows.
 
+As opposed to more traditional bounty programs, the Wizard Request program is meant to unlock long-lasting relationships/collaborations between the analysts and the projects at large.
 
-2. 我们将与社区分享，感兴趣的wizards会与你联系。
+#### For Wizards looking for :moneybag::moneybag::moneybag:
 
-3. 项目方筛选以及选择跟谁合作。
+If you are a wizard looking for bounties, make sure to join [our Discord](https://discord.gg/ErrzwBz), go to our “freelancer-listing” channel and click on the flying dollar bill emoji there. Also follow the [bounty bot](https://twitter.com/Dune\_Bounties) on Twitter.
 
-4. 数据就流动了起来。
+**FAQs about the program**
 
-与更传统的赏金计划相反，Wizard需求计划旨在搭建分析师与项目方之间的长期关系/合作。
+_- I need a lot of data, how many requests should I post?_
 
-
-
-#### 对于想寻找:moneybag::moneybag::moneybag:的Wizards
-
-如果你是寻找赏金的wizard，请务必加入[我们的 Discord](https://discord.gg/ErrzwBz)，进入我们的“自由职业者列表”频道，然后单击那里美元钞票的表情符号。 你还可以在推特上关注。[赏金机器人](https://twitter.com/Dune\_Bounties) 。
-
-
-
-**关于项目的FAQs**
-
-_-我需要大量的数据分析，那么应该发布多少需求？?_
-
-将每个需求都当作一个仪表盘。如果你想在一个仪表盘中查看所有信息，那么只需一个需求。另一方面，如果你希望看到三个不同的仪表盘，我们建议你创建三个需求。创建三个需求并不一定意味着与三个不同的分析师合作，这取决于你的想法。
-
+Think of every request as a dashboard. If you’d like to see all of your information in just one dashboard, then just one request. If, on the other hand, you’d like to see three different dashboards we recommend you create three requests. Creating three requests doesn’t necessarily mean working with three different analysts, that will be up to you to decide.
 
 \
-_- 我是一名分析师。我该如何报名？_
+_- I’m an analyst. How do I enroll?_
 
-目前，你唯一需要做的就是加入[我们的Discord](https://discord.gg/dunecom),进入我们的“自由职业者列表”频道，然后单击那里美元钞票的表情符号，这样你就会在新请求到达时收到通知。你还应该关注 Twitter 上[的赏金机器人](https://twitter.com/Dune_Bounties) 。
+For the moment the only thing you need to do is join [our Discord](https://discord.gg/dunecom), go to our “freelancer-listing” channel and click on the flying dollar bill emoji there, this way you’ll get notified when new requests arrive. Oh and you should definitely follow the [bounty bot](https://twitter.com/Dune\_Bounties) on Twitter.
+
 \
-_- 我想创建一个需求，但我不知道我应该为此支付/报价多少金额_
+_- I want to create a requests but I don’t know how much should I pay/offer for it_
 
-嗯，这实际上取决于你的需求的工作量和复杂性程度，但在你可接受的范围内，我们鼓励你尽可能慷慨。如果不确定，你可以随时在我们的 Discord 上提问！
+Well, that really depends on how much work/complexity your request entails but to the extent that you can, we encourage you to be generous. If you ain’t sure you can always ask on our Discord!
 
-_- Dune会抽成吗？?_
+_- Does Dune take a cut?_
 
-我们不会。 事实上，Dune 不参与完成交易的过程或后续跟进，这完全是在wizard和项目之间的事情。
-
+No we don’t. In fact, Dune does not take part in closing the deal or following up over time, this is strictly between the wizard and the project.

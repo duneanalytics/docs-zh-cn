@@ -1,6 +1,6 @@
-# Dune 指南
+# Dune Guides
 
-我们的一些社区成员已经为Dune制作了很棒的教程。
+Some of our Community Members have produced great written tutorials for Dune:
 
 [Andrew Hong](https://twitter.com/andrewhong5297)
 
@@ -31,6 +31,6 @@
 
 
 
-这些指南都很好，我们建议阅读所有的指南。\
+These guides are all great and we recommend reading all of them.\
 \
-非常**感谢**这些指南的作者，你们太了不起了！
+Big **thank you** to the authors of these guides, you are amazing!
