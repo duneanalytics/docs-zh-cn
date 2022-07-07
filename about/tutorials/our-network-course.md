@@ -1,4 +1,4 @@
-# Our Network course
+# 我们的网络课程
 
 我们来自OurNetwork的朋友与Dune Analytics合作创建了一个课程，在30天内教给30人web3数据分析。
 
@@ -10,5 +10,4 @@
 
 
 
-Please consider buying an edition of the mirror post to support the teachers of this course.
 请考虑购买mirror，以支持本课程的教师。
