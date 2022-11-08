@@ -21,7 +21,7 @@
 
 Note that `WETH` can be used for ETH price.
 
-**prices.layer\_1usd**
+**prices.layer1_usd**
 
 该表还支持其他区块链上的第 1 层（Layer 1）资产。
 
